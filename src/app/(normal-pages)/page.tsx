@@ -1,9 +1,29 @@
-import { Button } from "@mui/material";
+import Cta from "../components/home/Cta";
+import Features from "../components/home/Features";
+import Hero from "../components/home/Hero";
+import ResearchTools from "../components/home/ResearchTools";
+import SearchCta from "../components/home/SearchCta";
+import ValueProposition from "../components/home/ValueProposition";
 
 export default function Home() {
    return (
-      <main className="text-center p-7">
-         <h1>GUM INC</h1>
-      </main>
+      <>
+         <Hero />
+         <br />
+         <br />
+         <SearchCta />
+         <br />
+         <br />
+         <ValueProposition />
+         <br />
+         <br />
+         <Features />
+         <br />
+         <br />
+         <ResearchTools />
+         <br />
+         <br />
+         <Cta />
+      </>
    );
 }

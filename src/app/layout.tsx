@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import Providers from "./providers/Providers";
+import { madimiOne } from "./components/general/fonts";
 
 export const metadata: Metadata = {
    title: "Gum.iNc",
@@ -11,7 +12,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
    return (
       <Providers>
          <html lang="en">
-            <body className="min-h-[100vh]">{children}</body>
+            <body className={madimiOne.className}>{children}</body>
          </html>
       </Providers>
    );

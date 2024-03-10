@@ -1,19 +1,24 @@
 "use client";
 
 import { ThemeOptions, createTheme } from "@mui/material";
+import { primaryColor, secondaryColor } from "../lib/constants";
 
 export const themeOptions: ThemeOptions = {
    palette: {
       primary: {
-         main: "#b58536",
+         main: primaryColor,
       },
       secondary: {
-         main: "rgba(93,118,138,0.69)",
+         main: secondaryColor,
+      },
+      text: {
+         primary: "rgb(90,90,90)",
       },
    },
    components: {
       MuiButton: {
          defaultProps: {
+            color: "secondary",
             variant: "contained",
             size: "small",
             sx: { px: 2 },
@@ -29,6 +34,9 @@ export const themeOptions: ThemeOptions = {
          defaultProps: {
             sx: { "& .MuiInputBase-root": { borderRadius: "20px" } },
          },
+      },
+      MuiTypography: {
+         defaultProps: { fontFamily: "inherit" },
       },
    },
 };

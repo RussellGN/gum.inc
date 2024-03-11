@@ -17,6 +17,17 @@ import undraw_connected_2 from "./svgs/undraw_connected_2.svg";
 import undraw_online_resume from "./svgs/undraw_online_resume.svg";
 import undraw_predictive_analytics from "./svgs/undraw_predictive_analytics.svg";
 
+import layered_steps_haikei from "./svgs/layered-steps-haikei.svg";
+import layered_steps_haikei_2 from "./svgs/layered-steps-haikei2.svg";
+import layered_steps_haikei_4 from "./svgs/layered-steps-haikei4.svg";
+import layered_waves_haikei_2 from "./svgs/layered-waves-haikei2.svg";
+import layered_waves_haikei_3 from "./svgs/layered-waves-haikei3.svg";
+import layered_waves_haikei_4 from "./svgs/layered-waves-haikei4.svg";
+import stacked_peaks_haikei from "./svgs/stacked-peaks-haikei.svg";
+import stacked_steps_haikei from "./svgs/stacked-steps-haikei.svg";
+import stacked_steps_haikei_2 from "./svgs/stacked-steps-haikei2.svg";
+import stacked_waves_haikei from "./svgs/stacked-waves-haikei.svg";
+
 const images = {
    artShop,
    artShop2,
@@ -36,6 +47,16 @@ const images = {
    undraw_connected_2,
    undraw_online_resume,
    undraw_predictive_analytics,
+   layered_steps_haikei,
+   layered_steps_haikei_2,
+   layered_steps_haikei_4,
+   layered_waves_haikei_2,
+   layered_waves_haikei_3,
+   layered_waves_haikei_4,
+   stacked_peaks_haikei,
+   stacked_steps_haikei,
+   stacked_steps_haikei_2,
+   stacked_waves_haikei,
 };
 
 export default images;

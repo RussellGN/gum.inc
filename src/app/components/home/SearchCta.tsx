@@ -3,6 +3,7 @@ import { secondaryColor } from "@/app/lib/constants";
 import { Search } from "@mui/icons-material";
 import { Box, Button, IconButton, TextField, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function SearchCta() {
@@ -42,8 +43,9 @@ export default function SearchCta() {
             </Box>
             {/* <Typography variant="h2">Lorem ipsum dolor sit amet</Typography> */}
             <Typography className="max-w-prose text-center">
-               Lorem ipsum, dolor sit amet consectetur <br />
-               adipisicing elit. Vitae, labore fugit iste, quo nostrum, aut minima animi id <br /> accusamus quibusdam
+               Use our smart-search to quickly <br />
+               find what you&apos;re looking for, or navigate to <Link href="/connect">Inc Connect</Link> <br /> and start
+               discovering
             </Typography>
 
             {/* <div className="w-1/2 mt-5">
@@ -62,7 +64,7 @@ export default function SearchCta() {
                   color="secondary"
                   name="q"
                   type="search"
-                  placeholder="Search people, businesses and others..."
+                  placeholder="Search people, businesses and more..."
                   style={{
                      borderRadius: "50px 0 0 50px ",
                      border: "solid thin",

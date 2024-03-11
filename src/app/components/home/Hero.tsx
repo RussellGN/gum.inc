@@ -9,10 +9,10 @@ export default function Hero() {
    const theme = useTheme();
 
    return (
-      <Grid container alignItems="center" justifyContent="center" sx={{ minHeight: "70vh" }}>
+      <Grid container alignItems="center" justifyContent="center" sx={{ minHeight: "80vh" }}>
          <Grid item xs md="auto">
             <Box sx={{ pr: { md: 5 } }}>
-               <Typography variant="h1" sx={{ fontSize: "45px" }}>
+               <Typography variant="h1">
                   Discover, Connect <br /> and{" "}
                   <Box component="span" sx={{ color: "primary.light" }}>
                      Grow

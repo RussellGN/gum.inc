@@ -9,8 +9,6 @@ export default function Home() {
    return (
       <>
          <Hero />
-         <br />
-         <br />
          <SearchCta />
          <br />
          <br />

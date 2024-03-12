@@ -32,7 +32,7 @@ export default function Navbar() {
                   className={`w-9 object-cover h-9 border shadow-md rounded-[100%] cursor-pointer`}
                />
                <Button component={Link} href="/auth/join">
-                  Join
+                  Signup
                </Button>
             </div>
          </div>

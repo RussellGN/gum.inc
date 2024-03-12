@@ -1,3 +1,4 @@
+import connectScreenshot from "./images/connectScreenshot.png";
 import artShop from "./images/artShop.jpg";
 import artShop2 from "./images/artShop2.jpg";
 import firm from "./images/firm.jpg";
@@ -29,6 +30,7 @@ import stacked_steps_haikei_2 from "./svgs/stacked-steps-haikei2.svg";
 import stacked_waves_haikei from "./svgs/stacked-waves-haikei.svg";
 
 const images = {
+   connectScreenshot,
    artShop,
    artShop2,
    firm,

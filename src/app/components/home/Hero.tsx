@@ -47,7 +47,7 @@ export default function Hero() {
 function HeroAnimationGrid() {
    return (
       <>
-         <div className="col-span-3 row-span-2 border rounded-md shadow-md ">
+         <div className="bg-white col-span-3 row-span-2 border rounded-md shadow-md ">
             <div className="p-2">
                <div className="flex items-center px-2">
                   <Image src={images.user1} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
@@ -77,7 +77,7 @@ function HeroAnimationGrid() {
             </div>
          </div>
 
-         <div className="col-span-3 row-span-1 border rounded-md shadow-md ">
+         <div className="bg-white col-span-3 row-span-1 border rounded-md shadow-md ">
             <div className="p-2 h-full flex justify-around gap-3">
                <div className="flex flex-col items-center justify-around">
                   <Image src={images.user2} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
@@ -109,7 +109,7 @@ function HeroAnimationGrid() {
             </div>
          </div>
 
-         <div className="col-span-1 row-span-1 border rounded-md shadow-md  p-1">
+         <div className="bg-white col-span-1 row-span-1 border rounded-md shadow-md  p-1">
             <Box
                className="p-2 flex items-center justify-center rounded-md h-full"
                // sx={{ backgroundColor: "primary.light" }}
@@ -120,13 +120,13 @@ function HeroAnimationGrid() {
             </Box>
          </div>
 
-         <div className="col-span-2 row-span-2 border rounded-md shadow-md ">
+         <div className="bg-white col-span-2 row-span-2 border rounded-md shadow-md ">
             <div className="h-full p-2">
                <Image src={images.undraw_predictive_analytics} alt="connecting" className="h-full" />
             </div>
          </div>
 
-         <div className="col-span-4 row-span-2 border rounded-md shadow-md ">
+         <div className="bg-white col-span-4 row-span-2 border rounded-md shadow-md ">
             <div className="p-2 h-full">
                <div className="rounded-md flex gap-3 justify-between  h-full">
                   <Image src={images.firm} alt={"art shop"} className="rounded-md h-full w-1/3 block object-cover" />

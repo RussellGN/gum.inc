@@ -19,9 +19,9 @@ export default function Home() {
          <br />
          <br />
          <ResearchTools />
+         {/* <br />
          <br />
-         <br />
-         <Cta />
+         <Cta /> */}
       </>
    );
 }

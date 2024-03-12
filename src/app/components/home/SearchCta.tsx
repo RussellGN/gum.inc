@@ -1,5 +1,5 @@
 import images from "@/app/assets";
-import { secondaryColor } from "@/app/lib/constants";
+import { primaryColor, secondaryColor } from "@/app/lib/constants";
 import { Search } from "@mui/icons-material";
 import { Box, Button, IconButton, TextField, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
@@ -21,8 +21,8 @@ export default function SearchCta() {
             <Image
                src={images.blob1}
                alt=""
-               className="w-full absolute  top-1/2 -left-20 -z-10"
-               style={{ transform: "translateY(-50%" }}
+               className="w-full absolute  top-1/2 -right-20 -z-10"
+               style={{ transform: "translateY(-50%) rotateY(180deg)" }}
             />
             <Box
                className="shadow-xl"
@@ -68,16 +68,17 @@ export default function SearchCta() {
                   style={{
                      borderRadius: "50px 0 0 50px ",
                      border: "solid thin",
-                     borderColor: secondaryColor,
+                     borderColor: primaryColor,
                      boxShadow: "none",
                      textAlign: "center",
                      padding: "1rem 2rem ",
                   }}
                />
                <Button
+                  color="primary"
                   sx={{
                      border: "solid thin",
-                     borderColor: secondaryColor,
+                     borderColor: primaryColor,
                      borderRadius: "0 50px 50px 0",
                   }}
                >

@@ -34,7 +34,7 @@ export default function DirectoriesTabs() {
                variant="scrollable"
                scrollButtons="auto"
                aria-label="scrollable auto tabs example"
-               centered
+               // centered
             >
                {tabs.map((tab, index) => (
                   <Tab {...a11yProps(index)} icon={tab.icon} label={tab.label} />

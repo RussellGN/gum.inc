@@ -1,3 +1,5 @@
+"use client";
+
 import { SxProps, styled } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 

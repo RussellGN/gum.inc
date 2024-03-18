@@ -44,8 +44,8 @@ export default function SearchCta() {
             {/* <Typography variant="h2">Lorem ipsum dolor sit amet</Typography> */}
             <Typography className="max-w-prose text-center">
                Use our smart-search to quickly <br />
-               find what you&apos;re looking for, or navigate to <Link href="/connect">Inc Connect</Link> <br /> and start
-               discovering
+               find what you&apos;re looking for, or navigate to <Link href="/inc-connect">Inc Connect</Link> <br /> and
+               start discovering
             </Typography>
 
             {/* <div className="w-1/2 mt-5">

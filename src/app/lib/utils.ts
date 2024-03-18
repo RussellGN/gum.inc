@@ -56,3 +56,15 @@ export function getCookie(cname: string) {
       return null;
    }
 }
+
+export function capitalizeWords(str: string) {
+   let finalString = "";
+   let words = str
+      .trim()
+      .split(" ")
+      .filter((wrd) => wrd.trim() !== "");
+
+   words.forEach((word) => (finalString += word[0].toUpperCase() + word.slice(1)));
+
+   return finalString;
+}

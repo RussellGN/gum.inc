@@ -17,7 +17,12 @@ export default function Navbar() {
                <ul className="list-none flex gap-4">
                   {navLinks.map((navLink) => (
                      <li key={navLink.path}>
-                        <NavLink href={navLink.path}>{navLink.label}</NavLink>
+                        <NavLink
+                           href={navLink.path}
+                           includes={navLink.path.includes("/inc-connect") ? "/inc-connect" : undefined}
+                        >
+                           {navLink.label}
+                        </NavLink>
                      </li>
                   ))}
                </ul>

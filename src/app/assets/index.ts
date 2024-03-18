@@ -17,6 +17,10 @@ import undraw_connected from "./svgs/undraw_connected.svg";
 import undraw_connected_2 from "./svgs/undraw_connected_2.svg";
 import undraw_online_resume from "./svgs/undraw_online_resume.svg";
 import undraw_predictive_analytics from "./svgs/undraw_predictive_analytics.svg";
+import undraw_newsletter_re_wrob from "./svgs/undraw_newsletter_re_wrob.svg";
+import undraw_mailbox_re_dvds from "./svgs/undraw_mailbox_re_dvds.svg";
+import undraw_online_ad_re_ol62 from "./svgs/undraw_online_ad_re_ol62.svg";
+import undraw_the_search_s0xf from "./svgs/undraw_the_search_s0xf.svg";
 
 import layered_steps_haikei from "./svgs/layered-steps-haikei.svg";
 import layered_steps_haikei_2 from "./svgs/layered-steps-haikei2.svg";
@@ -28,6 +32,14 @@ import stacked_peaks_haikei from "./svgs/stacked-peaks-haikei.svg";
 import stacked_steps_haikei from "./svgs/stacked-steps-haikei.svg";
 import stacked_steps_haikei_2 from "./svgs/stacked-steps-haikei2.svg";
 import stacked_waves_haikei from "./svgs/stacked-waves-haikei.svg";
+
+import undraw_web_search_re_efla from "./svgs/undraw_web_search_re_efla.svg";
+import undraw_adventure_re_ncqp from "./svgs/undraw_adventure_re_ncqp.svg";
+import undraw_file_searching_re_3evy from "./svgs/undraw_file_searching_re_3evy.svg";
+import undraw_location_search_re_ttoj from "./svgs/undraw_location_search_re_ttoj.svg";
+import undraw_people_search_re_5rre from "./svgs/undraw_people_search_re_5rre.svg";
+import undraw_search_app_oso2 from "./svgs/undraw_search_app_oso2.svg";
+import undraw_team_re_0bfe from "./svgs/undraw_team_re_0bfe.svg";
 
 const images = {
    connectScreenshot,
@@ -49,6 +61,10 @@ const images = {
    undraw_connected_2,
    undraw_online_resume,
    undraw_predictive_analytics,
+   undraw_newsletter_re_wrob,
+   undraw_mailbox_re_dvds,
+   undraw_online_ad_re_ol62,
+   undraw_the_search_s0xf,
    layered_steps_haikei,
    layered_steps_haikei_2,
    layered_steps_haikei_4,
@@ -59,6 +75,13 @@ const images = {
    stacked_steps_haikei,
    stacked_steps_haikei_2,
    stacked_waves_haikei,
+   undraw_web_search_re_efla,
+   undraw_adventure_re_ncqp,
+   undraw_file_searching_re_3evy,
+   undraw_location_search_re_ttoj,
+   undraw_people_search_re_5rre,
+   undraw_search_app_oso2,
+   undraw_team_re_0bfe,
 };
 
 export default images;

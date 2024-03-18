@@ -37,7 +37,7 @@ export default function ResearchTools() {
          </Grid>
 
          <Grid item xs md={4}>
-            <Image src={images.undraw_online_resume} alt="online resume" className="w-full" />
+            <Image src={images.undraw_mailbox_re_dvds} alt="online resume" className="w-full" />
          </Grid>
       </Grid>
    );

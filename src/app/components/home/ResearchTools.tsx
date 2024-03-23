@@ -24,7 +24,7 @@ export default function ResearchTools() {
                   <Box component="span" sx={{ color: "primary.light" }}>
                      Inc Office
                   </Box>{" "}
-                  Newsletter for <br /> business insights and research
+                  Newsletters for <br /> business insights and research
                </Typography>
                <Typography className="max-w-[25rem] py-3">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse ullam hic possimus optio totam

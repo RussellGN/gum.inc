@@ -1,11 +1,9 @@
 import AnimatedHeader from "./AnimatedHeader";
 import Logo from "../general/Logo";
-import ukFlag from "@/app/assets/svgs/ukFlag.svg";
-import { Button } from "@mui/material";
 import { navLinks } from "@/app/lib/constants";
 import NavLink from "../general/NavLink";
-import Link from "next/link";
-import Image from "next/image";
+import AccessSelector from "./AccessSelector";
+import SignupOrAvatar from "../general/SignupOrAvatar";
 
 export default function Navbar() {
    return (
@@ -29,16 +27,8 @@ export default function Navbar() {
             </nav>
 
             <div className="flex gap-3 items-center">
-               <Image
-                  src={ukFlag}
-                  alt={"current access' flag"}
-                  width={35}
-                  height={35}
-                  className={`w-9 object-cover h-9 border shadow-md rounded-[100%] cursor-pointer`}
-               />
-               <Button component={Link} href="/auth/join">
-                  Signup
-               </Button>
+               <AccessSelector />
+               <SignupOrAvatar />
             </div>
          </div>
       </AnimatedHeader>

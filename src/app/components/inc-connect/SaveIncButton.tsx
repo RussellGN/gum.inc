@@ -1,19 +1,22 @@
 "use client";
 
-import { BookmarkAddOutlined } from "@mui/icons-material";
-import { IconButton } from "@mui/material";
-import React from "react";
+import { BookmarkAdd, BookmarkAddOutlined } from "@mui/icons-material";
+import { Button, IconButton, Snackbar } from "@mui/material";
+import React, { useState } from "react";
 
 export default function SaveIncButton() {
-   // function saveInc(e: Event) {
-   //    e.stopPropagation();
-   //    // e.stopImmediatePropagation();
-   //    alert("inc was saved");
-   // }
+   const [saved, setSaved] = useState(false);
+
+   function saveInc() {
+      setSaved((prev) => !prev);
+   }
 
    return (
-      <IconButton onClick={(e) => e.stopPropagation()} title="Save Inc?" size="small" color="secondary">
-         <BookmarkAddOutlined />
-      </IconButton>
+      <>
+         {/* <Snackbar /> */}
+         <IconButton onClick={saveInc} title="Save Inc?" size="small" color="primary">
+            {saved ? <BookmarkAdd /> : <BookmarkAddOutlined />}
+         </IconButton>
+      </>
    );
 }

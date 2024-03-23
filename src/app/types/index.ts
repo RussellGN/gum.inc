@@ -10,3 +10,8 @@ export type directory = {
 };
 
 export type expandSize = "minimized" | "normal" | "expanded";
+
+export type option = {
+   name: string;
+   description: string;
+};

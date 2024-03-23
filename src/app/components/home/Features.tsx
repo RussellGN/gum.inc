@@ -27,7 +27,7 @@ export default function Features() {
 
                      <div className="flex gap-3 items-center">
                         <Button endIcon={<ArrowRightAlt />}>Browse directories</Button>
-                        <Button variant="outlined">Join a directory</Button>
+                        <Button variant="outlined" color="primary">Join a directory</Button>
                      </div>
                   </Box>
                </Grid>
@@ -60,7 +60,7 @@ export default function Features() {
                   <Typography variant="h2" className="max-w-[25rem]">
                      Explore{" "}
                      <Typography color="primary" variant="inherit" component="span">
-                        Inc Connections
+                        Inc Listings
                      </Typography>{" "}
                      with our curated directory-categories
                   </Typography>
@@ -71,7 +71,9 @@ export default function Features() {
 
                   <div className="flex gap-3 items-center">
                      <Button endIcon={<ArrowRightAlt />}>Browse directories</Button>
-                     <Button variant="outlined">Join a directory</Button>
+                     <Button variant="outlined" color="primary">
+                        Join a directory
+                     </Button>
                   </div>
                </Box>
             </Grid>

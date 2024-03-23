@@ -10,15 +10,15 @@ export interface UserInterface {
    location: string;
    verified: boolean;
    bio: string;
-   displayPhoto: string | StaticImageData;
    serviceOfferings: {
       service: string;
       description: string;
    }[];
-   images: (string | StaticImageData)[];
    socialMedia: {
       platform: string;
       username: string;
       url: string;
    }[];
+   displayPhoto: string | StaticImageData;
+   images: (string | StaticImageData)[];
 }

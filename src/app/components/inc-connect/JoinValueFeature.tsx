@@ -28,7 +28,9 @@ export default function JoinValueFeature() {
                   <Button size="large" endIcon={<ArrowRightAlt />}>
                      Join Now
                   </Button>
-                  <Button variant="outlined">Read More</Button>
+                  <Button variant="outlined" color="primary">
+                     Read More
+                  </Button>
                </div>
             </Box>
          </Grid>

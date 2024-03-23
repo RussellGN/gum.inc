@@ -41,6 +41,12 @@ import undraw_people_search_re_5rre from "./svgs/undraw_people_search_re_5rre.sv
 import undraw_search_app_oso2 from "./svgs/undraw_search_app_oso2.svg";
 import undraw_team_re_0bfe from "./svgs/undraw_team_re_0bfe.svg";
 
+import undraw_newspaper_re_syf5 from "./svgs/undraw_newspaper_re_syf5.svg";
+import undraw_profile_data_re_v81r from "./svgs/undraw_profile_data_re_v81r.svg";
+import undraw_segment_analysis_re_ocsl from "./svgs/undraw_segment_analysis_re_ocsl.svg";
+import undraw_social_strategy_re_mk87 from "./svgs/undraw_social_strategy_re_mk87.svg";
+import undraw_stepping_up_g6oo from "./svgs/undraw_stepping_up_g6oo.svg";
+
 const images = {
    connectScreenshot,
    artShop,
@@ -82,6 +88,11 @@ const images = {
    undraw_people_search_re_5rre,
    undraw_search_app_oso2,
    undraw_team_re_0bfe,
+   undraw_newspaper_re_syf5,
+   undraw_profile_data_re_v81r,
+   undraw_segment_analysis_re_ocsl,
+   undraw_social_strategy_re_mk87,
+   undraw_stepping_up_g6oo,
 };
 
 export default images;

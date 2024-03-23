@@ -1,4 +1,4 @@
-import { directory, link } from "../types";
+import { directory, link, option } from "../types";
 import {
    Brush,
    Business,
@@ -42,7 +42,10 @@ export const zIndices = {
 };
 
 export const primaryColor = "#b58536";
-export const secondaryColor = "#365da1";
+export const primaryDarkColor = "#9e7430";
+// export const secondaryColor = "#365da1";
+export const secondaryColor = "#d0d0ef";
+export const secondaryDarkColor = "#b9b9d3";
 
 export const directories: directory[] = [
    {
@@ -121,3 +124,95 @@ export const directories: directory[] = [
       icon: <LocalHospital />,
    },
 ];
+
+export const researchBureauOptions: option[] = [
+   {
+      name: "Operations",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Sales & Marketing",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Strategy",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Procurement",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Enterprise Technology",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Morden Marketing",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Customer Experience",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Digital Growth",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Marketing & Sales",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Implementation Operations",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "People & Organisation Performance",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Risk & Resilience",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Strategy & Corporate Finance",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Sustainability",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Transformation",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Artificial Intelligence",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+   {
+      name: "Sustainability , Cause & Responsibility",
+      description:
+         "part spoken game eye steady crop noise eventually inside please finally dozen graph dried bark buffalo master against noon doing sky nearly pale throat",
+   },
+];
+
+export const gradients = {
+   primary1: `linear-gradient(to bottom right, ${primaryColor}, goldenrod)`,
+};

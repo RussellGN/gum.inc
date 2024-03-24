@@ -24,7 +24,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
    // const isAuthenticated = true;
 
    return (
-      <Grid container spacing={1} className="min-h-[70vh]">
+      <Grid container spacing={2} className="min-h-[70vh]">
          <Grid item xs md>
             <div className="p-3">
                <Grid container gap={3} alignItems="center">

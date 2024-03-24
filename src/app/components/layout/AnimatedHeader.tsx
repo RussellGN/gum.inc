@@ -21,8 +21,8 @@ export default function AnimatedHeader({ children }: PropsWithChildren) {
    }, [scrollBreakpoint]);
 
    const innerBoxstyles: SxProps = {
-      py: 1,
-      borderRadius: bodyScrolled ? "" : "10px",
+      py: 0.7,
+      borderRadius: bodyScrolled ? "" : "20px",
       transition: "box-shadow 0.1s linear",
       background: theme.palette.background.paper,
       border: "solid thin",

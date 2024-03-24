@@ -1,3 +1,6 @@
+import logo1 from "./logos/logo1.jpg";
+import logo2 from "./logos/logo2.jpg";
+import logo3 from "./logos/logo3.jpg";
 import connectScreenshot from "./images/connectScreenshot.png";
 import artShop from "./images/artShop.jpg";
 import artShop2 from "./images/artShop2.jpg";
@@ -48,6 +51,9 @@ import undraw_social_strategy_re_mk87 from "./svgs/undraw_social_strategy_re_mk8
 import undraw_stepping_up_g6oo from "./svgs/undraw_stepping_up_g6oo.svg";
 
 const images = {
+   logo1,
+   logo2,
+   logo3,
    connectScreenshot,
    artShop,
    artShop2,

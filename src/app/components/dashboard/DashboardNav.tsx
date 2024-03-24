@@ -5,12 +5,15 @@ import { expandSize } from "@/app/types";
 import { Badge, Box, Grid, IconButton, Typography } from "@mui/material";
 import { useState } from "react";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
-import { BarChart, Book, Bookmark, Mail, MonetizationOn, Person, Settings } from "@mui/icons-material";
+import { Mail, Settings } from "@mui/icons-material";
 import Link from "next/link";
+import { dashboardNavLinks } from "@/app/lib/constants";
+import { usePathname } from "next/navigation";
 
 export default function DashboardNav() {
    const [expand, setExpand] = useState<expandSize>("normal");
    const user = sampleUsers[1];
+   const pathname = usePathname();
 
    if (!user) throw new Error("User not found");
 
@@ -40,7 +43,11 @@ export default function DashboardNav() {
                      <IconButton
                         component={Link}
                         href={dashLink.href}
-                        sx={{ bgcolor: "whitesmoke", "&:hover": { bgcolor: "divider" } }}
+                        sx={{
+                           border: pathname === dashLink.href ? "solid 1px" : "solid 1px transparent",
+                           bgcolor: "whitesmoke",
+                           "&:hover": { bgcolor: "divider" },
+                        }}
                      >
                         {dashLink.icon}
                      </IconButton>
@@ -56,8 +63,13 @@ export default function DashboardNav() {
                <li className="mt-7">
                   <IconButton
                      component={Link}
-                     href="/settings"
-                     sx={{ bgcolor: "whitesmoke", "&:hover": { bgcolor: "divider" } }}
+                     href="/inbox"
+                     sx={{
+                        border: pathname === "/inbox" ? "solid 1px" : "solid 1px transparent",
+
+                        bgcolor: "whitesmoke",
+                        "&:hover": { bgcolor: "divider" },
+                     }}
                   >
                      <Badge color="primary" badgeContent={5} max={9}>
                         <Mail />
@@ -68,7 +80,12 @@ export default function DashboardNav() {
                   <IconButton
                      component={Link}
                      href="/settings"
-                     sx={{ bgcolor: "whitesmoke", "&:hover": { bgcolor: "divider" } }}
+                     sx={{
+                        border: pathname === "/settings" ? "solid 1px" : "solid 1px transparent",
+
+                        bgcolor: "whitesmoke",
+                        "&:hover": { bgcolor: "divider" },
+                     }}
                   >
                      <Settings />
                   </IconButton>
@@ -78,37 +95,3 @@ export default function DashboardNav() {
       </Grid>
    );
 }
-
-type dashboardNavLink = {
-   label: string;
-   href: string;
-   icon: JSX.Element;
-};
-
-const dashboardNavLinks: dashboardNavLink[] = [
-   {
-      label: "Details",
-      href: "/dashboard",
-      icon: <Person />,
-   },
-   {
-      label: "Statistics",
-      href: "/dashboard/statistics",
-      icon: <BarChart />,
-   },
-   {
-      label: "Saved Incs",
-      href: "/dashboard/saved-incs",
-      icon: <Bookmark />,
-   },
-   {
-      label: "Monetization",
-      href: "/dashboard/monetization",
-      icon: <MonetizationOn />,
-   },
-   {
-      label: "Featured Dirs",
-      href: "/dashboard/featured-dirs",
-      icon: <Book />,
-   },
-];

@@ -1,6 +1,6 @@
 import { PropsWithChildren } from "react";
 import { Box } from "@mui/material";
-import { secondaryColor } from "../lib/constants";
+import { gradients } from "../lib/constants";
 import FormNav from "../components/layout/FormNav";
 
 export default function Layout({ children }: PropsWithChildren) {
@@ -10,7 +10,7 @@ export default function Layout({ children }: PropsWithChildren) {
          className="min-h-[101vh] flex items-center justify-center"
          sx={{
             p: 3,
-            background: `linear-gradient(to bottom right, ${secondaryColor}, ${"rebeccapurple"})`,
+            background: gradients.secondary1,
          }}
       >
          <Box

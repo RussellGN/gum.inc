@@ -1,5 +1,9 @@
-import { directory, link, option } from "../types";
+import { dashboardNavLink, directory, link, option } from "../types";
 import {
+   BarChart,
+   Book,
+   BookOutlined,
+   Bookmark,
    Brush,
    Business,
    BusinessCenter,
@@ -7,9 +11,11 @@ import {
    Fireplace,
    Hotel,
    LocalHospital,
+   MonetizationOn,
    Money,
    MusicNote,
    Pages,
+   Person,
    Piano,
    Restaurant,
    School,
@@ -215,4 +221,34 @@ export const researchBureauOptions: option[] = [
 
 export const gradients = {
    primary1: `linear-gradient(to bottom right, ${primaryColor}, goldenrod)`,
+   secondary1: `linear-gradient(to bottom right, ${secondaryColor}, ${"rebeccapurple"})`,
+   secondary2: `linear-gradient(to bottom left, ${secondaryDarkColor}, ${"rebeccapurple"})`,
 };
+
+export const dashboardNavLinks: dashboardNavLink[] = [
+   {
+      label: "Details",
+      href: "/dashboard",
+      icon: <Person />,
+   },
+   {
+      label: "Overview",
+      href: "/dashboard/overview",
+      icon: <BarChart />,
+   },
+   {
+      label: "Saved Incs",
+      href: "/dashboard/saved-incs",
+      icon: <Bookmark />,
+   },
+   {
+      label: "Monetization",
+      href: "/dashboard/monetization",
+      icon: <MonetizationOn />,
+   },
+   {
+      label: "Directories & subscriptions",
+      href: "/dashboard/directories-subscriptions",
+      icon: <BookOutlined />,
+   },
+];

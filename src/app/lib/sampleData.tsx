@@ -1,5 +1,7 @@
+import { EmailOutlined } from "@mui/icons-material";
 import images from "../assets";
-import { UserInterface } from "../interfaces";
+import { NotificationInterface, SubscriptionInterface, UserInterface } from "../interfaces";
+import { generateAvatarLetters } from "./utils";
 
 export const sampleUsers: UserInterface[] = [
    {
@@ -742,5 +744,75 @@ export const sampleUsers: UserInterface[] = [
             url: "#",
          },
       ],
+   },
+];
+
+export const sampleNotifications: NotificationInterface[] = [
+   {
+      id: 1,
+      title: "More exposure",
+      user: sampleUsers[1],
+      type: "search-appearance",
+      content: `You made 5 Search appearances today!`,
+      date: "2024-01-13",
+      read: false,
+   },
+   {
+      id: 2,
+      title: "How to monetize",
+      user: sampleUsers[1],
+      type: "account",
+      content: "Find out how you can monentize your account on the monetization page",
+      date: "2024-01-12",
+      read: false,
+   },
+   {
+      id: 3,
+      title: "Introducing 'Gummy Pages'",
+      user: sampleUsers[1],
+      type: "announcement",
+      content: `Check out our new 'Gummy Pages' directory and consider becoming a memebr!`,
+      date: "2023-11-02",
+      read: true,
+   },
+   {
+      id: 4,
+      title: "More exposure",
+      user: sampleUsers[1],
+      type: "saved",
+      content: "You've been bookmarked 15 times today!",
+      date: "2023-10-12",
+      read: true,
+   },
+   {
+      id: 5,
+      title: "'City Thrift' Business page approved",
+      user: sampleUsers[1],
+      type: "page",
+      content: "Your business page was approved and is now live!",
+      date: "2023-09-02",
+      read: true,
+   },
+   {
+      id: 6,
+      title: "Signup successfull",
+      user: sampleUsers[1],
+      type: "account",
+      content: `Welcome to Gum.iNc ${generateAvatarLetters(sampleUsers[1].name)}!`,
+      date: "2023-09-01",
+      read: true,
+   },
+];
+
+export const sampleSubscriptions: SubscriptionInterface[] = [
+   {
+      id: 1,
+      user: sampleUsers[1],
+      name: "Research Bureau Newsletter",
+      price: "£30.00",
+      renews: true,
+      date: "2024-02-11",
+      description: "This newsletter offers business insights and research into relevant fields selected by user.",
+      icon: <EmailOutlined fontSize="large" color="primary" />,
    },
 ];

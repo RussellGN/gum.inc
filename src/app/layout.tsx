@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 
 export const metadata: Metadata = {
    title: "Gum.iNc",
-   description: "a platform for creatives to connect and grow",
+   description: "a platform for businesses, professionals, creatives and other entities to connect and grow",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

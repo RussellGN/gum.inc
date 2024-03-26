@@ -5,7 +5,7 @@ import { Box, Grid, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import DirectoryCard from "./DirectoryCard";
 import { expandSize } from "@/app/types";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import images from "@/app/assets";
 
 export default function Sidebar() {
@@ -21,7 +21,7 @@ export default function Sidebar() {
             )} */}
 
             <Image
-               src={images.undraw_location_search_re_ttoj as StaticImageData}
+               src={images.undraw_location_search_re_ttoj}
                alt="online search"
                className="w-full mb-4 mx-auto max-w-[7rem]"
             />

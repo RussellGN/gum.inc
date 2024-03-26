@@ -1,17 +1,12 @@
 import images from "@/app/assets";
 import { Box, Grid, Typography } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
-import React from "react";
+import Image from "next/image";
 
 export default function Explainer() {
    return (
       <Grid container alignItems="center" justifyContent="center" gap={3} className="p-10">
          <Grid item xs md={4}>
-            <Image
-               src={images.undraw_location_search_re_ttoj as StaticImageData}
-               alt="online search"
-               className="w-full max-w-[15rem]"
-            />
+            <Image src={images.undraw_location_search_re_ttoj} alt="online search" className="w-full max-w-[15rem]" />
          </Grid>
 
          <Grid item xs md="auto">

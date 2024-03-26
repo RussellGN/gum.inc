@@ -12,7 +12,9 @@ import user3 from "./images/user3.jpg";
 import user4 from "./images/user4.jpg";
 import user5 from "./images/user5.jpg";
 import ukFlag from "./svgs/ukFlag.svg";
+
 import worldFlag from "./svgs/worldFlag.svg";
+
 import blob1 from "./svgs/blob1.svg";
 import blob2 from "./svgs/blob2.svg";
 import blob3 from "./svgs/blob3.svg";
@@ -50,8 +52,62 @@ import undraw_segment_analysis_re_ocsl from "./svgs/undraw_segment_analysis_re_o
 import undraw_social_strategy_re_mk87 from "./svgs/undraw_social_strategy_re_mk87.svg";
 import undraw_stepping_up_g6oo from "./svgs/undraw_stepping_up_g6oo.svg";
 
+// import { StaticImageData } from "next/image";
+
 // const images: { [key: string]: StaticImageData } = {
-const images = {
+//    logo1,
+//    logo2,
+//    logo3,
+//    connectScreenshot,
+//    artShop,
+//    artShop2,
+//    firm,
+//    firm2,
+//    user1,
+//    user2,
+//    user3,
+//    user4,
+//    user5,
+//    ukFlag,
+//    worldFlag,
+//    blob1,
+//    blob2,
+//    blob3,
+//    undraw_connected,
+//    undraw_connected_2,
+//    undraw_online_resume,
+//    undraw_predictive_analytics,
+//    undraw_newsletter_re_wrob,
+//    undraw_mailbox_re_dvds,
+//    undraw_online_ad_re_ol62,
+//    undraw_the_search_s0xf,
+//    layered_steps_haikei,
+//    layered_steps_haikei_2,
+//    layered_steps_haikei_4,
+//    layered_waves_haikei_2,
+//    layered_waves_haikei_3,
+//    layered_waves_haikei_4,
+//    stacked_peaks_haikei,
+//    stacked_steps_haikei,
+//    stacked_steps_haikei_2,
+//    stacked_waves_haikei,
+//    undraw_web_search_re_efla,
+//    undraw_adventure_re_ncqp,
+//    undraw_file_searching_re_3evy,
+//    undraw_location_search_re_ttoj,
+//    undraw_people_search_re_5rre,
+//    undraw_search_app_oso2,
+//    undraw_team_re_0bfe,
+//    undraw_newspaper_re_syf5,
+//    undraw_profile_data_re_v81r,
+//    undraw_segment_analysis_re_ocsl,
+//    undraw_social_strategy_re_mk87,
+//    undraw_stepping_up_g6oo,
+// };
+
+// export default images;
+
+export default {
    logo1,
    logo2,
    logo3,
@@ -101,5 +157,3 @@ const images = {
    undraw_social_strategy_re_mk87,
    undraw_stepping_up_g6oo,
 };
-
-export default images;

@@ -2,7 +2,7 @@ import images from "@/app/assets";
 import { primaryColor } from "@/app/lib/constants";
 import { Search } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function SearchCta() {
@@ -11,14 +11,14 @@ export default function SearchCta() {
          <Box
             className="py-20 w-full  flex flex-col items-center justify-center gap-3 relative"
             // sx={{
-            //    backgroundImage: `url(${(images.layered_waves_haikei_4 as StaticImageData).src})`,
+            //    backgroundImage: `url(${(images.layered_waves_haikei_4 ).src})`,
             //    backgroundRepeat: "no-repeat",
             //    backgroundPosition: "center",
             //    backgroundSize: "cover",
             // }}
          >
             <Image
-               src={images.blob1 as StaticImageData}
+               src={images.blob1}
                alt=""
                className="w-full absolute  top-1/2 -right-20 -z-10"
                style={{ transform: "translateY(-50%) rotateY(180deg)" }}

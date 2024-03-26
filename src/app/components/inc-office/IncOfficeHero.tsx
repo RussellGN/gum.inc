@@ -1,6 +1,6 @@
 import images from "@/app/assets";
 import { Grid, Typography } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 
 export default function IncOfficeHero() {
@@ -33,7 +33,7 @@ export default function IncOfficeHero() {
 
          <Grid item xs={12} md={4}>
             <div className="">
-               <Image src={images.undraw_segment_analysis_re_ocsl} alt="mailbox" className="w-[80%]" />
+               <Image src={images.undraw_segment_analysis_re_ocsl as StaticImageData} alt="mailbox" className="w-[80%]" />
                {/* <Image src={images.undraw_stepping_up_g6oo} alt="mailbox" className="w-[80%]" /> */}
             </div>
          </Grid>

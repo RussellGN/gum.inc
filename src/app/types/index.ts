@@ -38,3 +38,5 @@ export type stat = {
    value: string | number;
    icon: JSX.Element;
 };
+
+// export type SVGImage =

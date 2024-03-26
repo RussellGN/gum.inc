@@ -2,7 +2,7 @@ import images from "@/app/assets";
 import { primaryColor } from "@/app/lib/constants";
 import { Search } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 export default function SearchCta() {
@@ -18,7 +18,7 @@ export default function SearchCta() {
             // }}
          >
             <Image
-               src={images.blob1}
+               src={images.blob1 as StaticImageData}
                alt=""
                className="w-full absolute  top-1/2 -right-20 -z-10"
                style={{ transform: "translateY(-50%) rotateY(180deg)" }}

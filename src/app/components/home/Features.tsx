@@ -1,7 +1,7 @@
 import images from "@/app/assets";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import DirectoriesTabs from "./DirectoriesTabs";
 
 export default function Features() {
@@ -90,7 +90,11 @@ export default function Features() {
             className="min-h-[60vh] mb-20"
          >
             <Grid item xs md={4}>
-               <Image src={images.undraw_connected_2} alt="online resume" className="w-full max-w-[15rem]" />
+               <Image
+                  src={images.undraw_connected_2 as StaticImageData}
+                  alt="online resume"
+                  className="w-full max-w-[15rem]"
+               />
             </Grid>
 
             <Grid item xs md="auto">

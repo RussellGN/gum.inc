@@ -1,7 +1,7 @@
 import images from "@/app/assets";
 import { Check, LocationOn, Mail, Verified, Work } from "@mui/icons-material";
 import { Badge, Box, Button, Grid, Typography } from "@mui/material";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export default function Hero() {
    return (
@@ -125,7 +125,11 @@ function HeroAnimationGrid() {
          <div className="bg-white col-span-4 row-span-2 flex items-center border rounded-md shadow-md ">
             <div className="p-2 h-full">
                <div className="rounded-md flex gap-3 justify-between  h-full">
-                  <Image src={images.firm} alt={"art shop"} className="rounded-md h-full w-1/3 block object-cover" />
+                  <Image
+                     src={images.firm as StaticImageData}
+                     alt={"art shop"}
+                     className="rounded-md h-full w-1/3 block object-cover"
+                  />
 
                   <div className="flex-grow">
                      <p>Centrury law firm</p>

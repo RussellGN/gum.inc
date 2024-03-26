@@ -1,16 +1,15 @@
 "use client";
 
 import { directories } from "@/app/lib/constants";
-import { Fullscreen, FullscreenExit, Maximize, Minimize, Search, Tune } from "@mui/icons-material";
-import { Box, Button, Grid, IconButton, TextField, Typography } from "@mui/material";
-import React, { useState } from "react";
+import { Box, Grid, TextField, Typography } from "@mui/material";
+import { useState } from "react";
 import DirectoryCard from "./DirectoryCard";
 import { expandSize } from "@/app/types";
 import Image from "next/image";
 import images from "@/app/assets";
 
 export default function Sidebar() {
-   const [expand, setExpand] = useState<expandSize>("normal");
+   const [expand] = useState<expandSize>("normal");
 
    return (
       <Grid item xs md={expand === "normal" ? 2.5 : "auto"}>

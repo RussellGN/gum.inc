@@ -1,18 +1,7 @@
 "use client";
 
 import { Tune, ArrowDownward, ArrowUpward, Close } from "@mui/icons-material";
-import {
-   SelectChangeEvent,
-   Box,
-   Button,
-   FormControl,
-   IconButton,
-   InputLabel,
-   MenuItem,
-   Select,
-   TextField,
-   Typography,
-} from "@mui/material";
+import { SelectChangeEvent, Box, FormControl, IconButton, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 import useIsMobile from "@/app/hooks/useIsMobile";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
@@ -101,10 +90,10 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 // }
 
 export default function SearchAndSort() {
-   const { handleQuery, handleSortChange, sortValue, queryValue } = useSearchAndSort();
+   const { handleSortChange, sortValue, queryValue } = useSearchAndSort();
    const isMobile = useIsMobile();
    const router = useRouter();
-   const pathname = usePathname();
+   // const pathname = usePathname();
 
    return (
       <div className="py-5 px-[5rem]">

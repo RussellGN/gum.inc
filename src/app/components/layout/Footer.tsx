@@ -1,7 +1,7 @@
 "use client";
 
-import { ArrowUpward, Facebook, Instagram, KeyboardDoubleArrowRight, Twitter, WhatsApp } from "@mui/icons-material";
-import { Box, Container, Grid, IconButton, Typography, Link as MuiLink, SxProps } from "@mui/material";
+import { ArrowUpward, Facebook, Instagram, Twitter, WhatsApp } from "@mui/icons-material";
+import { Box, Container, Grid, IconButton, Typography, Link as MuiLink } from "@mui/material";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -42,9 +42,9 @@ export default function Footer() {
                      <Typography variant="h3" sx={{ mb: 2.5 }}>
                         Quick links
                      </Typography>
-                     <FooterLink href="/about">About</FooterLink>
-                     <FooterLink href="/about">Login</FooterLink>
-                     <FooterLink href="/about">Contact</FooterLink>
+                     <FooterLink href="/dashboard">Dashboard</FooterLink>
+                     <FooterLink href="/login">Login</FooterLink>
+                     <FooterLink href="/signup">Signup</FooterLink>
                   </div>
                </Grid>
                <Grid item xs md={3}>
@@ -52,8 +52,9 @@ export default function Footer() {
                      <Typography variant="h3" sx={{ mb: 2.5 }}>
                         Quick links
                      </Typography>
-                     <FooterLink href="/about">Advertise</FooterLink>
-                     <FooterLink href="/about">FAQ</FooterLink>
+                     <FooterLink href="/contact">Contact</FooterLink>
+                     <FooterLink href="/advertise">Advertise</FooterLink>
+                     <FooterLink href="/about#faq">FAQ</FooterLink>
                   </div>
                </Grid>
             </Grid>
@@ -166,17 +167,7 @@ const socialMediaAccounts: socialMedia[] = [
    },
 ];
 
-function FooterLink({
-   href,
-   children,
-   includes,
-   sx,
-}: {
-   href: string;
-   children: ReactNode;
-   includes?: string;
-   sx?: SxProps;
-}) {
+function FooterLink({ href, children }: { href: string; children: ReactNode; includes?: string }) {
    return (
       <MuiLink
          component={Link}

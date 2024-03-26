@@ -1,8 +1,6 @@
 import { dashboardNavLink, directory, link, option } from "../types";
 import {
-   BarChart,
-   Book,
-   BookOutlined,
+   BarChart, BookOutlined,
    Bookmark,
    Brush,
    Business,
@@ -20,7 +18,7 @@ import {
    Restaurant,
    School,
    Shop,
-   Sports,
+   Sports
 } from "@mui/icons-material";
 
 export const navLinks: link[] = [

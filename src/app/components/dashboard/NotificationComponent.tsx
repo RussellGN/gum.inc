@@ -59,6 +59,6 @@ function NotificationIcon({ type, sx, otherProps }: { type: notificationType; sx
       case "view":
          return <VisibilitySharp sx={sx} {...otherProps} />;
       default:
-         throw new Error("No icon forund for notification type: " + type);
+         throw new Error("No icon found for notification type: " + String(type));
    }
 }

@@ -1,8 +1,6 @@
-import { gradients } from "@/app/lib/constants";
 import { directory, expandSize } from "@/app/types";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
-import React from "react";
 
 export default function DirectoryCard({ dir, expand }: { dir: directory; expand: expandSize }) {
    if (expand === "minimized")

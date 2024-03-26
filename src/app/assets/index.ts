@@ -49,8 +49,9 @@ import undraw_profile_data_re_v81r from "./svgs/undraw_profile_data_re_v81r.svg"
 import undraw_segment_analysis_re_ocsl from "./svgs/undraw_segment_analysis_re_ocsl.svg";
 import undraw_social_strategy_re_mk87 from "./svgs/undraw_social_strategy_re_mk87.svg";
 import undraw_stepping_up_g6oo from "./svgs/undraw_stepping_up_g6oo.svg";
+import { StaticImageData } from "next/image";
 
-const images = {
+const images: { [key: string]: StaticImageData } = {
    logo1,
    logo2,
    logo3,

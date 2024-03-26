@@ -1,9 +1,7 @@
 import images from "@/app/assets";
-import { ArrowRight, ArrowRightAlt } from "@mui/icons-material";
-import { Tab, Tabs, Link as MuiLink, Box, Button, Grid, Typography } from "@mui/material";
+import { ArrowRightAlt } from "@mui/icons-material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import DirectoriesTabs from "./DirectoriesTabs";
 
 export default function Features() {

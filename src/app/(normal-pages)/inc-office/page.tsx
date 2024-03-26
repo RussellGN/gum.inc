@@ -1,14 +1,9 @@
-import images from "@/app/assets";
-import GoBackBtn from "@/app/components/general/GoBackBtn";
 import IncOfficeHero from "@/app/components/inc-office/IncOfficeHero";
 import OptionCard from "@/app/components/inc-office/OptionCard";
 import { researchBureauOptions } from "@/app/lib/constants";
-import { option } from "@/app/types";
 import { ArrowRightAlt, KeyboardDoubleArrowRight } from "@mui/icons-material";
-import { Box, Button, Checkbox, Container, Divider, FormControlLabel, FormGroup, Grid, Typography } from "@mui/material";
-import Image from "next/image";
+import { Box, Button, FormGroup, Grid, Typography } from "@mui/material";
 import Link from "next/link";
-import React from "react";
 
 export default function Page() {
    return (

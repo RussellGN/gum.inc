@@ -1,8 +1,7 @@
 import images from "@/app/assets";
-import { Message, Search, Send } from "@mui/icons-material";
+import { Search, Send } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
-import React from "react";
 
 export default function ValueProposition() {
    return (

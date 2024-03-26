@@ -1,10 +1,9 @@
 import images from "@/app/assets";
-import { primaryColor, secondaryColor } from "@/app/lib/constants";
+import { primaryColor } from "@/app/lib/constants";
 import { Search } from "@mui/icons-material";
-import { Box, Button, IconButton, TextField, Typography } from "@mui/material";
-import Image, { StaticImageData } from "next/image";
+import { Box, Button, Typography } from "@mui/material";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 export default function SearchCta() {
    return (

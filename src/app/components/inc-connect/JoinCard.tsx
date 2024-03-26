@@ -1,4 +1,4 @@
-import { gradients, primaryColor, secondaryColor } from "@/app/lib/constants";
+import { gradients } from "@/app/lib/constants";
 import { AddCircleOutlined } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
 import Link from "next/link";

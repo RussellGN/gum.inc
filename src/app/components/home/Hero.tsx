@@ -1,13 +1,9 @@
-"use client";
-
 import images from "@/app/assets";
 import { Check, LocationOn, Mail, Verified, Work } from "@mui/icons-material";
-import { Badge, Box, Button, Grid, Typography, useTheme } from "@mui/material";
+import { Badge, Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 export default function Hero() {
-   const theme = useTheme();
-
    return (
       <Grid container alignItems="center" justifyContent="center" sx={{ minHeight: "80vh" }}>
          <Grid item xs md="auto">

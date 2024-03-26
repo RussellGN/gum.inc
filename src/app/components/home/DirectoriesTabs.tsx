@@ -88,7 +88,7 @@ const tabs: tab[] = [
 ];
 
 function CustomTabPanel(props: TabPanelProps) {
-   const { children, value, index, ...other } = props;
+   const { value, index, ...other } = props;
 
    return (
       <div
@@ -101,7 +101,7 @@ function CustomTabPanel(props: TabPanelProps) {
          {value === index && (
             <Box sx={{ p: 2 }} className="grid grid-flow-col auto-cols-auto overflow-x-auto gap-3">
                {sampleUsers.map((user) => (
-                  <div className="w-[10rem]">
+                  <div key={user.id} className="w-[10rem]">
                      <UserCard key={user.slug} user={user} />
                   </div>
                ))}

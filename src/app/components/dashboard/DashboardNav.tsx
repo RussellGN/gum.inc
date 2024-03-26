@@ -1,9 +1,7 @@
 "use client";
 
 import { sampleUsers } from "@/app/lib/sampleData";
-import { expandSize } from "@/app/types";
 import { Badge, Box, Grid, IconButton, Typography } from "@mui/material";
-import { useState } from "react";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import { Mail, Settings } from "@mui/icons-material";
 import Link from "next/link";
@@ -11,7 +9,7 @@ import { dashboardNavLinks } from "@/app/lib/constants";
 import { usePathname } from "next/navigation";
 
 export default function DashboardNav() {
-   const [expand, setExpand] = useState<expandSize>("normal");
+   // const [expand, setExpand] = useState<expandSize>("normal");
    const user = sampleUsers[1];
    const pathname = usePathname();
 
@@ -33,7 +31,7 @@ export default function DashboardNav() {
             </Typography>
 
             <ul className="list-none flex flex-col items-center gap-1.5">
-               {dashboardNavLinks.map((dashLink, index) => (
+               {dashboardNavLinks.map((dashLink) => (
                   <Box
                      component="li"
                      key={dashLink.label}

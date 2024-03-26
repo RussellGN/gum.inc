@@ -1,19 +1,14 @@
-import images from "@/app/assets";
-import {
-   ArrowRightAlt,
-   BookmarkAdd,
-   BookmarkAddOutlined,
-   LocationOn,
-   Verified,
-   VerifiedOutlined,
-} from "@mui/icons-material";
-import { Box, Button, Grid, IconButton, Typography } from "@mui/material";
+import { LocationOn, Verified } from "@mui/icons-material";
+import { Box, Grid, Typography } from "@mui/material";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import Link from "next/link";
 import { UserInterface } from "@/app/interfaces";
 import SaveIncButton from "./SaveIncButton";
 
 export default function UserCard({ user, simplifified }: { user: UserInterface; simplifified?: boolean }) {
+   if (simplifified) {
+      console.log("simplified");
+   }
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box

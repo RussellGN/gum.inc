@@ -1,5 +1,3 @@
-import { redirect } from "next/navigation";
-
 export function generateAvatarLetters(string: string): string {
    string = string.trim();
    const words = string.split(" ");
@@ -59,7 +57,7 @@ export function getCookie(cname: string) {
 
 export function capitalizeWords(str: string) {
    let finalString = "";
-   let words = str
+   const words = str
       .trim()
       .split(" ")
       .filter((wrd) => wrd.trim() !== "");

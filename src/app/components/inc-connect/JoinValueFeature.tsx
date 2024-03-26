@@ -1,8 +1,5 @@
-import images from "@/app/assets";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
 
 export default function JoinValueFeature() {
    return (

@@ -1,11 +1,9 @@
-import Explainer from "@/app/components/inc-connect/Explainer";
 import JoinCard from "@/app/components/inc-connect/JoinCard";
 import SearchAndControls from "@/app/components/inc-connect/SearchAndControls";
 import Sidebar from "@/app/components/inc-connect/Sidebar";
 import UserCard from "@/app/components/inc-connect/UserCard";
 import { sampleUsers } from "@/app/lib/sampleData";
 import { Box, Grid, Pagination } from "@mui/material";
-import React from "react";
 
 export default function Page() {
    return (

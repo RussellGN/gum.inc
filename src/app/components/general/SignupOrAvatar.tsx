@@ -1,18 +1,22 @@
+"use client";
+
 import { sampleUsers } from "@/app/lib/sampleData";
 import { generateAvatarLetters } from "@/app/lib/utils";
 import { Avatar, Button } from "@mui/material";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 export default function SignupOrAvatar() {
+   const pathname = usePathname();
    // const user = sampleUsers.find((sampleUser) => sampleUser.slug === slug);
    const user = sampleUsers[1];
 
    if (!user) throw new Error("User not found");
 
-   const isAuthenticated = true;
+   const isAuthenticated = false;
 
-   if (!isAuthenticated)
+   if (!pathname.includes("/dashboard") && !isAuthenticated)
       return (
          <Button component={Link} href="/signup">
             Signup

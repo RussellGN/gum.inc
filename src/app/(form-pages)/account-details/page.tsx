@@ -1,4 +1,3 @@
-import AuthProviders from "@/app/components/general/AuthProviders";
 import DividerWithText from "@/app/components/general/DividerWithText";
 import { InfoOutlined } from "@mui/icons-material";
 import { Link as MuiLink, Grid, TextField, Typography, Button } from "@mui/material";

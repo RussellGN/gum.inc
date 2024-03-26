@@ -66,9 +66,9 @@ export default function page() {
                   <CurrencyExchange fontSize="inherit" />
                </Typography>
                <Typography variant="subtitle2" sx={{ mb: 2, px: 1 }}>
-                  Spread the word and reap the rewards with Gum.iNc's Referral Program. Introduce businesses and individuals
-                  to our platform, and earn commissions for each successful referral. It's a win-win – your connections
-                  benefit from our services, and you earn for every new member you bring on board.
+                  Spread the word and reap the rewards with Gum.iNc&apos;s Referral Program. Introduce businesses and
+                  individuals to our platform, and earn commissions for each successful referral. It&apos;s a win-win – your
+                  connections benefit from our services, and you earn for every new member you bring on board.
                   {/* <br /> */}
                   {/* <strong>Earnings Since Last Withdrawl: £134</strong> */}
                </Typography>

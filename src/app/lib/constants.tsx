@@ -48,83 +48,97 @@ export const zIndices = {
 
 export const primaryColor = "#b58536";
 export const primaryDarkColor = "#9e7430";
-// export const secondaryColor = "#365da1";
 export const secondaryColor = "#d0d0ef";
 export const secondaryDarkColor = "#b9b9d3";
 
 export const directories: directory[] = [
    {
       name: "Gummy Pages",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "middle rough slabs sight sometime girl physical light tea foreign citizen recent salmon front short pair without caught cause are go bridge art return",
       icon: <Pages />,
    },
    {
       name: "Upcoming Events",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "shut rough sold ability else colony bigger realize interior repeat grew house fog bow pleasure opportunity making duck running eventually star metal different represent",
       icon: <EventAvailable />,
    },
    {
       name: "Crème Chefs",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "raw cloth that unless black poetry report lips higher lying becoming pole discover program built simplest pressure week pool planning about rabbit percent effect",
       icon: <Fireplace />,
    },
    {
       name: "Restaurants",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "hardly gun key me determine run stopped society cause dirt vote roof part bear difference crew selection fear cabin social die poetry scale captain",
       icon: <Restaurant />,
    },
    {
       name: "Sports",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "cross plate planned his kitchen break to two did positive in waste music saw does needle fifteen natural song money visitor point football how",
       icon: <Sports />,
    },
    {
-      name: "Craft/Skill",
+      name: "Craft / Skill",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "answer hello man kept familiar sets straw chose recognize per written twelve weather see pool small range accident saddle pilot five stronger smooth soil",
       icon: <Brush />,
    },
    {
       name: "Coin (Business)",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "camp nuts sea difficulty together statement flower topic nation mirror see castle rough built steady forty lead sale powder smoke may river finger judge",
       icon: <Money />,
    },
    {
       name: "Thrift (Fashion)",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "block dust service tie atom ability range train aloud wealth then badly return skill therefore present direct cabin fought difference whispered fill free children",
       icon: <Shop />,
    },
    {
       name: "Education",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "court height practical coal also whose name fort failed spread tin clearly probably origin raise use car heard younger expression safe tall large negative",
       icon: <School />,
    },
    {
       name: "Creatives & Artists",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "getting else is son sat nails exclaimed adjective church tie moon search nearer size character familiar route ants joy corn nearly trap whether far",
       icon: <Piano />,
    },
    {
-      name: "Labels | Artists & Repertoire/Booking Agents",
+      name: "Labels, Artists & Repertoire / Booking Agents",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "leg hearing gulf fed lose track noon material vessels pipe sides read mouse bicycle atomic hat poor wrapped beyond loss school straw began ago",
       icon: <MusicNote />,
    },
    {
-      name: "NGOs/Sponsorships & Funds",
+      name: "NGOs / Sponsorships & Funds",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "live into southern forty mathematics aloud song research funny exactly growth yes origin torn recently president got equally quickly final arrangement season almost poetry",
       icon: <Business />,
    },
    {
-      name: "Hubs/Studios & Co-working spaces ",
+      name: "Hubs / Studios & Co-working spaces ",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "fought brass want lungs parallel create newspaper fell pond underline heading meal ants brush becoming sell familiar worry hollow several bottom myself small word",
       icon: <BusinessCenter />,
    },
    {
       name: "AirBnbs, Hotels & Resorts",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "mysterious result cast softly science particular mother food brush practical government end thee rock thought income market worker slope provide solve snow slide grandmother",
       icon: <Hotel />,
    },
    {
-      name: "Hospitals/Medical Specialists & facilities",
+      name: "Hospitals / Medical Specialists & facilities",
+      shortDescription: "Features listings of everyday proffessionals",
       about: "selection aid tune pole minute impossible pitch instrument shout chapter lunch another sides handle on listen among them story tired realize had language heat",
       icon: <LocalHospital />,
    },

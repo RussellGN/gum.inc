@@ -5,6 +5,7 @@ export type link = {
 
 export type directory = {
    name: string;
+   shortDescription: string;
    about: string;
    icon: JSX.Element;
 };

@@ -1,6 +1,7 @@
 import { dashboardNavLink, directory, link, option } from "../types";
 import {
-   BarChart, BookOutlined,
+   BarChart,
+   BookOutlined,
    Bookmark,
    Brush,
    Business,
@@ -18,7 +19,7 @@ import {
    Restaurant,
    School,
    Shop,
-   Sports
+   Sports,
 } from "@mui/icons-material";
 
 export const navLinks: link[] = [
@@ -53,14 +54,14 @@ export const secondaryDarkColor = "#b9b9d3";
 
 export const directories: directory[] = [
    {
-      name: "Upcoming Events",
-      about: "shut rough sold ability else colony bigger realize interior repeat grew house fog bow pleasure opportunity making duck running eventually star metal different represent",
-      icon: <EventAvailable />,
-   },
-   {
       name: "Gummy Pages",
       about: "middle rough slabs sight sometime girl physical light tea foreign citizen recent salmon front short pair without caught cause are go bridge art return",
       icon: <Pages />,
+   },
+   {
+      name: "Upcoming Events",
+      about: "shut rough sold ability else colony bigger realize interior repeat grew house fog bow pleasure opportunity making duck running eventually star metal different represent",
+      icon: <EventAvailable />,
    },
    {
       name: "Crème Chefs",

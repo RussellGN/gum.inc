@@ -2,16 +2,16 @@
 
 ## todo
 
-2. business card, event card, other entity card
-3. business page, event page, other entity page
-4. research tools revamp
+1. business card, event card, other entity card
+2. business page, event page, other entity page
+3. research tools revamp
+4. Subscribe pages
 5. proper wording
-6. account dashboard
-7. page transititon animations
-8. animations
-9. about
-10.   body background
-11.   mobile nav
-12.   mobile responsiveness
-13.   popovers, toasts, dialogs and alerts
-14.   polish
+6. page transititon animations
+7. animations
+8. about
+9. body background
+10.   mobile nav
+11.   mobile responsiveness
+12.   popovers, toasts, dialogs and alerts
+13.   polish

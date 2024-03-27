@@ -7,9 +7,20 @@ import DirectoryCard from "./DirectoryCard";
 import { expandSize } from "@/app/types";
 import Image from "next/image";
 import images from "@/app/assets";
+import Link from "next/link";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Sidebar() {
    const [expand] = useState<expandSize>("normal");
+   const router = useRouter();
+   const readOnlySearchParams = useSearchParams();
+   const searchParams = new URLSearchParams(readOnlySearchParams);
+   const activeDir = searchParams.get("dir") || directories[0].name;
+
+   function viewDirectory(dir: string) {
+      searchParams.set("dir", dir);
+      router.push("/inc-connect?" + searchParams.toString());
+   }
 
    return (
       <Grid item xs md={expand === "normal" ? 2.5 : "auto"}>
@@ -36,8 +47,8 @@ export default function Sidebar() {
 
             <ul className="list-none">
                {directories.map((dir) => (
-                  <li key={dir.name}>
-                     <DirectoryCard dir={dir} expand={expand} />
+                  <li key={dir.name} onClick={() => viewDirectory(dir.name)}>
+                     <DirectoryCard dir={dir} activeDir={activeDir} expand={expand} />
                   </li>
                ))}
             </ul>

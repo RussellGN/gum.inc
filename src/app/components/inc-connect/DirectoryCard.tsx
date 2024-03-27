@@ -2,8 +2,18 @@ import { directory, expandSize } from "@/app/types";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 
-export default function DirectoryCard({ dir, expand }: { dir: directory; expand: expandSize }) {
-   if (expand === "minimized")
+export default function DirectoryCard({
+   dir,
+   activeDir,
+   expand,
+}: {
+   dir: directory;
+   activeDir: string;
+   expand: expandSize;
+}) {
+   const isActive = activeDir === dir.name;
+
+   if (expand === "minimized") {
       return (
          <Box
             className="flex items-center gap-3"
@@ -12,14 +22,12 @@ export default function DirectoryCard({ dir, expand }: { dir: directory; expand:
             {dir.icon}
          </Box>
       );
-   else if (expand === "normal")
+   } else if (expand === "normal") {
       return (
          <Box
             className="border-b-[3px] flex items-center gap-3 p-2 rounded-lg cursor-pointer transition-all hover:gap-4"
             sx={{
-               backgroundColor: dir.name.includes("Gummy") ? "secondary.light" : "",
-               // color: dir.name.includes("Gummy") ? "white" : "",
-               // "& svg": { color: dir.name.includes("Gummy") ? "inherit" : "grey", fontSize: "1.5rem", mt: -0.2 },
+               backgroundColor: isActive ? "secondary.light" : "",
                "& svg": { color: "grey", fontSize: "1.5rem", mt: -0.2 },
             }}
          >
@@ -27,6 +35,7 @@ export default function DirectoryCard({ dir, expand }: { dir: directory; expand:
             <Typography className="line-clamp-1 flex-grow">{dir.name}</Typography>
          </Box>
       );
+   }
 
    return (
       <Box className="border shadow-md rounded-lg px-2 py-3">

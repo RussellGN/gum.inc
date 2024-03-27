@@ -1,7 +1,7 @@
 "use client";
 
-import { Tune, ArrowDownward, ArrowUpward, Close } from "@mui/icons-material";
-import { SelectChangeEvent, Box, FormControl, IconButton, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import { Tune, ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { SelectChangeEvent, Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import useIsMobile from "@/app/hooks/useIsMobile";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 
@@ -92,11 +92,11 @@ import { usePathname, useSearchParams, useRouter } from "next/navigation";
 export default function SearchAndSort() {
    const { handleSortChange, sortValue, queryValue } = useSearchAndSort();
    const isMobile = useIsMobile();
-   const router = useRouter();
+   // const router = useRouter();
    // const pathname = usePathname();
 
    return (
-      <div className="py-5 px-[5rem]">
+      <Box sx={{ p: 4 }}>
          <Box
             component="form"
             sx={{
@@ -105,7 +105,7 @@ export default function SearchAndSort() {
                borderRadius: "20px",
                // alignItems: "center",
                // gap: 1,
-               mb: queryValue ? 2 : 4,
+               // mb: queryValue ? 2 : 4,
             }}
          >
             <button
@@ -157,15 +157,15 @@ export default function SearchAndSort() {
             </FormControl>
          </Box>
 
-         {queryValue && (
+         {/* {queryValue && (
             <Typography noWrap variant="h6" sx={{ mb: 4, textAlign: "center" }}>
                <IconButton size="small" onClick={() => router.replace("/inc-connect")} sx={{ mr: 0.8 }}>
                   <Close />
                </IconButton>
                {`Results for "${queryValue}"`}
             </Typography>
-         )}
-      </div>
+         )} */}
+      </Box>
    );
 }
 

@@ -33,7 +33,7 @@ export default function ValueProposition() {
                   <Box className="bg-[rgba(255,255,255,0.7)] border min-w-[15rem] rounded-lg shadow-md absolute bottom-[3rem] -right-1/2">
                      <div className="flex items-center gap-3 py-2 px-3">
                         <Image
-                           src={images.user3}
+                           src={images.person4m}
                            alt="user"
                            className="w-10 h-10 object-cover rounded-[100%] border-2 shadow-md"
                         />

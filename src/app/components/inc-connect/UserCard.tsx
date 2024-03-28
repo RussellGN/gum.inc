@@ -13,7 +13,7 @@ export default function UserCard({ user, simplifified }: { user: UserInterface; 
       <Box className="block border rounded-[15px] bg-white  ">
          <Box
             component={Link}
-            href={`/inc-connect/${user.slug}`}
+            href={`/inc-connect/user/${user.slug}`}
             className="block border pb-2 border-b-0 border-[transparent] rounded-tl-[15px] rounded-tr-[15px] cursor-pointer transition-all hover:border-slate-400 hover:bg-slate-50"
          >
             <Grid container gap={1} justifyContent="space-between" className="p-1.5 ">
@@ -21,7 +21,7 @@ export default function UserCard({ user, simplifified }: { user: UserInterface; 
                   <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
                      {user.name}
                   </Typography>
-                  <Typography variant="caption" component="div">
+                  <Typography variant="caption" noWrap component="p">
                      {user.jobTitle}
                   </Typography>
                </Grid>
@@ -50,39 +50,3 @@ export default function UserCard({ user, simplifified }: { user: UserInterface; 
       </Box>
    );
 }
-
-// export default function UserCard() {
-
-//    return (
-//       <div className="bg-[whitesmoke]  border rounded-md shadow-md ">
-//          <div className="p-1">
-//             <div className="flex gap-3 items-center px-2">
-//                <Image src={images.user1} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
-//                <div className="mr-auto ml-2">
-//                   <Typography variant="caption">Will Cosby</Typography>
-//                </div>
-//                <Verified fontSize="small" />
-//             </div>
-
-//             <div className="flex gap-3 flex-wrap pt-4 px-4">
-//                <Box sx={{ bgcolor: "divider", width: "10%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "40%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "60%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "30%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "80%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "10%", height: "0.4rem", m: 0.05 }}></Box>
-//                <Box sx={{ bgcolor: "divider", width: "50%", height: "0.4rem", m: 0.05 }}></Box>
-//             </div>
-
-//             <div className="flex gap-2 justify-around mt-4 px-2">
-//                <Typography variant="subtitle1" className=" flex items-center gap-2 p-1 justify-center text-center">
-//                   <LocationOn /> Ipswich
-//                </Typography>
-//                <IconButton color="secondary" size="small">
-//                   <Message />
-//                </IconButton>
-//             </div>
-//          </div>
-//       </div>
-//    );
-// }

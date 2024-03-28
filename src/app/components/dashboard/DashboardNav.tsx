@@ -16,7 +16,7 @@ export default function DashboardNav() {
    if (!user) throw new Error("User not found");
 
    return (
-      <Grid item xs={1}>
+      <Grid item xs>
          <Box className="min-h-[80vh] border  rounded-[20px] bg-white p-4 sticky top-[100px]">
             <AspectContainedNextImage
                src={user.displayPhoto}

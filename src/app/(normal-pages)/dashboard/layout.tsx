@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 
 export default function layout({ children }: PropsWithChildren) {
    return (
-      <Grid container gap={2}>
+      <Grid container gap={2} wrap="nowrap">
          <DashboardNav />
          <Grid item xs={11}>
             <div>{children}</div>

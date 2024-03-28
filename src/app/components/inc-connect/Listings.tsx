@@ -1,19 +1,38 @@
 "use client";
 
 import { Pagination, Typography } from "@mui/material";
-import React from "react";
-import UserCard from "./UserCard";
 import { useSearchParams } from "next/navigation";
 import JoinCard from "./JoinCard";
 import { directories } from "@/app/lib/constants";
-import { sampleUsers } from "@/app/lib/sampleData";
+import { sampleEstablishments, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
+import { EstablishmentInterface, EventInterface, UserInterface } from "@/app/interfaces";
+import Listing from "./Listing";
 
 export default function Listings() {
    const readOnlySearchParams = useSearchParams();
    const activeDir = readOnlySearchParams.get("dir") || directories[0].name;
 
-   // const listings = sampleUsers.sort(() => Math.random() - 0.5);
-   const listings = sampleUsers;
+   const activeDirFor = directories.find((dir) => dir.name === activeDir)?.for;
+   let listings: (EventInterface | UserInterface | EstablishmentInterface)[];
+
+   switch (activeDirFor) {
+      case "users":
+         listings = sampleUsers;
+         break;
+      case "events":
+         listings = sampleEvents;
+         break;
+      case "establishments":
+         listings = sampleEstablishments;
+         break;
+      case "users-establishments":
+         listings = [...sampleUsers, ...sampleEstablishments];
+         break;
+      default:
+         throw new Error("could not determine listings to display for dir: " + activeDir);
+   }
+
+   listings = listings.sort((listing1, listing2) => listing1.name.localeCompare(listing2.name));
 
    return (
       <>
@@ -22,8 +41,8 @@ export default function Listings() {
          </Typography>
          <div className="grid grid-cols-5 gap-2 ">
             <JoinCard directory={activeDir} />
-            {listings.map((user) => (
-               <UserCard key={user.slug} user={user} />
+            {listings.map((listing) => (
+               <Listing key={listing.slug} listing={listing} />
             ))}
          </div>
 

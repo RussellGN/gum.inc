@@ -12,6 +12,6 @@ export default function Listing({ listing }: { listing: UserInterface | EventInt
       case "establishment":
          return <EstablishmentCard establishment={listing as EstablishmentInterface} />;
       default:
-         throw new Error("Cannot find listing type: " + listing.type);
+         throw new Error("Cannot find listing type: " + String(listing.type));
    }
 }

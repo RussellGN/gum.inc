@@ -46,7 +46,7 @@ function HeroAnimationGrid() {
          <div className="bg-white col-span-3 row-span-2 flex items-center border rounded-md shadow-md ">
             <div>
                <div className="flex items-center px-2">
-                  <Image src={images.user1} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
+                  <Image src={images.userm} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
                   <div className="mr-auto ml-2">
                      <Typography variant="caption">Will Cosby</Typography>
                   </div>
@@ -76,7 +76,7 @@ function HeroAnimationGrid() {
          <div className="bg-white col-span-3 row-span-1 flex items-center border rounded-md shadow-md ">
             <div className="p-2 w-full flex justify-around gap-3">
                <div className="flex flex-col items-center justify-around">
-                  <Image src={images.user2} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
+                  <Image src={images.user5m} alt="user" className="w-9 h-9 object-cover rounded-[100%] border shadow-md" />
                   <Typography className="mb-0" variant="caption">
                      Raj Khamat
                   </Typography>
@@ -90,7 +90,7 @@ function HeroAnimationGrid() {
                </div>
 
                <div className="flex flex-col items-center justify-around">
-                  <Image src={images.user5} alt="user" className="w-9 h-9 object-cover rounded-full border shadow-md" />
+                  <Image src={images.person2m} alt="user" className="w-9 h-9 object-cover rounded-full border shadow-md" />
                   <Typography className="mb-0" variant="caption">
                      John Ruiberg
                   </Typography>

@@ -148,7 +148,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                            <LinkIcon fontSize="inherit" />
                         </Typography>
                         <ul className="list-none">
-                           {user.socialMedia.map((social) => (
+                           {user.socialMedia?.map((social) => (
                               <li key={social.platform} className="flex items-start gap-3 p-2">
                                  <SocialMediaIcon props={{ fontSize: "small" }} platform={social.platform} />
                                  <div>

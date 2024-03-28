@@ -8,6 +8,7 @@ export type directory = {
    shortDescription: string;
    about: string;
    icon: JSX.Element;
+   for: "events" | "users" | "establishments" | "users-establishments";
 };
 
 export type expandSize = "minimized" | "normal" | "expanded";
@@ -39,5 +40,3 @@ export type stat = {
    value: string | number;
    icon: JSX.Element;
 };
-
-// export type SVGImage =

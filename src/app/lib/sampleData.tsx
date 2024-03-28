@@ -1,746 +1,999 @@
 import { EmailOutlined } from "@mui/icons-material";
 import images from "../assets";
-import { NotificationInterface, SubscriptionInterface, UserInterface } from "../interfaces";
+import {
+   EstablishmentInterface,
+   EventInterface,
+   NotificationInterface,
+   SubscriptionInterface,
+   UserInterface,
+} from "../interfaces";
 import { generateAvatarLetters } from "./utils";
 
 export const sampleUsers: UserInterface[] = [
    {
+      type: "user",
       id: 1,
       slug: "esther-rios-1",
       name: "Esther Rios",
-      email: "got@pupujwa.ht",
-      jobTitle: "Accountant",
-      industry: "Finance",
+      email: "erios@gmail.com",
+      jobTitle: "Visa Consultant",
+      industry: "Travel & Finance",
       location: "Ipswich",
       verified: true,
-      bio: "opposite look collect dirt instance between slipped frog happy needed telephone lay stretch beside finally ruler slip scale by pocket forgotten paragraph image kill",
-      displayPhoto: images.user5,
+      bio: "Experienced visa consultant adept at navigating complex immigration processes. Specializing in providing tailored solutions for individuals and businesses seeking to obtain visas for travel, work, or study purposes. Skilled in analyzing visa requirements, preparing documentation, and guiding clients through the application process efficiently. Committed to delivering exceptional service and ensuring client satisfaction. Proficient in addressing diverse visa-related inquiries and resolving issues promptly. Dedicated to staying updated on immigration laws and regulations to offer the most accurate advice and assistance.",
+      displayPhoto: images.user4f,
+      images: [images.visa_consultancy, images.firm2],
       serviceOfferings: [
          {
-            service: "fully",
+            service: "Visa Assessment",
             description:
-               "joined screen floating active zero electric cast rose speech has fellow fly pull voice slightly selection because he rhyme coffee production believed stream sold",
+               "Comprehensive evaluation of client eligibility and requirements for various types of visas, ensuring accurate guidance.",
          },
          {
-            service: "everyone",
+            service: "Application Assistance",
             description:
-               "slight create atomic hundred surprise program crew shinning only tropical occasionally anyway average life tea uncle shore there wheat car whose pleasant age greatly",
+               "Expert support in completing and submitting visa applications, minimizing errors and optimizing chances of approval.",
          },
          {
-            service: "certainly",
+            service: "Document Preparation",
             description:
-               "spider share frame exciting tribe expect country pattern serve doll up customs fight crop enjoy save radio vast establish present rocky learn political letter",
+               "Thorough assistance in gathering and organizing required documents, streamlining the application process for clients.",
          },
          {
-            service: "half",
+            service: "Consultation Sessions",
             description:
-               "land shine sink special fifty parts tax choose lucky grow eager bright see bat hundred greatly notice excited perhaps unless as teach exactly century",
+               "Personalized consultations to address specific visa-related queries, providing clarity and guidance tailored to individual circumstances.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "Nichoeynolds",
+            username: "RiosConsultant",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "NicholasReynolds",
+            username: "RiosConsultant",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "NReynolds",
+            username: "RiosConsultant",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "NRnolds",
+            username: "RiosConsultant",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 2,
-      slug: "carrie-klein-2",
-      name: "Carrie Klein",
-      email: "tinsi@cirujek.cv",
+      slug: "Josef-klein-2",
+      name: "Josef Klein",
+      email: "carriek@yahoo.co.uk",
       jobTitle: "Web Developer",
       industry: "IT & Software",
       location: "Birmingham",
       verified: true,
-      bio: "board past bicycle driver them practical easy coffee may party tool coach game aloud cap room progress moving zoo they group meal slight soldier",
-      displayPhoto: images.user4,
+      bio: "Experienced web developer proficient in React.js, Next.js, JavaScript, and Python. Specializes in crafting bespoke websites with a focus on functionality, aesthetics, and user experience. Known for delivering high-quality code and designs tailored to client needs. Detail-oriented and dedicated to staying updated on the latest web development technologies and best practices. Passionate about creating visually appealing and responsive interfaces while ensuring optimal performance and user satisfaction.",
+      displayPhoto: images.person8m,
+      images: [images.event5],
       serviceOfferings: [
          {
-            service: "coal",
+            service: "Website Development",
             description:
-               "needed share have railroad steel sister bone paid needs hearing stuck magnet spirit dirt listen though gasoline lose birthday boy sing larger eye stream",
+               "Crafting bespoke websites tailored to client needs, focusing on functionality, aesthetics, and user experience.",
          },
          {
-            service: "straw",
+            service: "Frontend Design",
             description:
-               "behind lift represent surprise thumb he certainly whatever already fighting slept listen weather sum fly rule different instead silent who pull something lead seems",
+               "Creating visually appealing and responsive frontend interfaces using modern web development technologies and best practices.",
          },
          {
-            service: "like",
+            service: "Backend Development",
             description:
-               "nice who judge city believed scared copper dear swimming foreign his plates unusual softly powerful certainly action blood push bicycle equally broken dot eleven",
+               "Building robust server-side applications and APIs to power dynamic website functionalities and data management.",
          },
          {
-            service: "correct",
+            service: "Maintenance & Support",
             description:
-               "mood became pine older solve gun empty familiar make art traffic refused voyage strike everywhere plus shall ride receive party term cost train tax",
+               "Providing ongoing maintenance services, troubleshooting, and technical support to ensure smooth operation and optimal performance of websites.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "IdaMcie",
+            username: "KleinJ",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "IdaMcKenzie",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Izie",
+            username: "KleinJ",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "ChristineRoberson",
+            username: "KleinJ",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 3,
       slug: "nell-lane-3",
       name: "Nell Lane",
-      email: "vu@cezewam.pw",
+      email: "nelllane@lane.com",
       jobTitle: "Quantity Surveyor",
       industry: "Construction",
       location: "London",
       verified: true,
-      bio: "student two refer circus happily saddle harbor outline finish human flag learn vapor pride man teeth any elephant lion location people column stick caught",
-      displayPhoto: images.user1,
+      bio: "Detail-oriented quantity surveyor with expertise in cost estimation, procurement, and project management. Specializes in optimizing project budgets and ensuring cost efficiency. Experienced in conducting thorough cost analysis and providing accurate quantity take-offs. Skilled in contract negotiation and compliance, with a focus on delivering projects on time and within budget constraints. Committed to continuous professional development and staying abreast of industry standards and regulations.",
+      displayPhoto: images.person4m,
+      images: [images.office, images.auto_shop_2],
       serviceOfferings: [
          {
-            service: "able",
+            service: "Cost Estimation",
             description:
-               "lift hit pilot living growth sent metal dropped useful look why activity official parallel natural question birthday blue bark nobody strength dollar during weight",
+               "Accurate assessment of project costs through meticulous analysis of materials, labor, and overhead expenses, ensuring budget clarity.",
          },
          {
-            service: "truck",
+            service: "Quantity Take-Offs",
             description:
-               "exist stronger soft attempt our best needed captured zero cage managed smooth once body positive ask made size additional gone necessary swept recognize individual",
+               "Precise quantification of materials and resources required for construction projects, facilitating efficient procurement and cost management.",
          },
          {
-            service: "then",
+            service: "Procurement Management",
             description:
-               "satisfied goose his properly fort skin history shut length bowl forget possible upward mouse anybody perfectly blew world mental pencil tie frequently surrounded short",
+               "Strategic sourcing of materials and services at competitive prices while maintaining quality standards and project timelines.",
          },
          {
-            service: "nearly",
+            service: "Project Cost Control",
             description:
-               "progress as chamber grabbed age can allow least property special additional on minerals off parallel again couple impossible yard guess notice union character treated",
+               "Implementation of cost control measures and monitoring systems to track project expenditures and mitigate budget overruns, ensuring financial efficiency.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "Evelyley",
+            username: "Nell_lane",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "EvelynBailey",
+            username: "Nell_lane",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "Eiley",
+            username: "Nell_lane",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "ley",
+            username: "Nell_lane",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 4,
       slug: "lela-cook-4",
       name: "Lela Cook",
-      email: "tuf@dothuvec.tr",
+      email: "lela@gmail.com",
       jobTitle: "Script Writer",
       industry: "Film & Entertainment",
       location: "Leicester",
       verified: true,
-      bio: "direct mind information trail beyond plate transportation another spin broad like lesson heard industry throat run few scene arrange replied off divide learn sent",
-      displayPhoto: images.user4,
+      bio: "Dynamic script writer skilled in crafting compelling narratives for film, television, and other media platforms. Excels in developing engaging characters, captivating dialogue, and immersive storylines that resonate with audiences. Experienced in collaborating with directors, producers, and other creative professionals to bring scripts to life. Passionate about storytelling and dedicated to delivering scripts that entertain, inspire, and provoke thought.",
+      displayPhoto: images.person5f,
+      images: [images.event, images.user4f],
       serviceOfferings: [
          {
-            service: "lift",
+            service: "Script Development",
             description:
-               "row depend continued series warm dance red information coat ring visit establish problem population transportation said form ordinary reach written oldest star gate prepare",
+               "Creating original scripts from concept to final draft, tailored to client preferences and project requirements.",
          },
          {
-            service: "writing",
+            service: "Script Editing",
             description:
-               "horse dish attention look easier sentence unless nearby provide excitement police broad food rear face after sun use stepped parent had whatever crowd written",
+               "Polishing existing scripts by refining dialogue, enhancing plot structure, and ensuring coherence and consistency.",
          },
          {
-            service: "command",
+            service: "Adaptation Services",
             description:
-               "suddenly determine mean creature name tropical per yourself fifteen attempt coming round lonely fence opinion factory brief pupil treated got offer muscle except bottle",
+               "Adapting existing material such as books, articles, or real-life events into screenplay format, preserving the essence of the original work.",
          },
          {
-            service: "beat",
+            service: "Consultation & Feedback",
             description:
-               "neighborhood service truth necessary show figure swung walk scene built appropriate forward fought among worth worried throw grabbed little try birds rocket shoulder crack",
+               "Providing insightful feedback and guidance on script ideas, plot development, and character arcs to enhance storytelling effectiveness.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "Blakeen",
+            username: "lelaCook",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "BlakeJensen",
+            username: "lelaCook",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "Bsen",
+            username: "lelaCook",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "StellaTerry",
+            username: "lelaCook",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 5,
       slug: "aron-rhodes-5",
       name: "Aaron Rhodes",
-      email: "mickaki@bepnujok.li",
+      email: "arhodes@rhodesconsultancy.com",
       jobTitle: "Tax Lawyer",
-      industry: "Finance",
+      industry: "Finance & Law",
       location: "London",
       verified: true,
-      bio: "everything thread triangle comfortable hundred pleasure anybody nation dirt frighten went somewhere wind thus jungle told thy government present molecular prepare my nose throughout",
-      displayPhoto: images.user2,
+      bio: "Seasoned tax lawyer specializing in providing comprehensive legal counsel and representation in matters of taxation and finance. Proficient in navigating complex tax laws and regulations to help clients optimize their financial strategies and minimize tax liabilities. Skilled in tax planning, compliance, and dispute resolution, with a track record of achieving favorable outcomes for individuals and businesses. Committed to delivering personalized solutions and proactive advice to address clients' tax-related needs effectively.",
+      displayPhoto: images.person2m,
+      images: [images.logo3, images.office1, images.firm],
       serviceOfferings: [
          {
-            service: "hardly",
+            service: "Tax Planning",
             description:
-               "year greater nose stop supper against contrast cast him structure right white least mistake beat coffee account boy swung proper thick exist pet broken",
+               "Developing tailored tax strategies to maximize deductions, credits, and exemptions while ensuring compliance with tax laws.",
          },
          {
-            service: "stay",
+            service: "Tax Compliance",
             description:
-               "future quickly electric better glad cover he smallest me partly engineer lying report shore yellow piano thou stop leg impossible reader wrote empty part",
+               "Assisting clients in fulfilling their tax obligations, including filing tax returns, preparing financial statements, and responding to tax audits.",
          },
          {
-            service: "accurate",
+            service: "Tax Dispute Resolution",
             description:
-               "fill jar root within ancient put breakfast broad improve knife come barn condition enjoy money mix collect more gold grade knew cup space due",
+               "Representing clients in tax disputes with tax authorities or other parties, negotiating settlements, and litigating cases when necessary.",
          },
          {
-            service: "dried",
+            service: "Legal Advice & Counsel",
             description:
-               "system harbor gather its front underline through shop diagram spell floating broad wild harder term practice trap tears none depend position flat beyond themselves",
+               "Providing expert legal advice on various tax matters, including estate planning, corporate taxation, international taxation, and tax implications of business transactions.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "Olivitman",
+            username: "rhodesLaw",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "OliviaPittman",
+            username: "rhodesLaw",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "Ottman",
+            username: "rhodesLaw",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "Otman",
+            username: "rhodesLaw",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 6,
       slug: "tom-lloyd-6",
       name: "Tom Lloyd",
-      email: "fumi@wo.acht",
-      jobTitle: "Bass Guitarist",
-      industry: "Music",
+      email: "lloydtm@gmail.com",
+      jobTitle: "Organic farm specialist",
+      industry: "Farming",
       location: "Manchester",
       verified: true,
-      bio: "strike health remember left seldom cloth gain barn factory among hurt against trail evidence apple foot driving plant shown would cut busy conversation up",
-      displayPhoto: images.user1,
+      bio: "Dedicated farmer with a passion for sustainable agriculture and land stewardship. Specializes in cultivating organic crops and raising livestock using environmentally friendly practices. Experienced in crop rotation, soil health management, and integrated pest management to ensure high yields and quality produce. Committed to promoting local food systems and community engagement in agriculture.",
+      displayPhoto: images.user2m,
+      images: [images.farm_logo, images.farm, images.farm1, images.garden],
       serviceOfferings: [
          {
-            service: "mainly",
+            service: "Organic Farming",
             description:
-               "hole peace straw ground compare go factory characteristic breathing damage whispered tears have direction giant when sets football fort modern bicycle hunt steam concerned",
+               "Cultivating a variety of organic crops using methods that prioritize soil health, biodiversity, and environmental sustainability.",
          },
          {
-            service: "asleep",
+            service: "Livestock Management",
             description:
-               "stepped hurry attached smallest beauty recent rush rear particles flat football clothes five afternoon indicate victory electric for down part triangle grandmother sick somehow",
+               "Raising healthy and happy animals through ethical and humane practices, focusing on animal welfare and quality of products.",
          },
          {
-            service: "ourselves",
+            service: "Farm-to-Table Sales",
             description:
-               "putting engineer faster point riding deer break how experience effect ride goes comfortable slide consonant appropriate dangerous arm energy safety hat keep might machine",
+               "Selling fresh produce and farm products directly to consumers through farmer's markets, community-supported agriculture (CSA), and online platforms.",
          },
          {
-            service: "seven",
+            service: "Agricultural Consulting",
             description:
-               "greatly round affect pet naturally cow exactly dark frog opinion drew minute feed thank touch under flight theory for continued kitchen consider collect rain",
+               " Providing expert advice and guidance on sustainable farming practices, crop selection, and farm management techniques to aspiring farmers and agricultural businesses.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "NinaB",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "NinaBoyd",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "N",
+            username: "farmerLloyd",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "MelvinCarpenter",
+            username: "farmerLloyd",
             url: "#",
          },
       ],
    },
    {
+      type: "user",
       id: 7,
       slug: "steven-tyler-7",
       name: "Steven Tyler",
-      email: "go@mone.gr",
-      jobTitle: "Art Dealer",
-      industry: "Arts & Crafts",
-      location: "London",
-      verified: true,
-      bio: "opposite look collect dirt instance between slipped frog happy needed telephone lay stretch beside finally ruler slip scale by pocket forgotten paragraph image kill",
-      displayPhoto: images.user1,
-      serviceOfferings: [
-         {
-            service: "information",
-            description:
-               "young show known nails done room although nearest passage strange gate changing studying swimming my twelve written what correctly built sweet tribe die pleasure",
-         },
-         {
-            service: "town",
-            description:
-               "pig nodded pilot paragraph lonely flame maybe acres gently hole ate country plus peace anywhere verb mysterious concerned particular increase conversation near opposite branch",
-         },
-         {
-            service: "orbit",
-            description:
-               "expression man laid clear wrong bite prove torn studied replied breath shinning oxygen him grandmother crop tiny pine entire evidence put ground brass pet",
-         },
-         {
-            service: "report",
-            description:
-               "thou unhappy pocket alone ill share truth had another social horn where give call member visitor community brick each zero save enemy locate morning",
-         },
-      ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
-      socialMedia: [
-         {
-            platform: "LinkedIn",
-            username: "Lucilters",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "LucilleWaters",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Laters",
-            url: "#",
-         },
-         {
-            platform: "Twitter",
-            username: "Lters",
-            url: "#",
-         },
-      ],
-   },
-   {
-      id: 8,
-      slug: "isabelle-hanson-8",
-      name: "Isabelle Hanson",
-      email: "muiw@pe.as",
-      jobTitle: "Lawyer",
-      industry: "law",
-      location: "Ipswich",
-      verified: true,
-      bio: "opposite look collect dirt instance between slipped frog happy needed telephone lay stretch beside finally ruler slip scale by pocket forgotten paragraph image kill",
-      displayPhoto: images.user5,
-      serviceOfferings: [
-         {
-            service: "forgot",
-            description:
-               "final happen sum wet pack matter though we pond party frozen connected condition remove classroom tool sang studying private essential porch expect offer hurried",
-         },
-         {
-            service: "replied",
-            description:
-               "require seed his tax walk bark foreign contain terrible stand tell third wild treated sweet onto victory introduced lift tent strike outside underline physical",
-         },
-         {
-            service: "blanket",
-            description:
-               "blood add strip faster skin event empty vegetable exchange stove question support upon location entirely form joy statement while flow additional tail powder believed",
-         },
-         {
-            service: "middle",
-            description:
-               "ring carefully warm then strength time tent shake complex pressure note radio double distant goose crew sure depend similar dull fur ought addition drink",
-         },
-      ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
-      socialMedia: [
-         {
-            platform: "LinkedIn",
-            username: "TroyCz",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "TroyChavez",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Tez",
-            url: "#",
-         },
-         {
-            platform: "Twitter",
-            username: "AmeliaRhodes",
-            url: "#",
-         },
-      ],
-   },
-   {
-      id: 9,
-      slug: "eula-cummings-9",
-      name: "Eula Cummings",
-      email: "lakluena@zeh.ir",
-      jobTitle: "Carpenterr",
-      industry: "Utility",
-      location: "Leicester",
-      verified: true,
-      bio: "direct mind information trail beyond plate transportation another spin broad like lesson heard industry throat run few scene arrange replied off divide learn sent",
-      displayPhoto: images.user3,
-      serviceOfferings: [
-         {
-            service: "trap",
-            description:
-               "sport research worried library breakfast final shoulder by sing wore kids town strong oldest went toy once father grain fast exciting building same block",
-         },
-         {
-            service: "beneath",
-            description:
-               "cabin hair turn typical forest ring won diagram tropical write poor farm instrument importance slight edge charge does early individual rice function unit nuts",
-         },
-         {
-            service: "principle",
-            description:
-               "east jungle future directly lake crop lion original battle gate nails mirror cast example globe bow you plates goes here similar clothes about zoo",
-         },
-         {
-            service: "then",
-            description:
-               "get equipment equally with earn bridge plane teeth yesterday happen those vertical extra surface jump fun aware throughout began slipped high original missing replied",
-         },
-      ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
-      socialMedia: [
-         {
-            platform: "LinkedIn",
-            username: "Bessinard",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "BessieLeonard",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Bonard",
-            url: "#",
-         },
-         {
-            platform: "Twitter",
-            username: "Bnard",
-            url: "#",
-         },
-      ],
-   },
-   {
-      id: 10,
-      slug: "annie-hoffman-10",
-      name: "Annie Hoffman",
-      email: "putut@gel.tf",
-      jobTitle: "Tax Lawyer",
-      industry: "Finance",
-      location: "Newcastle",
-      verified: true,
-      bio: "everything thread triangle comfortable hundred pleasure anybody nation dirt frighten went somewhere wind thus jungle told thy government present molecular prepare my nose throughout",
-      displayPhoto: images.user3,
-      serviceOfferings: [
-         {
-            service: "boy",
-            description:
-               "oldest colony rose ask character public life race sun twice thirty chance some exactly whispered wrote sign tobacco club real have danger buried careful",
-         },
-         {
-            service: "combine",
-            description:
-               "chance mysterious smallest diagram contain till grass iron nervous plate forward kitchen eleven tightly kill carbon particles fallen basic suddenly package silly unknown today",
-         },
-         {
-            service: "melted",
-            description:
-               "weigh famous dinner across send season temperature dark dance cat joined grow slow little valley larger numeral hello seed printed jungle visit rate receive",
-         },
-         {
-            service: "nice",
-            description:
-               "trunk respect fill throughout higher send did of is against him cattle soap essential probably if orbit act thing pleasure compare substance deep die",
-         },
-      ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
-      socialMedia: [
-         {
-            platform: "LinkedIn",
-            username: "CodySrs",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "CodySummers",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Cers",
-            url: "#",
-         },
-         {
-            platform: "Twitter",
-            username: "ElsieRivera",
-            url: "#",
-         },
-      ],
-   },
-   {
-      id: 11,
-      slug: "francisco-white-11",
-      name: "Francisco White",
-      email: "lukuif@tafzoli.mg",
-      jobTitle: "Lead Guitarist",
+      email: "tyler@yahoo.co.uk",
+      jobTitle: "Dj",
       industry: "Music",
-      location: "Manchester",
-      verified: true,
-      bio: "strike health remember left seldom cloth gain barn factory among hurt against trail evidence apple foot driving plant shown would cut busy conversation up",
-      displayPhoto: images.user2,
-      serviceOfferings: [
-         {
-            service: "itself",
-            description:
-               "mud mental bridge stiff sea block curious rush sleep horn with asleep bare arrange mark everywhere ought thrown addition anyone throat cause arrangement alike",
-         },
-         {
-            service: "immediately",
-            description:
-               "fourth enough mouse plenty sat adult only factory nothing therefore seed aboard tool frozen opportunity should surrounded bean both sick best seldom elephant soil",
-         },
-         {
-            service: "bar",
-            description:
-               "war physical parts pie divide arrangement whenever pond observe college discussion shaking women announced satellites system weather pack flag came teach month pair student",
-         },
-         {
-            service: "central",
-            description:
-               "while blue research spider middle certain burst model living stared appropriate clean danger until act operation orbit announced respect selection begun repeat sudden sister",
-         },
-      ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
-      socialMedia: [
-         {
-            platform: "LinkedIn",
-            username: "GeneWs",
-            url: "#",
-         },
-         {
-            platform: "Facebook",
-            username: "GeneWillis",
-            url: "#",
-         },
-         {
-            platform: "Instagram",
-            username: "Gis",
-            url: "#",
-         },
-         {
-            platform: "Twitter",
-            username: "WinifredArnold",
-            url: "#",
-         },
-      ],
-   },
-   {
-      id: 12,
-      slug: "max-stanley-12",
-      name: "Max Stanley",
-      email: "so@mu.ca",
-      jobTitle: "Plumber",
-      industry: "Utility",
       location: "London",
       verified: true,
-      bio: "opposite look collect dirt instance between slipped frog happy needed telephone lay stretch beside finally ruler slip scale by pocket forgotten paragraph image kill",
-      displayPhoto: images.user1,
+      bio: "Dynamic bass DJ renowned for electrifying performances and infectious beats that keep crowds dancing all night. Specializes in mixing and blending bass-heavy tracks across various genres, from dubstep to trap to drum and bass. Known for creating immersive sonic experiences and fostering a vibrant atmosphere at clubs, festivals, and events worldwide.",
+      displayPhoto: images.person9m,
+      images: [images.event2, images.event3, images.event7],
       serviceOfferings: [
          {
-            service: "solar",
+            service: "Live Performances",
             description:
-               "tight writing table during youth trade atmosphere too might stove effort equal chamber wet ate directly seems connected language street season late social lady",
+               "Delivering high-energy DJ sets featuring bass-heavy music, customized to suit the vibe and audience preferences of each event.",
          },
          {
-            service: "seldom",
+            service: "Event Booking",
             description:
-               "shadow upper according party slightly opportunity exact science wheat movement hold become attention general known today important citizen image square sum health leather cat",
+               "Available for bookings at clubs, festivals, concerts, private parties, and corporate events, bringing unparalleled energy and excitement to any occasion.",
          },
          {
-            service: "dust",
+            service: "Music Production",
             description:
-               "instead active human paint family interior without dozen troops further too sent present company grabbed satellites silly percent news chief shop such tax queen",
+               "Producing original bass music tracks and remixes for release on digital platforms, showcasing unique soundscapes and innovative production techniques.",
          },
          {
-            service: "grew",
+            service: "DJ Workshops",
             description:
-               "tall neighborhood guess have appearance growth experience rice east belt lungs warn wet bank continued on author speech gate burn union ocean shirt empty",
+               "Offering workshops and tutorials on bass DJing techniques, mixing fundamentals, and music production tips to aspiring DJs and electronic music enthusiasts.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
             platform: "LinkedIn",
-            username: "Jeromtinez",
+            username: "djTyler",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "JeromeMartinez",
+            username: "djTyler",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "Jrtinez",
+            username: "djTyler",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "Jtinez",
+            username: "djTyler",
+            url: "#",
+         },
+      ],
+   },
+
+   {
+      type: "user",
+      id: 63,
+      slug: "jessica-smith-63",
+      name: "Jessica Smith",
+      email: "jessicasmith@gmail.com",
+      jobTitle: "Venture Capitalist",
+      industry: "Finance",
+      location: "London",
+      verified: true,
+      bio: "Experienced investor supporting early-stage startups in securing funding.",
+      displayPhoto: images.user3f,
+      images: [images.office1, images.furniture, images.vinatge_cars],
+      serviceOfferings: [
+         {
+            service: "Startup Funding",
+            description: "Investing in promising early-stage companies.",
+         },
+         {
+            service: "Business Advisory",
+            description: "Providing strategic guidance to portfolio companies.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "Twitter",
+            username: "jessicasmith",
+            url: "#",
+         },
+         {
+            platform: "LinkedIn",
+            username: "jessicasmith",
             url: "#",
          },
       ],
    },
    {
-      id: 13,
-      slug: "edward-moss-13",
-      name: "Edward Moss",
-      email: "oru@pamfu.gl",
-      jobTitle: "Maths Tutor",
-      industry: "Education",
+      type: "user",
+      id: 22,
+      slug: "jane-smith-22",
+      name: "Jane Smith",
+      email: "jane.smith@yahoo.co.uk",
+      jobTitle: "Product Manager",
+      industry: "Technology",
       location: "Liverpool",
       verified: true,
-      bio: "opposite look collect dirt instance between slipped frog happy needed telephone lay stretch beside finally ruler slip scale by pocket forgotten paragraph image kill",
-      displayPhoto: images.user2,
+      bio: "Experienced product manager with a focus on user-centered design.",
+      displayPhoto: images.person6f,
+      images: [images.office2],
       serviceOfferings: [
          {
-            service: "rise",
-            description:
-               "planned breeze brought area too future suddenly else plane fast dry damage stick dull idea news from becoming attached subject strength choose knowledge reach",
+            service: "Product Management",
+            description: "Driving product strategy and execution.",
          },
          {
-            service: "easier",
-            description:
-               "explanation anyone touch sky increase lips busy metal folks should my plus darkness spell nearby movie under struck becoming nature simple steam brought morning",
-         },
-         {
-            service: "own",
-            description:
-               "combination progress equator swung stopped smile keep law go rope into fighting mental stairs smooth greater merely this flat tell tank opinion wire broke",
-         },
-         {
-            service: "told",
-            description:
-               "seen truth enter valuable place special folks which allow rule captain yesterday below improve softly log young be they somehow fuel pie belt something",
+            service: "User Research",
+            description: "Gathering insights to inform product decisions.",
          },
       ],
-      images: [images.firm, images.artShop2, images.firm2, images.artShop],
       socialMedia: [
          {
+            platform: "Twitter",
+            username: "janesmith",
+            url: "#",
+         },
+         {
             platform: "LinkedIn",
-            username: "Ronalnston",
+            username: "janesmith",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "user",
+      id: 32,
+      slug: "emily-johnson-32",
+      name: "Emily Johnson",
+      email: "emily.johnson@gmail.com",
+      jobTitle: "Artist",
+      industry: "Arts",
+      location: "Essex",
+      verified: true,
+      bio: "Contemporary artist exploring themes of identity and culture.",
+      displayPhoto: images.person3f,
+      images: [images.artShop, images.artShop2],
+      serviceOfferings: [
+         {
+            service: "Painting",
+            description: "Creating vibrant and thought-provoking artworks.",
+         },
+         {
+            service: "Art Commission",
+            description: "Accepting commissions for customized artworks.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "Instagram",
+            username: "emilyjohnson",
             url: "#",
          },
          {
             platform: "Facebook",
-            username: "RonaldJohnston",
+            username: "emilyjohnsonart",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "user",
+      id: 24,
+      slug: "sarah-davis-24",
+      name: "Sarah Davis",
+      email: "sarahdavis@gmail.com",
+      jobTitle: "Fitness Instructor",
+      industry: "Fitness",
+      location: "Newcastle",
+      verified: true,
+      bio: "Certified fitness instructor passionate about helping others achieve their health and wellness goals.",
+      displayPhoto: images.user3f,
+      images: [images.restaurant2],
+      serviceOfferings: [
+         {
+            service: "Personal Training",
+            description: "One-on-one fitness sessions tailored to individual needs.",
+         },
+         {
+            service: "Group Classes",
+            description: "Fun and energizing fitness classes for all fitness levels.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "Instagram",
+            username: "sarahfitness",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "sarahfitness",
+            url: "#",
+         },
+      ],
+   },
+];
+
+export const sampleEvents: EventInterface[] = [
+   {
+      type: "event",
+      id: 1,
+      slug: "tech-conference-1",
+      name: "Tech Conference",
+      creator: sampleUsers[0],
+      hosts: [sampleUsers[1], sampleUsers[2], sampleUsers[3]],
+      contactDetails: "Call +101 775668421",
+      eventType: "Conference",
+      location: "Liverpool",
+      about: "A conference for technology enthusiasts and professionals to network and learn about the latest trends and developments in the industry.",
+      startDate: "2024-05-01",
+      endDate: "2024-05-03",
+      displayPhoto: images.event5,
+      images: [images.event, images.event5, images.office2],
+      socialMedia: [
+         {
+            platform: "Twitter",
+            username: "techconf",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "event",
+      id: 2,
+      slug: "art-exhibition-2",
+      name: "Art Exhibition",
+      creator: sampleUsers[5],
+      contactDetails: "Text or call +101 32433494",
+      eventType: "Exhibition",
+      location: "London",
+      about: "An exhibition showcasing the works of local artists exploring different mediums and styles.",
+      startDate: "2024-07-15",
+      endDate: "2024-07-20",
+      displayPhoto: images.artShop2,
+      images: [images.artShop2, images.artShop, images.person4m],
+   },
+   {
+      type: "event",
+      id: 3,
+      slug: "fitness-workshop-3",
+      name: "Fitness Workshop",
+      creator: sampleUsers[2],
+      contactDetails: "Call +12 32121 323",
+      eventType: "Workshop",
+      location: "Ipswich",
+      about: "A hands-on workshop where participants will learn effective workout techniques and receive guidance on creating a personalized fitness plan.",
+      startDate: "2024-09-10",
+      endDate: "2024-09-11",
+      displayPhoto: images.event6,
+      images: [images.garden, images.restaurant2],
+   },
+   {
+      type: "event",
+      id: 4,
+      slug: "startup-pitch-competition-4",
+      name: "Startup Pitch Competition",
+      creator: sampleUsers[6],
+      hosts: [sampleUsers[0], sampleUsers[4]],
+      contactDetails: "info@startups.org",
+      eventType: "Competition",
+      location: "San Francisco",
+      about: "A pitch competition where early-stage startups will showcase their innovative ideas to a panel of judges and investors.",
+      startDate: "2024-10-05",
+      endDate: "2024-10-06",
+      displayPhoto: images.event7,
+      images: [images.event, images.event3],
+      socialMedia: [
+         {
+            platform: "Twitter",
+            username: "startuppitch",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "event",
+      id: 5,
+      slug: "charity-cala-5",
+      name: "Charity Gala",
+      creator: sampleUsers[7],
+      contactDetails: "info@example.com",
+      eventType: "Gala",
+      location: "London",
+      about: "A fundraising gala to support various charitable initiatives and make a positive impact in the community.",
+      startDate: "2024-11-15",
+      endDate: "2024-11-15",
+      displayPhoto: images.logo,
+      images: [images.restaurant, images.event, images.person4m],
+   },
+   {
+      type: "event",
+      id: 6,
+      slug: "music-festival-6",
+      name: "Music Festival",
+      creator: sampleUsers[8],
+      contactDetails: "Contact us on +232 24334 2323",
+      eventType: "Music Festival",
+      location: "Nottingham",
+      about: "A multi-day music festival featuring a diverse lineup of artists across different genres.",
+      startDate: "2024-12-01",
+      endDate: "2024-12-03",
+      displayPhoto: images.event2,
+      images: [images.event2, images.event3, images.user4f, images.restaurant2],
+      socialMedia: [
+         {
+            platform: "Instagram",
+            username: "musicfest",
+            url: "#",
+         },
+      ],
+   },
+];
+
+export const sampleEstablishments: EstablishmentInterface[] = [
+   {
+      type: "establishment",
+      id: 901,
+      slug: "danny's-veggies-901",
+      name: "Danny's Veggies",
+      admin: sampleUsers[4],
+      team: [sampleUsers[3], sampleUsers[1]],
+      industry: "Food",
+      location: "Ipswich",
+      verified: true,
+      email: "dansvegs@dannysveg.co.uk",
+      contactDetails: "call us on +121 43435 656",
+      about: "Passionate vegetable selling business committed to providing fresh, locally sourced produce to the community. Specializes in offering a wide variety of seasonal vegetables, fruits, and herbs, all grown with care and sustainability in mind. Dedicated to promoting healthy eating and supporting local farmers. Known for excellent customer service and a vibrant, welcoming atmosphere at the market or store.",
+      displayPhoto: images.farm_logo,
+      images: [images.user2m, images.farm1, images.garden],
+      serviceOfferings: [
+         {
+            service: "Fresh Produce Selection",
+            description:
+               "Offering a diverse range of fresh vegetables, fruits, and herbs, carefully selected and sourced from local farmers and suppliers.",
+         },
+         {
+            service: "Seasonal Specials",
+            description:
+               "Providing seasonal specials and promotions to highlight the best of each season's harvest, ensuring customers have access to the freshest produce.",
+         },
+         {
+            service: "Community Engagement",
+            description:
+               "Engaging with the local community through educational events, cooking demonstrations, and partnerships with schools and organizations to promote healthy eating habits.",
+         },
+         {
+            service: "Custom Orders",
+            description:
+               "Accommodating custom orders and requests from customers, including bulk purchases for events, special occasions, or specific dietary needs.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "dannysveg",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "dannysveg",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "establishment",
+      id: 90,
+      slug: "auto-works-90",
+      name: "Borcelle Auto Works",
+      admin: sampleUsers[1],
+      team: [sampleUsers[2], sampleUsers[0]],
+      industry: "Automotive repairs",
+      location: "Glasgow",
+      verified: true,
+      email: "info@autoglasgow.com",
+      contactDetails: "call us on +121 43435 656",
+      about: "Trusted auto repair shop specializing in comprehensive vehicle maintenance and repair services. With years of experience, our team of skilled technicians is dedicated to providing top-notch automotive solutions. From routine maintenance tasks to complex engine repairs, we're committed to keeping vehicles running smoothly and safely on the road.",
+      displayPhoto: images.auto_shop_2,
+      images: [images.auto_shop_2, images.auto_shop_3, images.auto_shop_2, images.vinatge_cars, images.auto_shop_5],
+      serviceOfferings: [
+         {
+            service: "Diagnostic Services",
+            description:
+               "Utilizing state-of-the-art diagnostic equipment to identify and troubleshoot vehicle issues accurately and efficiently.",
+         },
+         {
+            service: "Routine Maintenance",
+            description:
+               "Performing essential maintenance tasks such as oil changes, tire rotations, and brake inspections to ensure optimal vehicle performance and longevity.",
+         },
+         {
+            service: "Repair Services",
+            description:
+               "Offering a full range of repair services, including engine repairs, transmission repairs, brake repairs, and electrical system diagnostics and repairs.",
+         },
+         {
+            service: "Quality Parts",
+            description:
+               "Using high-quality OEM or aftermarket parts for repairs and replacements, backed by warranty options for added peace of mind.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "BorcelleAuto",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "BorcelleAuto",
             url: "#",
          },
          {
             platform: "Instagram",
-            username: "Rhnston",
+            username: "BorcelleAuto",
             url: "#",
          },
          {
             platform: "Twitter",
-            username: "Rnston",
+            username: "BorcelleAuto",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "establishment",
+      id: 111,
+      slug: "reap-farm-111",
+      name: "Reap farm",
+      admin: sampleUsers[3],
+      industry: "farming",
+      location: "Leicester",
+      verified: false,
+      email: "info@reapfarm.co.uk",
+      contactDetails: "call us on +121 43435 656",
+      about: "Family-owned farm dedicated to sustainable agriculture and ethical farming practices. Specializes in growing a wide variety of crops and raising livestock with a focus on environmental stewardship and community engagement.",
+      displayPhoto: images.farm_logo2,
+      images: [images.farm_logo2, images.farm, images.farm1, images.garden, images.restaurant2],
+      serviceOfferings: [
+         {
+            service: "Organic Produce",
+            description: "Providing fresh, organic fruits, vegetables, and herbs grown with care and respect for the land.",
+         },
+         {
+            service: "Farm-to-Table Events",
+            description:
+               "Hosting farm-to-table dinners and events showcasing seasonal produce and locally sourced ingredients.",
+         },
+         {
+            service: "Agritourism Activities",
+            description: "Offering educational farm tours, workshops, and hands-on experiences for visitors of all ages.",
+         },
+         {
+            service: "Community Supported Agriculture (CSA)",
+            description:
+               "Offering CSA memberships for customers to receive weekly or monthly shares of seasonal produce directly from the farm.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "reapFarm",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "reapFarm",
+            url: "#",
+         },
+         {
+            platform: "Instagram",
+            username: "reapFarm",
+            url: "#",
+         },
+         {
+            platform: "Twitter",
+            username: "reapFarm",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "establishment",
+      id: 92,
+      slug: "iphone-repairs-92",
+      name: "iPhone Repairs",
+      admin: sampleUsers[4],
+      team: [sampleUsers[3], sampleUsers[1], sampleUsers[8], sampleUsers[7]],
+      industry: "Tech repairs",
+      location: "Newcastle",
+      verified: true,
+      email: "info@irepairs.com",
+      contactDetails: "call us on +121 43435 656",
+      about: "Trusted iPhone repair shop specializing in fast and reliable repairs for all models of iPhones. With skilled technicians and high-quality parts, we're committed to getting your device back to optimal condition.",
+      displayPhoto: images.office2,
+      images: [images.office2],
+      serviceOfferings: [
+         {
+            service: "Screen Replacement",
+            description: "Quick and efficient screen replacements for cracked or damaged iPhone screens.",
+         },
+         {
+            service: "Battery Replacement",
+            description: "Professional battery replacement services to restore battery life and performance.",
+         },
+         {
+            service: "Water Damage Repair",
+            description: "Expert diagnosis and repair for iPhones affected by water damage or liquid spills.",
+         },
+         {
+            service: "Diagnostic Services",
+            description:
+               "Thorough diagnostic services to identify and address any other issues affecting your iPhone's functionality.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "irepairs",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "irepairs",
+            url: "#",
+         },
+         {
+            platform: "Instagram",
+            username: "irepairs",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "establishment",
+      id: 101,
+      slug: "children's-artworks-101",
+      name: "Children's Artworks",
+      admin: sampleUsers[5],
+      team: [sampleUsers[0], sampleUsers[9]],
+      industry: "Art",
+      location: "Manchester",
+      verified: true,
+      email: "info@kidsart.com",
+      contactDetails: "call us on +121 43435 656",
+      about: "Whimsical children's artwork store offering a curated selection of creative supplies and unique artwork for kids of all ages. Dedicated to fostering imagination, self-expression, and artistic exploration.",
+      displayPhoto: images.artShop2,
+      images: [images.artShop2, images.artShop],
+      serviceOfferings: [
+         {
+            service: "Art Supplies",
+            description:
+               "Providing a wide range of art supplies, including paints, crayons, markers, and sketchbooks, tailored to children's needs and interests.",
+         },
+         {
+            service: "Art Classes",
+            description:
+               "Offering art classes and workshops for children to learn new techniques and unleash their creativity in a supportive environment.",
+         },
+         {
+            service: "Custom Artwork",
+            description:
+               "Creating custom artwork and personalized gifts for children, including name plaques, growth charts, and hand-painted keepsakes.",
+         },
+         {
+            service: "Birthday Parties",
+            description:
+               "Hosting art-themed birthday parties with customizable packages, including guided art activities, decorations, and party favors.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "kidsart",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "kidsart",
+            url: "#",
+         },
+         {
+            platform: "Instagram",
+            username: "kidsart",
+            url: "#",
+         },
+         {
+            platform: "Twitter",
+            username: "kidsart",
+            url: "#",
+         },
+      ],
+   },
+   {
+      type: "establishment",
+      id: 988,
+      slug: "the-bistro-988",
+      name: "The Bistro",
+      admin: sampleUsers[0],
+      industry: "Food",
+      location: "Birmingham",
+      verified: true,
+      email: "info@thebistro.com",
+      contactDetails: "call us on +121 43435 656",
+      about: "Vibrant restaurant serving delicious, globally inspired cuisine made with locally sourced ingredients. Known for its welcoming atmosphere, innovative dishes, and commitment to sustainability.",
+      displayPhoto: images.restaurant,
+      images: [images.restaurant, images.restaurant2, images.restaurant3],
+      serviceOfferings: [
+         {
+            service: "Diverse Menu",
+            description:
+               "Offering a diverse menu featuring a fusion of flavors and culinary techniques from around the world.",
+         },
+         {
+            service: "Seasonal Specials",
+            description:
+               "Highlighting seasonal ingredients and flavors with regularly updated specials and prix-fixe menus.",
+         },
+         {
+            service: "Catering Services",
+            description:
+               "Providing catering services for events of all sizes, from intimate gatherings to large corporate functions.",
+         },
+         {
+            service: "Private Dining",
+            description:
+               "Offering private dining options for special occasions, complete with customizable menus and personalized service.",
+         },
+      ],
+      socialMedia: [
+         {
+            platform: "LinkedIn",
+            username: "the_bistro",
+            url: "#",
+         },
+         {
+            platform: "Facebook",
+            username: "the_bistro",
+            url: "#",
+         },
+         {
+            platform: "Instagram",
+            username: "the_bistro",
             url: "#",
          },
       ],

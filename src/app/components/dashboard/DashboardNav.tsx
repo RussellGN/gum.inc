@@ -16,14 +16,14 @@ export default function DashboardNav() {
    if (!user) throw new Error("User not found");
 
    return (
-      <Grid item xs>
+      <Grid item xs={1}>
          <Box className="min-h-[80vh] border  rounded-[20px] bg-white p-4 sticky top-[100px]">
             <AspectContainedNextImage
                src={user.displayPhoto}
                alt={user.name}
                aspectRatio="1 / 1"
                nextImageProps={{
-                  className: "border-2 shadow-sm rounded-[100%]",
+                  className: "border-2 shadow-sm rounded-[100%] ",
                }}
             />
             <Typography component="p" variant="caption" fontWeight="bold" textAlign="center" sx={{ mt: 1, mb: 3 }}>

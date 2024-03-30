@@ -1,4 +1,3 @@
-import images from "@/app/assets";
 import { Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -21,7 +20,6 @@ export default function IncOfficeHero() {
                   Your Gateway to Business Excellence
                </Typography>
                <Typography className="shadow-xl rounded-xl  border-blue-600 relative -right-5 p-5">
-                  {/* <Image src={images.undraw_stepping_up_g6oo} alt="mailbox" className="w-[10rem] m-3 float-left" /> */}
                   Welcome to Inc Office, where business insights come to you. Join our exclusive newsletter for a curated
                   selection of strategic tips, marketing trends, and digital growth hacks. Stay ahead of the curve and
                   elevate your business with our valuable content delivered right to your inbox. Subscribe now and unlock
@@ -32,8 +30,7 @@ export default function IncOfficeHero() {
 
          <Grid item xs={12} md={4}>
             <div className="">
-               <Image src={images.undraw_segment_analysis_re_ocsl} alt="mailbox" className="w-[80%]" />
-               {/* <Image src={images.undraw_stepping_up_g6oo} alt="mailbox" className="w-[80%]" /> */}
+               <Image src="/svgs/undraw_segment_analysis_re_ocsl.svg" width={160} height={90}  alt="mailbox" className="w-[80%]" />
             </div>
          </Grid>
       </Grid>

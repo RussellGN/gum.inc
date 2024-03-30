@@ -118,7 +118,13 @@ function HeroAnimationGrid() {
 
          <div className="bg-white col-span-2 row-span-2 flex items-center border rounded-md shadow-md ">
             <div className="h-full p-2">
-               <Image src={images.undraw_predictive_analytics} alt="connecting" className="h-full" />
+               <Image
+                  src="/svgs/undraw_predictive_analytics.svg"
+                  width={160}
+                  height={90}
+                  alt="connecting"
+                  className="h-full"
+               />
             </div>
          </div>
 

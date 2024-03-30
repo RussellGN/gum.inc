@@ -47,7 +47,6 @@ export default function ValueProposition() {
                      </div>
                   </Box>
                </Box>
-               {/* <Image src={images.undraw_online_resume} alt="online resume" className="w-full" />{" "} */}
             </Box>
          </Grid>
 

@@ -5,7 +5,7 @@ import { Link as MuiLink, Accordion, AccordionDetails, AccordionSummary, Typogra
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { directories } from "@/app/lib/constants";
 import { useRouter, useSearchParams } from "next/navigation";
-import { ArrowRightAlt, InfoOutlined } from "@mui/icons-material";
+import { InfoOutlined } from "@mui/icons-material";
 import Link from "next/link";
 
 export default function DirsAccordion() {

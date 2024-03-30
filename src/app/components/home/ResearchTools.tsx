@@ -1,4 +1,3 @@
-import images from "@/app/assets";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -11,7 +10,7 @@ export default function ResearchTools() {
          gap={10}
          className="min-h-[60vh]  rounded-[20px] mb-20"
          sx={{
-            backgroundImage: `url(${images.layered_waves_haikei_4.src})`,
+            backgroundImage: "url('/svgs/layered-waves-haikei4.svg')",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
@@ -36,7 +35,7 @@ export default function ResearchTools() {
          </Grid>
 
          <Grid item xs md={4}>
-            <Image src={images.undraw_mailbox_re_dvds} alt="online resume" className="w-full" />
+            <Image src="/svgs/undraw_mailbox_re_dvds.svg" width={160} height={90} alt="online resume" className="w-full" />
          </Grid>
       </Grid>
    );

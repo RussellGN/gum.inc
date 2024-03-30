@@ -23,7 +23,7 @@ export default function DashboardNav() {
                alt={user.name}
                aspectRatio="1 / 1"
                nextImageProps={{
-                  className: "border-2 shadow-sm rounded-[100%] ",
+                  className: "border-2 shadow-sm rounded-[100%]",
                }}
             />
             <Typography component="p" variant="caption" fontWeight="bold" textAlign="center" sx={{ mt: 1, mb: 3 }}>

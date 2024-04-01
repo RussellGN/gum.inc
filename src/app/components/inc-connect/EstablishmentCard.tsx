@@ -5,13 +5,7 @@ import Link from "next/link";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
 
-export default function EstablishmentCard({
-   establishment,
-   simplifified,
-}: {
-   establishment: EstablishmentInterface;
-   simplifified?: boolean;
-}) {
+export default function EstablishmentCard({ establishment }: { establishment: EstablishmentInterface }) {
    return (
       <Box className="block border rounded-[15px] bg-slate-200 ">
          <Box

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { UserInterface } from "@/app/interfaces";
 import SaveIncButton from "./SaveIncButton";
 
-export default function UserCard({ user, simplifified }: { user: UserInterface; simplifified?: boolean }) {
+export default function UserCard({ user }: { user: UserInterface }) {
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box

@@ -4,7 +4,6 @@ import { sampleUsers } from "@/app/lib/sampleData";
 import { capitalizeWords } from "@/app/lib/utils";
 import {
    Link as LinkIcon,
-   Person2,
    Work,
    LocationOn,
    Verified,
@@ -280,7 +279,7 @@ export default function EstablishmentPage({
                   <div className="flex gap-2 overflow-x-auto">
                      {sampleUsers.map((inc) => (
                         <div key={inc.slug} className="w-8/12 flex-shrink-0">
-                           <UserCard simplifified user={inc} />
+                           <UserCard user={inc} />
                         </div>
                      ))}
                   </div>

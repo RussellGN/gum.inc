@@ -1,12 +1,12 @@
 import { EventInterface } from "@/app/interfaces";
-import { Verified, LocationOn, Event, DateRange } from "@mui/icons-material";
+import { Verified, LocationOn, Event } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
 import { friendlyDate } from "@/app/lib/utils";
 
-export default function EventCard({ event, simplifified }: { event: EventInterface; simplifified?: boolean }) {
+export default function EventCard({ event }: { event: EventInterface }) {
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box

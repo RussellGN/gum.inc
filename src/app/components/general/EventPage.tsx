@@ -275,7 +275,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                   <div className="flex gap-2 overflow-x-auto">
                      {sampleUsers.map((inc) => (
                         <div key={inc.slug} className="w-8/12 flex-shrink-0">
-                           <UserCard simplifified user={inc} />
+                           <UserCard user={inc} />
                         </div>
                      ))}
                   </div>

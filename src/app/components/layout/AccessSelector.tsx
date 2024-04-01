@@ -2,19 +2,8 @@
 
 import { KeyboardArrowDown, InfoOutlined } from "@mui/icons-material";
 import Image from "next/image";
-import {
-   Link as MuiLink,
-   Box,
-   Popover,
-   Typography,
-   Radio,
-   RadioGroup,
-   FormControlLabel,
-   FormControl,
-   FormLabel,
-   IconButton,
-} from "@mui/material";
-import { FormEvent, MouseEvent, useState } from "react";
+import { Link as MuiLink, Box, Popover, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from "@mui/material";
+import { MouseEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 

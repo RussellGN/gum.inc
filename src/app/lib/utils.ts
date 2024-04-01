@@ -62,7 +62,12 @@ export function capitalizeWords(str: string) {
       .split(" ")
       .filter((wrd) => wrd.trim() !== "");
 
-   words.forEach((word) => (finalString += word[0].toUpperCase() + word.slice(1)));
+   words.forEach((word) => (finalString += word[0].toUpperCase() + word.slice(1) + " "));
 
    return finalString;
+}
+
+export function friendlyDate(date: string | Date) {
+   date = new Date(date);
+   return Intl.DateTimeFormat("en-us", { month: "short", day: "2-digit", year: "numeric" }).format(date);
 }

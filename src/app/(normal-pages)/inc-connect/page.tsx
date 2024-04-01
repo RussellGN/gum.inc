@@ -17,7 +17,7 @@ export default function Page() {
                   </Suspense>
                   <Suspense
                      fallback={
-                        <div className="min-h-[20vh] w-full flex items-center justify-center">
+                        <div className="h-[50vh] w-full flex items-center justify-center">
                            <CircularProgress />
                         </div>
                      }

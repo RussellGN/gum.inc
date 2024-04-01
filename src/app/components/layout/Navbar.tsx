@@ -4,14 +4,20 @@ import { navLinks } from "@/app/lib/constants";
 import NavLink from "../general/NavLink";
 import AccessSelector from "./AccessSelector";
 import SignupOrAvatar from "../general/SignupOrAvatar";
+import { Box } from "@mui/material";
+import MobileNav from "./MobileNav";
 
 export default function Navbar() {
    return (
       <AnimatedHeader>
-         <div className="flex justify-between items-center">
-            <Logo />
+         <Box sx={{ display: "flex", justifyContent: { md: "space-between" }, alignItems: "center" }}>
+            <MobileNav />
 
-            <nav>
+            <Box sx={{ mr: { xs: "auto", md: 0 } }}>
+               <Logo />
+            </Box>
+
+            <Box component="nav" sx={{ display: { xs: "none", md: "unset" } }}>
                <ul className="list-none flex gap-4">
                   {navLinks.map((navLink) => (
                      <li key={navLink.path}>
@@ -24,13 +30,13 @@ export default function Navbar() {
                      </li>
                   ))}
                </ul>
-            </nav>
+            </Box>
 
             <div className="flex gap-3 items-center">
                <AccessSelector />
                <SignupOrAvatar />
             </div>
-         </div>
+         </Box>
       </AnimatedHeader>
    );
 }

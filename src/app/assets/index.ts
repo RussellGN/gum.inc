@@ -53,6 +53,8 @@ import types from "./images/types-uk-company.jpg";
 import vinatge_cars from "./images/vinatge_cars.jpg";
 import visa_consultancy from "./images/visa_consultancy.png";
 
+import inc_user_page_screenshot from "./screenshots/inc-user-page-screenshot2.jpg";
+
 const images = {
    guminc_logo1,
    guminc_logo2,
@@ -105,6 +107,7 @@ const images = {
    types,
    vinatge_cars,
    visa_consultancy,
+   inc_user_page_screenshot,
 };
 
 export default images;

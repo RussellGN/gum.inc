@@ -1,15 +1,12 @@
 import { EventInterface } from "@/app/interfaces";
-import { Verified, LocationOn, Event } from "@mui/icons-material";
+import { Verified, LocationOn, Event, DateRange } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
+import { friendlyDate } from "@/app/lib/utils";
 
 export default function EventCard({ event, simplifified }: { event: EventInterface; simplifified?: boolean }) {
-   if (simplifified) {
-      console.log("simplified");
-   }
-
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box
@@ -35,11 +32,11 @@ export default function EventCard({ event, simplifified }: { event: EventInterfa
             </Grid>
 
             <AspectContainedNextImage src={event.displayPhoto} alt={event.name} aspectRatio="3 / 2" />
-            {/* <div className="p-2 pb-0">
-               <Typography component="p" variant="caption" color="grey" className="line-clamp-2">
-                  {event.about}
+            <div className="p-2 pb-0">
+               <Typography component="p" variant="caption" color="grey">
+                  {`${friendlyDate(event.startDate)} `}
                </Typography>
-            </div> */}
+            </div>
          </Box>
          <Box className="p-2 pt-0">
             <div className="flex items-center justify-between gap-3 border-t-2">

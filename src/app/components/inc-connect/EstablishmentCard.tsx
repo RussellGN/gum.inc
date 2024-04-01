@@ -12,10 +12,6 @@ export default function EstablishmentCard({
    establishment: EstablishmentInterface;
    simplifified?: boolean;
 }) {
-   if (simplifified) {
-      console.log("simplified");
-   }
-
    return (
       <Box className="block border rounded-[15px] bg-slate-200 ">
          <Box

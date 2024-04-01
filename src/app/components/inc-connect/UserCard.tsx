@@ -6,9 +6,6 @@ import { UserInterface } from "@/app/interfaces";
 import SaveIncButton from "./SaveIncButton";
 
 export default function UserCard({ user, simplifified }: { user: UserInterface; simplifified?: boolean }) {
-   if (simplifified) {
-      console.log("simplified");
-   }
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box

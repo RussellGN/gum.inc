@@ -6,6 +6,8 @@ import AccessSelector from "./AccessSelector";
 import SignupOrAvatar from "../general/SignupOrAvatar";
 import { Box } from "@mui/material";
 import MobileNav from "./MobileNav";
+import { Suspense } from "react";
+import { KeyboardArrowDown } from "@mui/icons-material";
 
 export default function Navbar() {
    return (
@@ -33,7 +35,16 @@ export default function Navbar() {
             </Box>
 
             <div className="flex gap-3 items-center">
-               <AccessSelector />
+               <Suspense
+                  fallback={
+                     <div className="flex gap-1 items-center border rounded-[20px] px-1 py-0.5 bg-gray-100">
+                        <div className="w-7 h-7 bg-gray-200 rounded-[100%]" />
+                        <KeyboardArrowDown />
+                     </div>
+                  }
+               >
+                  <AccessSelector />
+               </Suspense>
                <SignupOrAvatar />
             </div>
          </Box>

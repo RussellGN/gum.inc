@@ -8,42 +8,41 @@ export default function ValueProposition() {
       <Grid container alignItems="center" justifyContent="center" className="min-h-[90vh]">
          <Grid item xs md={5}>
             <Box className="h-full  p-5 relative flex items-center justify-center">
-               <Box className="border h-[25rem] bg-white w-[15rem] rounded-lg shadow-md relative">
-                  <div className="flex items-center h-full justify-center text-center">
-                     put my <br />
-                     profile here...
-                  </div>
+               <Box className="flex py-1 justify-center h-[28rem] bg-gray-200 border-gray-200 border-4 rounded-[20px]  shadow-md relative">
+                  <Image
+                     src={images.inc_user_page_screenshot}
+                     alt="screenshot of a user's page on the platform"
+                     className="w-auto h-full rounded-[20px]"
+                  />
                   <Box
                      sx={{ backgroundColor: "primary.light" }}
                      className="border h-[25rem] w-[15rem]  rounded-lg shadow-md absolute top-[-3rem] -right-1/4 rotate-6 -z-10"
                   ></Box>
 
-                  <Box className="bg-[rgba(255,255,255,0.7)] border min-w-[15rem] rounded-lg shadow-md absolute top-1/4 -left-3/4">
-                     <div className="py-2 px-3 border gap-4 flex items-center justify-around">
+                  <Box className="bg-white border rounded-lg shadow-md absolute top-1/4 -left-full">
+                     <div className="py-1 px-2 border gap-4 flex items-center justify-around">
                         <div className="flex items-center gap-2">
-                           <Search />
-                           <Typography>Art Shops, London</Typography>
+                           <Search fontSize="small" />
+                           <Typography variant="subtitle1">Tax Lawyer, London</Typography>
                         </div>
-                        <Typography variant="subtitle2" className="bg-gray-200 border rounded-lg px-2">
+                        <Typography variant="caption" className="bg-gray-200 border rounded-lg px-2">
                            found 32
                         </Typography>
                      </div>
                   </Box>
 
-                  <Box className="bg-[rgba(255,255,255,0.7)] border min-w-[15rem] rounded-lg shadow-md absolute bottom-[3rem] -right-1/2">
-                     <div className="flex items-center gap-3 py-2 px-3">
+                  <Box className="bg-white border rounded-lg shadow-md absolute bottom-[3rem] -right-3/4">
+                     <div className="flex items-center gap-3 py-1 px-2">
                         <Image
-                           src={images.person4m}
+                           src={images.person2m}
                            alt="user"
                            className="w-10 h-10 object-cover rounded-[100%] border-2 shadow-md"
                         />
                         <div className="mr-auto flex flex-col gap-0">
-                           <Typography>Will Cosby</Typography>
-                           <Typography color="secondary" variant="caption">
-                              Art Dealer
-                           </Typography>
+                           <Typography variant="subtitle1">Aaron Rhodes</Typography>
+                           <Typography variant="caption">Tax Lawyer</Typography>
                         </div>
-                        <Send color="secondary" />
+                        <Send fontSize="small" />
                      </div>
                   </Box>
                </Box>

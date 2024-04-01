@@ -562,6 +562,16 @@ export const sampleEvents: EventInterface[] = [
       about: "A conference for technology enthusiasts and professionals to network and learn about the latest trends and developments in the industry.",
       startDate: "2024-05-01",
       endDate: "2024-05-03",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.event5,
       images: [images.event, images.event5, images.office2],
       socialMedia: [
@@ -584,6 +594,16 @@ export const sampleEvents: EventInterface[] = [
       about: "An exhibition showcasing the works of local artists exploring different mediums and styles.",
       startDate: "2024-07-15",
       endDate: "2024-07-20",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.artShop2,
       images: [images.artShop2, images.artShop, images.person4m],
    },
@@ -599,6 +619,16 @@ export const sampleEvents: EventInterface[] = [
       about: "A hands-on workshop where participants will learn effective workout techniques and receive guidance on creating a personalized fitness plan.",
       startDate: "2024-09-10",
       endDate: "2024-09-11",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.event6,
       images: [images.garden, images.restaurant2],
    },
@@ -615,6 +645,16 @@ export const sampleEvents: EventInterface[] = [
       about: "A pitch competition where early-stage startups will showcase their innovative ideas to a panel of judges and investors.",
       startDate: "2024-10-05",
       endDate: "2024-10-06",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.event7,
       images: [images.event, images.event3],
       socialMedia: [
@@ -637,6 +677,16 @@ export const sampleEvents: EventInterface[] = [
       about: "A fundraising gala to support various charitable initiatives and make a positive impact in the community.",
       startDate: "2024-11-15",
       endDate: "2024-11-15",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.logo,
       images: [images.restaurant, images.event, images.person4m],
    },
@@ -652,6 +702,16 @@ export const sampleEvents: EventInterface[] = [
       about: "A multi-day music festival featuring a diverse lineup of artists across different genres.",
       startDate: "2024-12-01",
       endDate: "2024-12-03",
+      keyTakeaways: [
+         {
+            takeaway: "Special guests",
+            description: "We've invited relevant people to speak for the occasion",
+         },
+         {
+            takeaway: "Drinks & Food",
+            description: "Drinks and food will be made available",
+         },
+      ],
       displayPhoto: images.event2,
       images: [images.event2, images.event3, images.user4f, images.restaurant2],
       socialMedia: [

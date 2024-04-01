@@ -53,6 +53,10 @@ export interface EventInterface extends ListingInterface {
    about: string;
    startDate: string;
    endDate: string;
+   keyTakeaways: {
+      takeaway: string;
+      description: string;
+   }[];
 }
 
 export interface NotificationInterface {

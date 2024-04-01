@@ -9,16 +9,17 @@ import {
    LocationOn,
    Verified,
    Edit,
-   BookmarkAdd,
    KeyboardDoubleArrowRight,
    InfoOutlined,
    Message,
+   ContactPage,
 } from "@mui/icons-material";
 import { Link as MuiLink, Box, Grid, Typography, IconButton, Rating } from "@mui/material";
 import Link from "next/link";
 import SocialMediaIcon from "../inc-connect/SocialMediaIcon";
 import UserCard from "../inc-connect/UserCard";
 import AspectContainedNextImage from "./AspectContainedNextImage";
+import SaveIncButton from "../inc-connect/SaveIncButton";
 
 export default function UserAccountDetails({ user, isAuthenticated }: { user: UserInterface; isAuthenticated?: boolean }) {
    // const isAuthenticated = true;
@@ -27,8 +28,8 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
       <Grid container spacing={2} className="min-h-[70vh]">
          <Grid item xs md>
             <div className="p-3">
-               <Grid container gap={3} alignItems="center">
-                  <Grid item xs={3} md={2}>
+               <Grid container gap={3} alignItems="center" justifyContent={{ xs: "center", md: "unset" }}>
+                  <Grid item xs={5} md={2}>
                      <AspectContainedNextImage
                         src={user?.displayPhoto}
                         alt={user.name}
@@ -39,7 +40,10 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                   </Grid>
 
                   <Grid item xs>
-                     <div className="flex flex-col justify-center items-start gap-2">
+                     <Box
+                        sx={{ alignItems: { xs: "center", md: "flex-start" } }}
+                        className="flex flex-col justify-center gap-2"
+                     >
                         <Typography variant="h2">{user.name}</Typography>
 
                         <Box className="flex items-center gap-3" sx={{ "& svg": { color: "primary.main" } }}>
@@ -73,7 +77,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                            Verified
                            <Verified fontSize="inherit" />
                         </Typography>
-                     </div>
+                     </Box>
                   </Grid>
 
                   <Grid item xs={12} md="auto">
@@ -97,9 +101,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                               <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
                                  <Message />
                               </IconButton>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
-                                 <BookmarkAdd />
-                              </IconButton>
+                              <SaveIncButton sx={{ border: "solid thin", borderColor: "divider" }} />
                            </>
                         )}
                      </Box>
@@ -142,27 +144,46 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                   </Grid>
 
                   <Grid item xs md={6}>
-                     <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md ">
+                     <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md" sx={{ mb: 3 }}>
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
-                           Social Media
-                           <LinkIcon fontSize="inherit" />
+                           Contact Details
+                           <ContactPage fontSize="inherit" />
                         </Typography>
-                        <ul className="list-none">
-                           {user.socialMedia?.map((social) => (
-                              <li key={social.platform} className="flex items-start gap-3 p-2">
-                                 <SocialMediaIcon props={{ fontSize: "small" }} platform={social.platform} />
-                                 <div>
-                                    <Typography variant="h4" fontWeight="bold" sx={{ mb: 0.5 }}>
-                                       {capitalizeWords(social.platform)}
-                                    </Typography>
-                                    <MuiLink component={Link} href={social.url}>
-                                       {social.username}
-                                    </MuiLink>
-                                 </div>
-                              </li>
-                           ))}
-                        </ul>
+
+                        <div className="flex items-start gap-3 p-2">
+                           <KeyboardDoubleArrowRight fontSize="small" />
+                           <Typography>{user.contactDetails || "Contact details not publicly available"}</Typography>
+                        </div>
                      </Box>
+
+                     {user.socialMedia ? (
+                        <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md ">
+                           <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
+                              Social Media
+                              <LinkIcon fontSize="inherit" />
+                           </Typography>
+                           <ul className="list-none">
+                              {user.socialMedia?.map((social) => (
+                                 <li key={social.platform} className="flex items-start gap-3 p-2">
+                                    <SocialMediaIcon props={{ fontSize: "small" }} platform={social.platform} />
+                                    <div>
+                                       <Typography variant="h4" fontWeight="bold" sx={{ mb: 0.5 }}>
+                                          {capitalizeWords(social.platform)}
+                                       </Typography>
+                                       <MuiLink component={Link} href={social.url}>
+                                          {social.username}
+                                       </MuiLink>
+                                    </div>
+                                 </li>
+                              ))}
+                           </ul>
+                        </Box>
+                     ) : (
+                        <div className="flex items-start gap-3 p-2">
+                           <KeyboardDoubleArrowRight fontSize="small" />
+                           <Typography sx={{ mb: 0.5 }}>No social media</Typography>
+                        </div>
+                     )}
                   </Grid>
                </Grid>
             </div>
@@ -172,7 +193,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
                <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
                   <Typography variant="h4" sx={{ mb: 1 }}>
-                     Essence &amp; Endeavors
+                     Gallery
                   </Typography>
                   <div className="flex gap-2 overflow-x-auto pb-2">
                      {user.images.map((img, index) => (

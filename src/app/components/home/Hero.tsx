@@ -14,8 +14,9 @@ export default function Hero() {
                      Grow
                   </Box>
                </Typography>
-               <Typography className="max-w-[15rem] py-3">
-                  Lorem ipsum dolor sit amet. Illum vero corrupti molestiae?
+               <Typography className="max-w-[20rem] py-3">
+                  Explore and engage a vibrant community of professionals, businesses and events and fuel your growth with
+                  our impactful newsletters
                   <br />
                </Typography>
                <Button>Get Started</Button>

@@ -65,7 +65,7 @@ export default function ResearchBureauNewsletterForm() {
          <Box sx={{ mt: 2.5 }}>
             <FormGroup sx={{ pb: 2 }} className="">
                <div className="flex flex-row flex-wrap gap-3">
-                  {options.map((option, index) => (
+                  {options.map((option) => (
                      <OptionCard key={option.name} option={option} toggleOptionCheckedState={toggleOptionCheckedState} />
                   ))}
                </div>

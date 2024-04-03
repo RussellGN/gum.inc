@@ -14,7 +14,7 @@ export default function ResearchBureauNewsletterForm() {
    const isAllSelected = options.length === numberOfoptionsSelected;
 
    function toggleOptionCheckedState(optionName: string) {
-      let newOptions = [...options];
+      const newOptions = [...options];
       newOptions.forEach((option, index) => {
          if (option.name === optionName) {
             newOptions[index].checked = !option.checked;
@@ -24,7 +24,7 @@ export default function ResearchBureauNewsletterForm() {
    }
 
    function toggleAllOptions() {
-      let newOptions = [...options];
+      const newOptions = [...options];
       if (isAllSelected) {
          newOptions.forEach((option) => {
             option.checked = false;
@@ -66,12 +66,7 @@ export default function ResearchBureauNewsletterForm() {
             <FormGroup sx={{ pb: 2 }} className="">
                <div className="flex flex-row flex-wrap gap-3">
                   {options.map((option, index) => (
-                     <OptionCard
-                        key={option.name}
-                        index={index}
-                        option={option}
-                        toggleOptionCheckedState={toggleOptionCheckedState}
-                     />
+                     <OptionCard key={option.name} option={option} toggleOptionCheckedState={toggleOptionCheckedState} />
                   ))}
                </div>
             </FormGroup>

@@ -2,8 +2,6 @@
 
 ## todo
 
-1. business card, event card, other entity card
-2. business page, event page, other entity page
 3. research tools revamp
 4. Subscribe pages
 5. proper wording

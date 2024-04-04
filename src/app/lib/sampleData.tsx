@@ -405,9 +405,9 @@ export const sampleUsers: UserInterface[] = [
    {
       type: "user",
       id: 63,
-      slug: "jessica-smith-63",
-      name: "Jessica Smith",
-      email: "jessicasmith@gmail.com",
+      slug: "jessica-dei-63",
+      name: "Jessica Dei",
+      email: "jessicadei@gmail.com",
       jobTitle: "Venture Capitalist",
       industry: "Finance",
       location: "London",
@@ -428,12 +428,12 @@ export const sampleUsers: UserInterface[] = [
       socialMedia: [
          {
             platform: "Twitter",
-            username: "jessicasmith",
+            username: "jessicadei",
             url: "#",
          },
          {
             platform: "LinkedIn",
-            username: "jessicasmith",
+            username: "jessicadei",
             url: "#",
          },
       ],

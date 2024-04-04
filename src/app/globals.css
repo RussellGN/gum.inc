@@ -22,3 +22,16 @@ body {
    border: solid rgb(173, 173, 173);
    border-radius: 10px;
 }
+
+.marquee {
+   animation: marquee-animation 40s infinite linear;
+}
+
+@keyframes marquee-animation {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-100%);
+   }
+}

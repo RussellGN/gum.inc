@@ -53,8 +53,7 @@ export default function Footer() {
                         Quick links
                      </Typography>
                      <FooterLink href="/contact">Contact</FooterLink>
-                     <FooterLink href="/advertise">Advertise</FooterLink>
-                     <FooterLink href="/about#faq">FAQ</FooterLink>
+                     <FooterLink href="/advertise">Partner with us</FooterLink>
                   </div>
                </Grid>
             </Grid>

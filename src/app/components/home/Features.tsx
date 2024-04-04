@@ -2,6 +2,7 @@ import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import DirectoriesTabs from "./DirectoriesTabs";
+import Link from "next/link";
 
 export default function Features() {
    return (
@@ -16,21 +17,23 @@ export default function Features() {
             <Grid item xs md="auto">
                <Box sx={{ pr: { md: 5 } }}>
                   <Typography variant="h2" className="max-w-[25rem]">
-                     Explore{" "}
+                     Discover, list, and{" "}
                      <Typography color="primary" variant="inherit" component="span">
-                        Inc Listings
+                        thrive
                      </Typography>{" "}
-                     with our curated directory-categories
+                     in the world of opportunities
                   </Typography>
                   <Typography className="max-w-[25rem] py-3">
-                     From finance to music, our meticulously curated directory categories provide a gateway to a world of
-                     connections and opportunities, tailored to your needs and interests
+                     Unlock a wealth of opportunities in our comprehensive Inc Connect directory. Find and showcase
+                     services, connect with industry leaders, and elevate your business.{" "}
                   </Typography>
 
                   <div className="flex gap-3 items-center">
-                     <Button endIcon={<ArrowRightAlt />}>Browse directories</Button>
-                     <Button variant="outlined" color="primary">
-                        Join a directory
+                     <Button component={Link} href="/inc-connect" endIcon={<ArrowRightAlt />}>
+                        Start Exploring
+                     </Button>
+                     <Button component={Link} href="/signup" color="primary">
+                        Join!
                      </Button>
                   </div>
                </Box>
@@ -71,7 +74,9 @@ export default function Features() {
                      Lorem ipsum dolor sit amet. Illum vero corrupti molestiae?
                      <br />
                   </Typography>
-                  <Button endIcon={<ArrowRightAlt />}>Signup</Button>
+                  <Button component={Link} href="/signup" endIcon={<ArrowRightAlt />}>
+                     Signup
+                  </Button>
                </Box>
             </Grid>
          </Grid>

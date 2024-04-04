@@ -1,7 +1,8 @@
 import images from "@/app/assets";
-import { Search, Send } from "@mui/icons-material";
+import { ArrowRightAlt, Search, Send } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ValueProposition() {
    return (
@@ -56,7 +57,9 @@ export default function ValueProposition() {
                   GUM.INC brings together businesses, proffessionals, creatives and other entities onto one platform for
                   easy discovery and connecting
                </Typography>
-               <Button>Get Started</Button>
+               <Button component={Link} href="/inc-connect" endIcon={<ArrowRightAlt />}>
+                  Start Exploring
+               </Button>
             </Box>
          </Grid>
       </Grid>

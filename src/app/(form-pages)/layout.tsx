@@ -14,7 +14,7 @@ export default function Layout({ children }: PropsWithChildren) {
          }}
       >
          <Box
-            className="bg-[whitesmoke] rounded-[15px] shadow-2xl border max-w-[30rem] flex flex-col justify-between w-full min-h-[60vh]"
+            className="bg-[whitesmoke] rounded-[15px] shadow-2xl border max-w-[35rem] flex flex-col justify-between w-full min-h-[60vh]"
             sx={{ p: 5 }}
          >
             <FormNav />

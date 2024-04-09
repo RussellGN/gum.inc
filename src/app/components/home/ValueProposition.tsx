@@ -1,5 +1,5 @@
 import images from "@/app/assets";
-import { ArrowRightAlt, Message, Search, Send } from "@mui/icons-material";
+import { ArrowRightAlt, Message, Search } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";

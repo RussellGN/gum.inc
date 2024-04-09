@@ -1,9 +1,8 @@
 "use client";
 
 import { sampleEvents, sampleOrganizations, sampleUsers } from "@/app/lib/sampleData";
-import { Event, MedicalServices, Money, MusicNote } from "@mui/icons-material";
 import { Box, Tab, Tabs } from "@mui/material";
-import React, { ReactNode } from "react";
+import React from "react";
 import UserCard from "../inc-connect/UserCard";
 import { directories } from "@/app/lib/constants";
 import { EventInterface, OrganizationInterface, UserInterface } from "@/app/interfaces";

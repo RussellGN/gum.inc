@@ -11,7 +11,7 @@ type propTypes = { params: { slug: string }; searchParams: { type: string } };
 export default function Page({ params: { slug }, searchParams: { type } }: propTypes) {
    const chat = sampleChats.find((chat) => chat.chatRespondend.slug === slug) || sampleChats[0];
    const messages = sampleMessages.filter((msg) => msg.chat.id === chat.id);
-
+   console.log(type);
    return (
       <div className="flex flex-col h-full">
          <Box className="w-full flex items-center gap-3 mb-4">

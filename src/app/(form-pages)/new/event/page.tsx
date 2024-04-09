@@ -1,4 +1,5 @@
 import FormSteps from "@/app/components/general/FormSteps";
+import ImageInput from "@/app/components/general/ImageInput";
 import TitleDescriptionInput from "@/app/components/general/TitleDescriptionInput";
 import { Event, InfoOutlined } from "@mui/icons-material";
 import { Box, TextField, Typography } from "@mui/material";
@@ -167,14 +168,22 @@ function Step4() {
 }
 
 function Step5() {
+   const imageNames = ["display-photo", "image1", "image2", "image3", "image4", "image5", "image6"];
    return (
       <>
-         {/* <br /> images: (string | StaticImageData)[]; */}
          <div className="flex flex-col gap-5 p-5">
             <Typography sx={{ px: 2, textAlign: "center" }}>
                <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
-               Now, lets upload some images of the event, if any.
+               Now, lets upload some images of / related to the event. Start with a logo or main feature.
             </Typography>
+
+            <div className="w-full max-w-[25rem] grid grid-cols-3 gap-2 mx-auto">
+               {imageNames.map((imgName) => (
+                  <div key={imgName} className={`${imgName === "display-photo" ? "col-span-3 " : ""}`}>
+                     <ImageInput name={imgName} />
+                  </div>
+               ))}
+            </div>
          </div>
       </>
    );

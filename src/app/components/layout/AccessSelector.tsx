@@ -61,8 +61,8 @@ export default function AccessSelector() {
          >
             <Box sx={{ p: 3 }}>
                <FormControl>
-                  <FormLabel id="access-level-label" className="flex gap-3 items-center" sx={{ mb: 1.5 }}>
-                     Access Level
+                  <FormLabel id="access-level-label" className="flex gap-3 items-center" sx={{ mb: 1 }}>
+                     Select Access Level
                      <MuiLink sx={{ mt: -0.3 }} component={Link} href="/about#access-level">
                         <InfoOutlined fontSize="small" />
                      </MuiLink>
@@ -74,8 +74,8 @@ export default function AccessSelector() {
                      onChange={(e) => changeAccessLevel(e.target.value)}
                      name="access-level"
                   >
-                     <FormControlLabel value="uk" control={<Radio />} label={"United kingdom"} />
-                     <FormControlLabel value="global" control={<Radio />} label="Global" />
+                     <FormControlLabel value="uk" control={<Radio size="small" />} label={"United kingdom"} />
+                     <FormControlLabel value="global" control={<Radio size="small" />} label="Global" />
                   </RadioGroup>
                </FormControl>
             </Box>

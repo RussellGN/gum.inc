@@ -1,6 +1,6 @@
 "use client";
 
-import { Tune, ArrowDownward, ArrowUpward } from "@mui/icons-material";
+import { ArrowDownward, ArrowUpward } from "@mui/icons-material";
 import { SelectChangeEvent, Box, FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import useIsMobile from "@/app/hooks/useIsMobile";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
@@ -108,19 +108,14 @@ export default function SearchAndSort() {
                // mb: queryValue ? 2 : 4,
             }}
          >
-            <button
-               type="button"
-               className="bg-[transparent] py-2 px-4 border border-r-0 rounded-tl-[20px] rounded-bl-[20px] hover:bg-slate-50   active:bg-slate-100"
-            >
-               <Tune />
-            </button>
+            {/* <Filters /> */}
 
             <input
                type="search"
                defaultValue={queryValue ? queryValue : ""}
                name="query"
                placeholder="Search..."
-               className="bg-[transparent] py-2 px-4 border border-r-0 border-l-0 flex-grow hover:bg-slate-50 outline-none focus:bg-slate-100"
+               className="bg-[transparent] py-2 px-4 border border-r-0  rounded-tl-[20px] rounded-bl-[20px] flex-grow hover:bg-slate-50 outline-none focus:bg-slate-100"
             />
 
             <FormControl size={isMobile ? "small" : "medium"}>

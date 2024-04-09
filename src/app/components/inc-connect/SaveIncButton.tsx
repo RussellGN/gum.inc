@@ -13,8 +13,14 @@ export default function SaveIncButton({ size, sx }: { size?: "small" | "large" |
 
    return (
       <>
-         {/* <Snackbar /> */}
-         <IconButton onClick={saveInc} title="Save Inc?" size={size || "small"} color="primary" sx={sx}>
+         {/* <Snackbar open={open} autoHideDuration={3000} onClose={()=> setOpen(false)} message={saved? 'Inc was un-saved' : 'Inc saved'} /> */}
+         <IconButton
+            onClick={saveInc}
+            title={saved ? "Un-save inc?" : "Save inc?"}
+            size={size || "small"}
+            color="primary"
+            sx={sx}
+         >
             {saved ? <BookmarkAdd /> : <BookmarkAddOutlined />}
          </IconButton>
       </>

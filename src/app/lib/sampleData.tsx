@@ -1,17 +1,20 @@
 import { EmailOutlined } from "@mui/icons-material";
 import images from "../assets";
 import {
-   EstablishmentInterface,
+   OrganizationInterface,
    EventInterface,
    NotificationInterface,
    SubscriptionInterface,
    UserInterface,
+   ChatInterface,
+   MessageInterface,
 } from "../interfaces";
 import { generateAvatarLetters } from "./utils";
 
 export const sampleUsers: UserInterface[] = [
    {
       type: "user",
+      worksAt: "Independant",
       id: 1,
       slug: "esther-rios-1",
       name: "Esther Rios",
@@ -70,6 +73,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 2,
       slug: "Josef-klein-2",
       name: "Josef Klein",
@@ -123,6 +127,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 3,
       slug: "nell-lane-3",
       name: "Nell Lane",
@@ -181,6 +186,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 4,
       slug: "lela-cook-4",
       name: "Lela Cook",
@@ -239,6 +245,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 5,
       slug: "aron-rhodes-5",
       name: "Aaron Rhodes",
@@ -297,6 +304,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 6,
       slug: "tom-lloyd-6",
       name: "Tom Lloyd",
@@ -345,6 +353,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 7,
       slug: "steven-tyler-7",
       name: "Steven Tyler",
@@ -404,6 +413,7 @@ export const sampleUsers: UserInterface[] = [
 
    {
       type: "user",
+      worksAt: "Independant",
       id: 63,
       slug: "jessica-dei-63",
       name: "Jessica Dei",
@@ -440,6 +450,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 22,
       slug: "jane-smith-22",
       name: "Jane Smith",
@@ -476,6 +487,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 32,
       slug: "emily-johnson-32",
       name: "Emily Johnson",
@@ -512,6 +524,7 @@ export const sampleUsers: UserInterface[] = [
    },
    {
       type: "user",
+      worksAt: "Independant",
       id: 24,
       slug: "sarah-davis-24",
       name: "Sarah Davis",
@@ -551,6 +564,7 @@ export const sampleUsers: UserInterface[] = [
 export const sampleEvents: EventInterface[] = [
    {
       type: "event",
+      verified: true,
       id: 1,
       slug: "tech-conference-1",
       name: "Tech Conference",
@@ -584,6 +598,7 @@ export const sampleEvents: EventInterface[] = [
    },
    {
       type: "event",
+      verified: true,
       id: 2,
       slug: "art-exhibition-2",
       name: "Art Exhibition",
@@ -609,6 +624,7 @@ export const sampleEvents: EventInterface[] = [
    },
    {
       type: "event",
+      verified: true,
       id: 3,
       slug: "fitness-workshop-3",
       name: "Fitness Workshop",
@@ -634,6 +650,7 @@ export const sampleEvents: EventInterface[] = [
    },
    {
       type: "event",
+      verified: true,
       id: 4,
       slug: "startup-pitch-competition-4",
       name: "Startup Pitch Competition",
@@ -667,6 +684,7 @@ export const sampleEvents: EventInterface[] = [
    },
    {
       type: "event",
+      verified: true,
       id: 5,
       slug: "charity-cala-5",
       name: "Charity Gala",
@@ -692,6 +710,7 @@ export const sampleEvents: EventInterface[] = [
    },
    {
       type: "event",
+      verified: true,
       id: 6,
       slug: "music-festival-6",
       name: "Music Festival",
@@ -724,9 +743,9 @@ export const sampleEvents: EventInterface[] = [
    },
 ];
 
-export const sampleEstablishments: EstablishmentInterface[] = [
+export const sampleOrganizations: OrganizationInterface[] = [
    {
-      type: "establishment",
+      type: "organization",
       id: 901,
       slug: "danny's-veggies-901",
       name: "Danny's Veggies",
@@ -776,7 +795,7 @@ export const sampleEstablishments: EstablishmentInterface[] = [
       ],
    },
    {
-      type: "establishment",
+      type: "organization",
       id: 90,
       slug: "auto-works-90",
       name: "Borcelle Auto Works",
@@ -836,7 +855,7 @@ export const sampleEstablishments: EstablishmentInterface[] = [
       ],
    },
    {
-      type: "establishment",
+      type: "organization",
       id: 111,
       slug: "reap-farm-111",
       name: "Reap farm",
@@ -893,7 +912,7 @@ export const sampleEstablishments: EstablishmentInterface[] = [
       ],
    },
    {
-      type: "establishment",
+      type: "organization",
       id: 92,
       slug: "iphone-repairs-92",
       name: "iPhone Repairs",
@@ -945,7 +964,7 @@ export const sampleEstablishments: EstablishmentInterface[] = [
       ],
    },
    {
-      type: "establishment",
+      type: "organization",
       id: 101,
       slug: "children's-artworks-101",
       name: "Children's Artworks",
@@ -1005,7 +1024,7 @@ export const sampleEstablishments: EstablishmentInterface[] = [
       ],
    },
    {
-      type: "establishment",
+      type: "organization",
       id: 988,
       slug: "the-bistro-988",
       name: "The Bistro",
@@ -1127,5 +1146,74 @@ export const sampleSubscriptions: SubscriptionInterface[] = [
       date: "2024-02-11",
       description: "This newsletter offers business insights and research into relevant fields selected by user.",
       icon: <EmailOutlined fontSize="large" color="primary" />,
+   },
+];
+
+export const sampleChats: ChatInterface[] = [
+   {
+      id: 1,
+      chatInitiator: sampleUsers[3],
+      chatRespondend: sampleOrganizations[3],
+   },
+   {
+      id: 2,
+      chatInitiator: sampleUsers[3],
+      chatRespondend: sampleOrganizations[4],
+   },
+   {
+      id: 3,
+      chatInitiator: sampleUsers[3],
+      chatRespondend: sampleUsers[7],
+   },
+];
+
+export const sampleMessages: MessageInterface[] = [
+   {
+      id: 1,
+      sender: sampleUsers[3],
+      body: "Hello! I admire your work and would love to discuss a potential collaboration. Are you available for a chat?",
+      chat: sampleChats[0],
+      date: "2024-01-02",
+      opened: true,
+   },
+   {
+      id: 2,
+      sender: sampleOrganizations[3],
+      body: "Hi. Thank you for reaching out. I'm definitely interested in exploring collaboration opportunities. When would be a good time for us to connect?",
+      chat: sampleChats[0],
+      date: "2024-01-03",
+      opened: true,
+   },
+   {
+      id: 3,
+      sender: sampleUsers[3],
+      body: "Great to hear! How about tomorrow at 2:00 PM? We can discuss more details and see how our skills complement each other.",
+      chat: sampleChats[0],
+      date: "2024-01-04",
+      opened: false,
+   },
+   {
+      id: 4,
+      sender: sampleUsers[3],
+      body: "Hi how are you doing.",
+      chat: sampleChats[1],
+      date: "2023-11-14",
+      opened: true,
+   },
+   {
+      id: 5,
+      sender: sampleUsers[3],
+      body: "I need your services.",
+      chat: sampleChats[2],
+      date: "2023-11-12",
+      opened: true,
+   },
+   {
+      id: 5,
+      sender: sampleUsers[7],
+      body: "How may i help.",
+      chat: sampleChats[2],
+      date: "2023-11-12",
+      opened: true,
    },
 ];

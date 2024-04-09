@@ -69,12 +69,13 @@ export const themeOptions: ThemeOptions = {
          },
       },
       MuiTextField: {
-         defaultProps: {
-            sx: { "& .MuiInputBase-root": { borderRadius: "20px" } },
-         },
+         defaultProps: { sx: { "& .MuiInputBase-root": { borderRadius: "20px" } } },
       },
       MuiTypography: {
          defaultProps: { fontFamily: "inherit" },
+      },
+      MuiBackdrop: {
+         styleOverrides: { root: { backgroundColor: "rgba(255,255,255,0.3)", backdropFilter: "blur(5px)" } },
       },
    },
 };

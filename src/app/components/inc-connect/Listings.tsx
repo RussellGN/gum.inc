@@ -4,16 +4,17 @@ import { Pagination, Typography } from "@mui/material";
 import { useSearchParams } from "next/navigation";
 import JoinCard from "./JoinCard";
 import { directories } from "@/app/lib/constants";
-import { sampleEstablishments, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
-import { EstablishmentInterface, EventInterface, UserInterface } from "@/app/interfaces";
+import { sampleOrganizations, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
+import { OrganizationInterface, EventInterface, UserInterface } from "@/app/interfaces";
 import Listing from "./Listing";
 
 export default function Listings() {
    const readOnlySearchParams = useSearchParams();
-   const activeDir = readOnlySearchParams.get("dir") || directories[0].name;
+   const activeDirName = readOnlySearchParams.get("dir") || directories[0].name;
 
-   const activeDirFor = directories.find((dir) => dir.name === activeDir)?.for;
-   let listings: (EventInterface | UserInterface | EstablishmentInterface)[];
+   const activeDir = directories.find((dir) => dir.name === activeDirName);
+   const activeDirFor = (directories.find((dir) => dir.name === activeDirName) || directories[0]).for;
+   let listings: (EventInterface | UserInterface | OrganizationInterface)[];
 
    switch (activeDirFor) {
       case "users":
@@ -22,14 +23,14 @@ export default function Listings() {
       case "events":
          listings = sampleEvents;
          break;
-      case "establishments":
-         listings = sampleEstablishments;
+      case "organizations":
+         listings = sampleOrganizations;
          break;
-      case "users-establishments":
-         listings = [...sampleUsers, ...sampleEstablishments];
+      case "users-organizations":
+         listings = [...sampleUsers, ...sampleOrganizations];
          break;
       default:
-         throw new Error("could not determine listings to display for dir: " + activeDir);
+         throw new Error("could not determine listings to display for dir: " + activeDirName);
    }
 
    listings = listings.sort((listing1, listing2) => listing1.name.localeCompare(listing2.name));
@@ -37,10 +38,10 @@ export default function Listings() {
    return (
       <>
          <Typography textAlign="center" sx={{ px: 2, mb: 3 }}>
-            Showing all listings in <strong>{activeDir} - UK access</strong>
+            Showing all listings in <strong>{activeDirName} - UK access</strong>
          </Typography>
          <div className="grid grid-cols-5 gap-2 ">
-            <JoinCard directory={activeDir} />
+            <JoinCard dir={activeDir!} />
             {listings.map((listing) => (
                <Listing key={listing.slug} listing={listing} />
             ))}

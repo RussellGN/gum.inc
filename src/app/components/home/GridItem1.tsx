@@ -1,4 +1,4 @@
-import { sampleEstablishments, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
+import { sampleOrganizations, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
 import { Box, Grid, Typography } from "@mui/material";
 import {
    Verified,
@@ -19,7 +19,7 @@ import UncontolledSlideshow from "../general/UncontolledSlideshow";
 export default function GridItem1() {
    const user = sampleUsers[7];
    const event = sampleEvents[0];
-   const establishment = sampleEstablishments[2];
+   const organization = sampleOrganizations[2];
 
    const slides = [
       <div key="item1-slide1" className="h-full">
@@ -156,10 +156,10 @@ export default function GridItem1() {
             <Grid container gap={1} justifyContent="space-between" className="mb-2 ">
                <Grid item xs zeroMinWidth>
                   <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
-                     {establishment.name}
+                     {organization.name}
                   </Typography>
                   <Typography variant="caption" component="div">
-                     {establishment.industry}
+                     {organization.industry}
                   </Typography>
                </Grid>
                <Grid item xs="auto">
@@ -186,8 +186,8 @@ export default function GridItem1() {
                }}
             >
                <AspectContainedNextImage
-                  src={establishment.displayPhoto}
-                  alt={establishment.name}
+                  src={organization.displayPhoto}
+                  alt={organization.name}
                   sx={{
                      borderRadius: "10px",
                   }}
@@ -197,7 +197,7 @@ export default function GridItem1() {
             <Box className="mt-2 flex justify-between items-center">
                <Typography noWrap className="flex-grow">
                   <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
-                  {establishment.location}
+                  {organization.location}
                </Typography>
                <Message />
             </Box>

@@ -23,10 +23,10 @@ export default function layout({ children }: PropsWithChildren) {
                variant="outlined"
                color="primary"
                component={Link}
-               href="/new/establishment"
+               href="/new/organization"
                endIcon={<Business />}
             >
-               Create Business / Organisation Page
+               Create Organisation Page
             </Button>
          </div>
 

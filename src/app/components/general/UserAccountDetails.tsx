@@ -7,7 +7,6 @@ import {
    Person2,
    Work,
    LocationOn,
-   Verified,
    Edit,
    KeyboardDoubleArrowRight,
    InfoOutlined,
@@ -20,6 +19,7 @@ import SocialMediaIcon from "../inc-connect/SocialMediaIcon";
 import UserCard from "../inc-connect/UserCard";
 import AspectContainedNextImage from "./AspectContainedNextImage";
 import SaveIncButton from "../inc-connect/SaveIncButton";
+import Verification from "./Verification";
 
 export default function UserAccountDetails({ user, isAuthenticated }: { user: UserInterface; isAuthenticated?: boolean }) {
    // const isAuthenticated = true;
@@ -66,17 +66,11 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                         <Typography variant="subtitle1">
                            Works:{" "}
                            <Typography variant="inherit" fontWeight="bold" color="primary" component="span">
-                              Freelance
+                              {user.worksAt || "Independant"}
                            </Typography>
                         </Typography>
 
-                        <Typography
-                           variant="subtitle1"
-                           className="px-2 py-[2px] border rounded-lg bg-slate-100 flex items-center gap-2"
-                        >
-                           Verified
-                           <Verified fontSize="inherit" />
-                        </Typography>
+                        <Verification isVerified={user.verified} />
                      </Box>
                   </Grid>
 
@@ -98,7 +92,11 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                            </>
                         ) : (
                            <>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
+                              <IconButton
+                                 component={Link}
+                                 href={"/inbox/" + user.slug + "?type=user"}
+                                 sx={{ border: "solid thin", borderColor: "divider" }}
+                              >
                                  <Message />
                               </IconButton>
                               <SaveIncButton sx={{ border: "solid thin", borderColor: "divider" }} />
@@ -124,7 +122,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                   <Grid item xs md={6}>
                      <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md ">
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
-                           Service Offerings
+                           What I Do
                            <Work fontSize="inherit" />
                         </Typography>
                         <ul className="list-none">

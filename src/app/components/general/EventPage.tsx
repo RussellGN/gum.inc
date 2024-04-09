@@ -6,7 +6,6 @@ import {
    Link as LinkIcon,
    Work,
    LocationOn,
-   Verified,
    Edit,
    KeyboardDoubleArrowRight,
    InfoOutlined,
@@ -21,7 +20,8 @@ import SocialMediaIcon from "../inc-connect/SocialMediaIcon";
 import UserCard from "../inc-connect/UserCard";
 import AspectContainedNextImage from "./AspectContainedNextImage";
 import SaveIncButton from "../inc-connect/SaveIncButton";
-import Image from "next/image";
+import Members from "./Members";
+import Verification from "./Verification";
 
 export default function EventPage({ event, isAuthenticated }: { event: EventInterface; isAuthenticated?: boolean }) {
    return (
@@ -75,13 +75,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                            </MuiLink>
                         </Typography>
 
-                        <Typography
-                           variant="subtitle1"
-                           className="px-2 py-[2px] border rounded-lg bg-slate-100 flex items-center gap-2"
-                        >
-                           Verified
-                           <Verified fontSize="inherit" />
-                        </Typography>
+                        <Verification isVerified={event.verified} />
                      </div>
                   </Grid>
 
@@ -103,7 +97,11 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                            </>
                         ) : (
                            <>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
+                              <IconButton
+                                 component={Link}
+                                 href={"/inbox/" + event.slug + "?type=event"}
+                                 sx={{ border: "solid thin", borderColor: "divider" }}
+                              >
                                  <Message />
                               </IconButton>
                               <SaveIncButton sx={{ border: "solid thin", borderColor: "divider" }} />
@@ -197,29 +195,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
 
          <Grid item xs md={3.5}>
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
-               {event.hosts && (
-                  <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
-                     <Typography variant="h4" sx={{ mb: 1 }}>
-                        Hosts
-                     </Typography>
-                     <Grid container spacing={1} wrap="nowrap" overflow="auto" sx={{ pb: 1 }}>
-                        {event.hosts.map((host) => (
-                           <Grid item xs={4.5} component={Link} href={`/inc-connect/user/${host.slug}`} key={host.name}>
-                              <Box className="p-2 rounded-xl border flex flex-col items-center  gap-2 justify-around hover:bg-slate-100 ">
-                                 <Image
-                                    src={host.displayPhoto}
-                                    alt={host.name}
-                                    className="w-10 h-10 object-cover rounded-[100%] border shadow-md"
-                                 />
-                                 <Typography noWrap className="w-full text-center mb-0">
-                                    {host.name}
-                                 </Typography>
-                              </Box>
-                           </Grid>
-                        ))}
-                     </Grid>
-                  </Box>
-               )}
+               {event.hosts && <Members members={event.hosts} memberType="hosts" />}
 
                <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
                   <Typography variant="h4" sx={{ mb: 1 }}>

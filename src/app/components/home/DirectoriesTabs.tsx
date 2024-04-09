@@ -1,10 +1,14 @@
 "use client";
 
-import { sampleUsers } from "@/app/lib/sampleData";
+import { sampleEvents, sampleOrganizations, sampleUsers } from "@/app/lib/sampleData";
 import { Event, MedicalServices, Money, MusicNote } from "@mui/icons-material";
 import { Box, Tab, Tabs } from "@mui/material";
 import React, { ReactNode } from "react";
 import UserCard from "../inc-connect/UserCard";
+import { directories } from "@/app/lib/constants";
+import { EventInterface, OrganizationInterface, UserInterface } from "@/app/interfaces";
+import EventCard from "../inc-connect/EventCard";
+import OrganizationCard from "../inc-connect/OrganizationCard";
 
 export default function DirectoriesTabs() {
    const [value, setValue] = React.useState(0);
@@ -39,9 +43,7 @@ export default function DirectoriesTabs() {
 
          <Box>
             {tabs.map((tab, index) => (
-               <CustomTabPanel key={"panel-" + tab.label} value={value} index={index}>
-                  {tab.content}
-               </CustomTabPanel>
+               <CustomTabPanel key={"panel-" + tab.label} value={value} index={index} listings={tab.listings} />
             ))}
          </Box>
       </Box>
@@ -51,44 +53,80 @@ export default function DirectoriesTabs() {
 type tab = {
    icon: React.JSX.Element;
    label: string;
-   content: ReactNode;
+   listings: (EventInterface | UserInterface | OrganizationInterface)[];
 };
 
-const tabs: tab[] = [
-   {
-      label: "Finance",
-      icon: <Money />,
-      content: <div>finance listings go here</div>,
-   },
-   {
-      label: "Music",
-      icon: <MusicNote />,
-      content: <div>Music listings go here</div>,
-   },
-   {
-      label: "Events",
-      icon: <Event />,
-      content: <div>Event listings go here</div>,
-   },
-   {
-      label: "Medicine",
-      icon: <MedicalServices />,
-      content: <div>Hospitals and Clinics listings go here</div>,
-   },
-   {
-      label: "Tourism",
-      icon: <MedicalServices />,
-      content: <div>Hospitals and Clinics listings go here</div>,
-   },
-   {
-      label: "Utility",
-      icon: <MedicalServices />,
-      content: <div>Hospitals and Clinics listings go here</div>,
-   },
-];
+// const tabs: tab[] = [
+//    {
+//       label: "Finance",
+//       icon: <Money />,
+//       content: <div>finance listings go here</div>,
+//    },
+//    {
+//       label: "Music",
+//       icon: <MusicNote />,
+//       content: <div>Music listings go here</div>,
+//    },
+//    {
+//       label: "Events",
+//       icon: <Event />,
+//       content: <div>Event listings go here</div>,
+//    },
+//    {
+//       label: "Medicine",
+//       icon: <MedicalServices />,
+//       content: <div>Hospitals and Clinics listings go here</div>,
+//    },
+//    {
+//       label: "Tourism",
+//       icon: <MedicalServices />,
+//       content: <div>Hospitals and Clinics listings go here</div>,
+//    },
+//    {
+//       label: "Utility",
+//       icon: <MedicalServices />,
+//       content: <div>Hospitals and Clinics listings go here</div>,
+//    },
+// ];
+
+const tabs: tab[] = directories
+   .filter((dir) => !dir.name.toLowerCase().includes("event"))
+   .splice(0, 5)
+   .map((dir) => {
+      function determineListings() {
+         let listings: (EventInterface | UserInterface | OrganizationInterface)[];
+
+         switch (dir.for) {
+            case "users":
+               listings = sampleUsers;
+               break;
+            case "events":
+               listings = sampleEvents;
+               break;
+            case "organizations":
+               listings = sampleOrganizations;
+               break;
+            case "users-organizations":
+               listings = [...sampleUsers, ...sampleOrganizations];
+               break;
+            default:
+               throw new Error("could not determine listings to display for dir: " + dir.name);
+         }
+
+         const deleteCount = listings.length > 5 ? 5 : listings.length;
+         listings = listings.splice(0, deleteCount);
+         return listings.sort(() => Math.random() - 0.5);
+      }
+
+      return {
+         icon: dir.icon,
+         label: dir.name,
+         listings: determineListings(),
+      };
+   });
 
 function CustomTabPanel(props: TabPanelProps) {
-   const { value, index, ...other } = props;
+   const { value, index, listings, ...other } = props;
 
    return (
       <div
@@ -100,9 +138,15 @@ function CustomTabPanel(props: TabPanelProps) {
       >
          {value === index && (
             <Box sx={{ p: 2 }} className="grid grid-flow-col auto-cols-auto overflow-x-auto gap-3">
-               {sampleUsers.map((user) => (
-                  <div key={user.id} className="w-[10rem]">
-                     <UserCard key={user.slug} user={user} />
+               {listings.map((listing) => (
+                  <div key={listing.id} className="w-[10rem]">
+                     {listing.type === "user" ? (
+                        <UserCard key={listing.slug} user={listing as UserInterface} />
+                     ) : listing.type === "event" ? (
+                        <EventCard key={listing.slug} event={listing as EventInterface} />
+                     ) : (
+                        <OrganizationCard key={listing.slug} organization={listing as OrganizationInterface} />
+                     )}
                   </div>
                ))}
             </Box>
@@ -112,9 +156,9 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 interface TabPanelProps {
-   children?: React.ReactNode;
    index: number;
    value: number;
+   listings: (EventInterface | UserInterface | OrganizationInterface)[];
 }
 
 function a11yProps(index: number) {

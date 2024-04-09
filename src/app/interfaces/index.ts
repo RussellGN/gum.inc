@@ -5,7 +5,8 @@ interface ListingInterface {
    id: number;
    slug: string;
    name: string;
-   type: "event" | "user" | "establishment";
+   type: "event" | "user" | "organization";
+   verified: boolean;
    displayPhoto: string | StaticImageData;
    images: (string | StaticImageData)[];
    socialMedia?: {
@@ -19,9 +20,9 @@ export interface UserInterface extends ListingInterface {
    email: string;
    contactDetails?: string;
    jobTitle: string;
+   worksAt?: string;
    industry: string;
    location: string;
-   verified: boolean;
    bio: string;
    serviceOfferings: {
       service: string;
@@ -29,14 +30,13 @@ export interface UserInterface extends ListingInterface {
    }[];
 }
 
-export interface EstablishmentInterface extends ListingInterface {
+export interface OrganizationInterface extends ListingInterface {
    email: string;
    admin: UserInterface;
    team?: UserInterface[];
    contactDetails?: string;
    industry: string;
    location: string;
-   verified: boolean;
    about: string;
    serviceOfferings: {
       service: string;
@@ -79,4 +79,31 @@ export interface SubscriptionInterface {
    expires?: string;
    description: string;
    icon: JSX.Element;
+}
+
+export interface DirectoryInterface {
+   name: string;
+   shortDescription: string;
+   about: string;
+   icon: JSX.Element;
+   for: "events" | "users" | "organizations" | "users-organizations";
+   itemToBeListed: string;
+   actionForListing: () => void;
+   // actionForListing: string | (() => void);
+   // actionForListingWhenLoggedIn: "proceed-with-action" | "notify-consideration";
+}
+
+export interface ChatInterface {
+   id: number;
+   chatInitiator: UserInterface | OrganizationInterface | EventInterface;
+   chatRespondend: UserInterface | OrganizationInterface | EventInterface;
+}
+
+export interface MessageInterface {
+   id: number;
+   chat: ChatInterface;
+   sender: UserInterface | OrganizationInterface | EventInterface;
+   date: string;
+   body: string;
+   opened: boolean;
 }

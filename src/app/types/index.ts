@@ -3,14 +3,6 @@ export type link = {
    path: string;
 };
 
-export type directory = {
-   name: string;
-   shortDescription: string;
-   about: string;
-   icon: JSX.Element;
-   for: "events" | "users" | "establishments" | "users-establishments";
-};
-
 export type expandSize = "minimized" | "normal" | "expanded";
 
 export type option = {

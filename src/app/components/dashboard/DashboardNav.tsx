@@ -3,7 +3,7 @@
 import { sampleUsers } from "@/app/lib/sampleData";
 import { Badge, Box, Grid, IconButton, Typography } from "@mui/material";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
-import { Mail, Settings } from "@mui/icons-material";
+import { Message, Settings } from "@mui/icons-material";
 import Link from "next/link";
 import { dashboardNavLinks } from "@/app/lib/constants";
 import { usePathname } from "next/navigation";
@@ -69,8 +69,8 @@ export default function DashboardNav() {
                         "&:hover": { bgcolor: "divider" },
                      }}
                   >
-                     <Badge color="primary" badgeContent={5} max={9}>
-                        <Mail />
+                     <Badge component={Link} href="/inbox/" color="primary" badgeContent={5} max={9}>
+                        <Message />
                      </Badge>
                   </IconButton>
                </li>

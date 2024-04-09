@@ -1,5 +1,5 @@
 import images from "@/app/assets";
-import { ArrowRightAlt, Search, Send } from "@mui/icons-material";
+import { ArrowRightAlt, Message, Search, Send } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,7 +20,7 @@ export default function ValueProposition() {
                      className="border h-[25rem] w-[15rem]  rounded-lg shadow-md absolute top-[-3rem] -right-1/4 rotate-6 -z-10"
                   ></Box>
 
-                  <Box className="bg-white border rounded-lg shadow-md absolute top-1/4 -left-full">
+                  <Box className="bg-white border rounded-lg shadow-lg absolute top-1/4 -left-full">
                      <div className="py-1 px-2 border gap-4 flex items-center justify-around">
                         <div className="flex items-center gap-2">
                            <Search fontSize="small" />
@@ -32,18 +32,20 @@ export default function ValueProposition() {
                      </div>
                   </Box>
 
-                  <Box className="bg-white border rounded-lg shadow-md absolute bottom-[3rem] -right-3/4">
-                     <div className="flex items-center gap-3 py-1 px-2">
+                  <Box className="bg-white border rounded-lg shadow-lg absolute bottom-[3rem] -right-3/4">
+                     <div className="flex items-center gap-4 py-0.5 px-1.5">
                         <Image
                            src={images.person2m}
                            alt="user"
                            className="w-10 h-10 object-cover rounded-[100%] border-2 shadow-md"
                         />
                         <div className="mr-auto flex flex-col gap-0">
-                           <Typography variant="subtitle1">Aaron Rhodes</Typography>
+                           <Typography sx={{ mb: 0 }} variant="subtitle2">
+                              Aaron Rhodes
+                           </Typography>
                            <Typography variant="caption">Tax Lawyer</Typography>
                         </div>
-                        <Send fontSize="small" />
+                        <Message fontSize="small" />
                      </div>
                   </Box>
                </Box>

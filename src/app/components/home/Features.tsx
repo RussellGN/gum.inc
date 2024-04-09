@@ -24,7 +24,7 @@ export default function Features() {
                      in the world of opportunities
                   </Typography>
                   <Typography className="max-w-[25rem] py-3">
-                     Unlock a wealth of opportunities in our comprehensive Inc Connect directory. Find and showcase
+                     Unlock a wealth of opportunities in our comprehensive Inc Connect directory. Find or showcase
                      services, connect with industry leaders, and elevate your business.{" "}
                   </Typography>
 

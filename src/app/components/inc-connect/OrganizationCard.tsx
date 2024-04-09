@@ -1,25 +1,25 @@
-import { EstablishmentInterface } from "@/app/interfaces";
+import { OrganizationInterface } from "@/app/interfaces";
 import { Business, LocationOn, Verified } from "@mui/icons-material";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
 
-export default function EstablishmentCard({ establishment }: { establishment: EstablishmentInterface }) {
+export default function OrganizationCard({ organization }: { organization: OrganizationInterface }) {
    return (
       <Box className="block border rounded-[15px] bg-slate-200 ">
          <Box
             component={Link}
-            href={`/inc-connect/establishment/${establishment.slug}`}
+            href={`/inc-connect/organization/${organization.slug}`}
             className="block border pb-2 border-b-0 border-[transparent] rounded-tl-[15px] rounded-tr-[15px] cursor-pointer transition-all hover:border-slate-400 hover:bg-slate-50"
          >
             <Grid container gap={1} justifyContent="space-between" className="p-1.5 ">
                <Grid item xs zeroMinWidth>
                   <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
-                     {establishment.name}
+                     {organization.name}
                   </Typography>
                   <Typography variant="caption" noWrap component="p">
-                     {establishment.industry}
+                     {organization.industry}
                   </Typography>
                </Grid>
                <Grid item xs="auto">
@@ -30,10 +30,10 @@ export default function EstablishmentCard({ establishment }: { establishment: Es
                </Grid>
             </Grid>
 
-            <AspectContainedNextImage src={establishment.displayPhoto} alt={establishment.name} aspectRatio="3 / 2" />
+            <AspectContainedNextImage src={organization.displayPhoto} alt={organization.name} aspectRatio="3 / 2" />
             <div className="p-2 pb-0">
                <Typography component="p" variant="caption" color="grey" className="line-clamp-2">
-                  {establishment.about}
+                  {organization.about}
                </Typography>
             </div>
          </Box>
@@ -42,7 +42,7 @@ export default function EstablishmentCard({ establishment }: { establishment: Es
             <div className="flex items-center justify-between gap-3 border-t-2">
                <Typography noWrap className="flex-grow">
                   <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
-                  {establishment.location}
+                  {organization.location}
                </Typography>
 
                <SaveIncButton />

@@ -1,4 +1,5 @@
-import { directory, expandSize } from "@/app/types";
+import { DirectoryInterface } from "@/app/interfaces";
+import { expandSize } from "@/app/types";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 
@@ -7,7 +8,7 @@ export default function DirectoryCard({
    activeDir,
    expand,
 }: {
-   dir: directory;
+   dir: DirectoryInterface;
    activeDir: string;
    expand: expandSize;
 }) {

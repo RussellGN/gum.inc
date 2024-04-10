@@ -20,6 +20,7 @@ import UserCard from "../inc-connect/UserCard";
 import AspectContainedNextImage from "./AspectContainedNextImage";
 import SaveIncButton from "../inc-connect/SaveIncButton";
 import Verification from "./Verification";
+import Gallery from "./Gallery";
 
 export default function UserAccountDetails({ user, isAuthenticated }: { user: UserInterface; isAuthenticated?: boolean }) {
    // const isAuthenticated = true;
@@ -189,23 +190,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
 
          <Grid item xs md={3.5}>
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
-               <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
-                  <Typography variant="h4" sx={{ mb: 1 }}>
-                     Gallery
-                  </Typography>
-                  <div className="flex gap-2 overflow-x-auto pb-2">
-                     {user.images.map((img, index) => (
-                        <div key={"img-" + index} className="w-6/12 flex-shrink-0">
-                           <AspectContainedNextImage
-                              src={img}
-                              sx={{ border: "solid 2px", borderColor: "rgb(180,180,180)", borderRadius: "10px" }}
-                              alt="gallery image"
-                              aspectRatio="3 / 2"
-                           />
-                        </div>
-                     ))}
-                  </div>
-               </Box>
+               <Gallery images={user.images} />
 
                <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
                   <Typography variant="h4" sx={{ mb: 1 }}>

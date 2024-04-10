@@ -1,7 +1,7 @@
 "use client";
 
-import { Box, Button, Dialog, IconButton } from "@mui/material";
-import { Fullscreen, FullscreenExit } from "@mui/icons-material";
+import { Box, Dialog, IconButton } from "@mui/material";
+import { Close, Fullscreen } from "@mui/icons-material";
 import { useState } from "react";
 import { StaticImageData } from "next/image";
 import AspectContainedNextImage from "./AspectContainedNextImage";
@@ -20,7 +20,7 @@ export default function ImageViewer({ image, alt }: { image: string | StaticImag
    return (
       <>
          <button
-            className="absolute top-0 right-0 rounded-bl-lg bg-black text-white p-2 hover:bg-gray-900"
+            className="absolute top-0 right-0 rounded-bl-lg bg-black text-white px-1 py-0.5 transition-all hover:bg-gray-600"
             onClick={handleClickOpen}
             type="button"
          >
@@ -28,14 +28,14 @@ export default function ImageViewer({ image, alt }: { image: string | StaticImag
          </button>
 
          <Dialog fullWidth maxWidth="md" open={open} onClose={handleClose}>
-            <Box className="p-4">
-               <div className="text-right">
-                  <IconButton onClick={handleClose} type="button">
-                     <FullscreenExit />
+            <Box className="p-3">
+               <div className="text-right mb-3">
+                  <IconButton size="small" onClick={handleClose} type="button">
+                     <Close />
                   </IconButton>
                </div>
                <div>
-                  <AspectContainedNextImage src={image} alt={alt} />
+                  <AspectContainedNextImage src={image} alt={alt} sx={{ borderRadius: "15px" }} />
                </div>
             </Box>
          </Dialog>

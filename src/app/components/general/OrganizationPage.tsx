@@ -21,6 +21,7 @@ import AspectContainedNextImage from "./AspectContainedNextImage";
 import SaveIncButton from "../inc-connect/SaveIncButton";
 import Members from "./Members";
 import Verification from "./Verification";
+import Gallery from "./Gallery";
 
 export default function OrganizationPage({
    organization,
@@ -201,23 +202,7 @@ export default function OrganizationPage({
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
                {organization.team && <Members members={organization.team} memberType="team" />}
 
-               <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
-                  <Typography variant="h4" sx={{ mb: 1 }}>
-                     Gallery
-                  </Typography>
-                  <div className="flex gap-2 overflow-x-auto pb-2">
-                     {organization.images.map((img, index) => (
-                        <div key={"img-" + index} className="w-6/12 flex-shrink-0">
-                           <AspectContainedNextImage
-                              src={img}
-                              sx={{ border: "solid 2px", borderColor: "rgb(180,180,180)", borderRadius: "10px" }}
-                              alt="gallery image"
-                              aspectRatio="3 / 2"
-                           />
-                        </div>
-                     ))}
-                  </div>
-               </Box>
+               <Gallery images={organization.images} />
 
                <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
                   <Typography variant="h4" sx={{ mb: 1 }}>

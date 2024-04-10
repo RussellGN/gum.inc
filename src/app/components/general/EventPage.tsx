@@ -22,6 +22,7 @@ import AspectContainedNextImage from "./AspectContainedNextImage";
 import SaveIncButton from "../inc-connect/SaveIncButton";
 import Members from "./Members";
 import Verification from "./Verification";
+import Gallery from "./Gallery";
 
 export default function EventPage({ event, isAuthenticated }: { event: EventInterface; isAuthenticated?: boolean }) {
    return (
@@ -197,23 +198,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
                {event.hosts && <Members members={event.hosts} memberType="hosts" />}
 
-               <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
-                  <Typography variant="h4" sx={{ mb: 1 }}>
-                     Gallery
-                  </Typography>
-                  <div className="flex gap-2 overflow-x-auto pb-2">
-                     {event.images.map((img, index) => (
-                        <div key={"img-" + index} className="w-6/12 flex-shrink-0">
-                           <AspectContainedNextImage
-                              src={img}
-                              sx={{ border: "solid 2px", borderColor: "rgb(180,180,180)", borderRadius: "10px" }}
-                              alt="gallery image"
-                              aspectRatio="3 / 2"
-                           />
-                        </div>
-                     ))}
-                  </div>
-               </Box>
+               <Gallery images={event.images} />
 
                <Box sx={{ borderBottom: "solid", borderColor: "divider", py: 2 }}>
                   <Typography variant="h4" sx={{ mb: 1 }}>

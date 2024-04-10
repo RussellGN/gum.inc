@@ -114,7 +114,7 @@ const tabs: tab[] = directories
 
          const deleteCount = listings.length > 5 ? 5 : listings.length;
          listings = listings.splice(0, deleteCount);
-         return listings.sort(() => Math.random() - 0.5);
+         return listings.sort((listing1, listing2) => listing1.name.localeCompare(listing2.name));
       }
 
       return {

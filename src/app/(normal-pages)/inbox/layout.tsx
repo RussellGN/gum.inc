@@ -1,8 +1,8 @@
 import InboxSidebar from "@/app/components/inbox/InboxSidebar";
 import { Box, Grid } from "@mui/material";
-import { ReactNode } from "react";
+import { PropsWithChildren } from "react";
 
-export default function Layout({ children }: { chidren: ReactNode }) {
+export default function Layout({ children }: PropsWithChildren) {
    return (
       <Grid container gap={3}>
          <Grid item xs md={3}>

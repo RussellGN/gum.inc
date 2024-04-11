@@ -1,36 +1,68 @@
-import { ArrowRightAlt } from "@mui/icons-material";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { ArrowRightAlt, Message, Money, PeopleOutlined, Search } from "@mui/icons-material";
+import { Box, Button, Typography } from "@mui/material";
+
+type feature = {
+   title: string;
+   description: string;
+   icon: JSX.Element;
+};
+
+const features: feature[] = [
+   {
+      title: "let people find you",
+      description: "Showcasing yourself on the platform enables people todiscover you mre easily",
+      icon: <Search />,
+   },
+
+   {
+      title: "engage businesses & people",
+      description: "Once a member, you have the ability to engage other accounts via direct message",
+      icon: <Message />,
+   },
+
+   {
+      title: "showcase businesses & events",
+      description: "Create pages for your events, businesses and more, so they may be discovered",
+      icon: <PeopleOutlined />,
+   },
+
+   {
+      title: "monetization opportunities",
+      description: "We provide you with the means to earn by being part of the network and promoting it",
+      icon: <Money />,
+   },
+];
 
 export default function JoinValueFeature() {
    return (
-      <Grid container alignItems="center" justifyContent="center" gap={5} className="min-h-[60vh]">
-         <Grid item xs md={4}>
-            <div className="relative w-full h-[20rem] flex items-center justify-center">
-               <div className="bg-gray-600 border rounded-xl w-6/12 h-[70%] absolute top-1/2 -translate-y-1/2 "></div>
-               <div className="bg-gray-500 border rounded-xl w-7/12 h-[70%] absolute top-1/2 -translate-y-1/2 mt-3" />
-               <div className="bg-gray-400 border rounded-xl w-8/12 h-[70%] absolute top-1/2 -translate-y-1/2 mt-6" />
-               <div className="bg-gray-300 border rounded-xl w-9/12 h-[70%] absolute top-1/2 -translate-y-1/2 mt-9" />
-               <div className="bg-gray-200 border rounded-xl w-10/12 h-[70%] absolute top-1/2 -translate-y-1/2 mt-9" />
-            </div>
-         </Grid>
+      <Box sx={{ my: 8, py: 3 }}>
+         <Typography variant="h3" sx={{ textAlign: "center", mb: 3 }}>
+            Why Join The Network?
+         </Typography>
 
-         <Grid item xs md="auto">
-            <Box sx={{ pr: { md: 5 } }}>
-               <Typography variant="h2">Whats in store for Joining the network?</Typography>
-               <Typography className="max-w-[15rem] py-3">
-                  Lorem ipsum dolor sit amet. Illum vero corrupti molestiae?
-                  <br />
-               </Typography>
-               <div className="flex items-center gap-3">
-                  <Button size="large" endIcon={<ArrowRightAlt />}>
-                     Join Now
-                  </Button>
-                  <Button variant="outlined" color="primary">
-                     Read More
-                  </Button>
+         <div className="flex gap-3 overflow-x-auto items-stretch">
+            {features.map((feature) => (
+               <div key={feature.title} className="bg-white p-6 rounded-[15px]">
+                  <Box className="flex flex-col text-center justify-center items-center gap-6">
+                     <Box sx={{ "& svg": { fontSize: "2.5rem", color: "primary.light" } }}>{feature.icon}</Box>
+
+                     <div className="w-[20rem]">
+                        <Typography sx={{ mb: 1 }} variant="h4">
+                           {feature.title.toUpperCase()}
+                        </Typography>
+                        <Typography>{feature.description}</Typography>
+                     </div>
+                  </Box>
                </div>
-            </Box>
-         </Grid>
-      </Grid>
+            ))}
+         </div>
+
+         <div className="flex items-center justify-center gap-3 mt-6">
+            <Button endIcon={<ArrowRightAlt />}>Join Now</Button>
+            <Button variant="outlined" color="primary">
+               Read More
+            </Button>
+         </div>
+      </Box>
    );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { sampleEvents, sampleOrganizations, sampleUsers } from "@/app/lib/sampleData";
+import { sampleEvents, sampleOrganizationsForFeature, sampleUsersForFeature } from "@/app/lib/sampleData";
 import { Box, Tab, Tabs } from "@mui/material";
 import React from "react";
 import UserCard from "../inc-connect/UserCard";
@@ -55,39 +55,6 @@ type tab = {
    listings: (EventInterface | UserInterface | OrganizationInterface)[];
 };
 
-// const tabs: tab[] = [
-//    {
-//       label: "Finance",
-//       icon: <Money />,
-//       content: <div>finance listings go here</div>,
-//    },
-//    {
-//       label: "Music",
-//       icon: <MusicNote />,
-//       content: <div>Music listings go here</div>,
-//    },
-//    {
-//       label: "Events",
-//       icon: <Event />,
-//       content: <div>Event listings go here</div>,
-//    },
-//    {
-//       label: "Medicine",
-//       icon: <MedicalServices />,
-//       content: <div>Hospitals and Clinics listings go here</div>,
-//    },
-//    {
-//       label: "Tourism",
-//       icon: <MedicalServices />,
-//       content: <div>Hospitals and Clinics listings go here</div>,
-//    },
-//    {
-//       label: "Utility",
-//       icon: <MedicalServices />,
-//       content: <div>Hospitals and Clinics listings go here</div>,
-//    },
-// ];
-
 const tabs: tab[] = directories
    .filter((dir) => !dir.name.toLowerCase().includes("event"))
    .splice(0, 5)
@@ -97,16 +64,16 @@ const tabs: tab[] = directories
 
          switch (dir.for) {
             case "users":
-               listings = sampleUsers;
+               listings = sampleUsersForFeature;
                break;
             case "events":
                listings = sampleEvents;
                break;
             case "organizations":
-               listings = sampleOrganizations;
+               listings = sampleOrganizationsForFeature;
                break;
             case "users-organizations":
-               listings = [...sampleUsers, ...sampleOrganizations];
+               listings = [...sampleUsersForFeature, ...sampleOrganizationsForFeature];
                break;
             default:
                throw new Error("could not determine listings to display for dir: " + dir.name);

@@ -19,7 +19,7 @@ export default function ResearchBureauNewsletterForm() {
       setShowDialog(false);
    }
 
-   const numberOfoptionsSelected = options.filter((option) => option.checked).length;
+   const numberOfoptionsSelected: number = options.filter((option) => option.checked).length;
    const isAllSelected = options.length === numberOfoptionsSelected;
 
    function toggleOptionCheckedState(optionName: string) {

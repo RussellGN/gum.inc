@@ -5,7 +5,7 @@ import Link from "next/link";
 import { UserInterface } from "@/app/interfaces";
 import SaveIncButton from "./SaveIncButton";
 
-export default function UserCard({ user }: { user: UserInterface }) {
+export default function UserCard({ user, initiallySaved }: { user: UserInterface; initiallySaved?: boolean }) {
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box
@@ -41,7 +41,7 @@ export default function UserCard({ user }: { user: UserInterface }) {
                   {user.location}
                </Typography>
 
-               <SaveIncButton />
+               <SaveIncButton initiallySaved={Boolean(initiallySaved)} />
             </div>
          </Box>
       </Box>

@@ -6,7 +6,7 @@ import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
 import { friendlyDate } from "@/app/lib/utils";
 
-export default function EventCard({ event }: { event: EventInterface }) {
+export default function EventCard({ event, initiallySaved }: { event: EventInterface; initiallySaved?: boolean }) {
    return (
       <Box className="block border rounded-[15px] bg-white  ">
          <Box
@@ -45,7 +45,7 @@ export default function EventCard({ event }: { event: EventInterface }) {
                   {event.location}
                </Typography>
 
-               <SaveIncButton />
+               <SaveIncButton initiallySaved={Boolean(initiallySaved)} />
             </div>
          </Box>
       </Box>

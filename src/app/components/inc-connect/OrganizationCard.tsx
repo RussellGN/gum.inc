@@ -5,7 +5,13 @@ import Link from "next/link";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
 import SaveIncButton from "./SaveIncButton";
 
-export default function OrganizationCard({ organization }: { organization: OrganizationInterface }) {
+export default function OrganizationCard({
+   organization,
+   initiallySaved,
+}: {
+   organization: OrganizationInterface;
+   initiallySaved?: boolean;
+}) {
    return (
       <Box className="block border rounded-[15px] bg-slate-200 ">
          <Box
@@ -45,7 +51,7 @@ export default function OrganizationCard({ organization }: { organization: Organ
                   {organization.location}
                </Typography>
 
-               <SaveIncButton />
+               <SaveIncButton initiallySaved={Boolean(initiallySaved)} />
             </div>
          </Box>
       </Box>

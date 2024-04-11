@@ -9,7 +9,6 @@ import { dashboardNavLinks } from "@/app/lib/constants";
 import { usePathname } from "next/navigation";
 
 export default function DashboardNav() {
-   // const [expand, setExpand] = useState<expandSize>("normal");
    const user = sampleUsers[1];
    const pathname = usePathname();
 

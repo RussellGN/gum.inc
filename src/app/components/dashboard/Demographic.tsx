@@ -9,7 +9,7 @@ export default function Demographic() {
             <People fontSize="inherit" />
          </Typography>
          <h5>viewers locations</h5>
-         <h5>nature of viewers on platform</h5>
+         <h5>signed in</h5>
       </Box>
    );
 }

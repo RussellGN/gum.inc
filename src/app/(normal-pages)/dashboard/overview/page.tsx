@@ -1,5 +1,4 @@
 import AccountActivity from "@/app/components/dashboard/AccountActivity";
-import Demographic from "@/app/components/dashboard/Demographic";
 import Earnings from "@/app/components/dashboard/Earnings";
 import IncScore from "@/app/components/dashboard/IncScore";
 import Statistics from "@/app/components/dashboard/Statistics";
@@ -7,7 +6,7 @@ import { Box, Grid, Typography } from "@mui/material";
 
 export default function page() {
    return (
-      <Grid container spacing={2}>
+      <Grid container spacing={2} alignItems="stretch">
          <Grid item xs={12}>
             <Box sx={{ p: 3 }}>
                <Typography variant="h2">Account Overview</Typography>
@@ -18,6 +17,8 @@ export default function page() {
             </Box>
          </Grid>
 
+         <Statistics />
+
          <Grid item xs={12} md={8}>
             <AccountActivity />
          </Grid>
@@ -26,15 +27,13 @@ export default function page() {
             <IncScore />
          </Grid>
 
-         <Grid item xs={12} md={4}>
+         <Grid item xs={12}>
             <Earnings />
          </Grid>
 
-         <Grid item xs={12} md={8}>
+         {/* <Grid item xs={12} md={8}>
             <Demographic />
-         </Grid>
-
-         <Statistics />
+         </Grid> */}
       </Grid>
    );
 }

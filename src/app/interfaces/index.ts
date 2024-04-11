@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import { notificationType } from "../types";
 
-interface ListingInterface {
+export interface ListingInterface {
    id: number;
    slug: string;
    name: string;

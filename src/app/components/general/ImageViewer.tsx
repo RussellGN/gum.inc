@@ -27,7 +27,15 @@ export default function ImageViewer({ image, alt }: { image: string | StaticImag
             <Fullscreen />
          </button>
 
-         <Dialog fullWidth maxWidth="md" open={open} onClose={handleClose}>
+         <Dialog
+            PaperProps={{
+               sx: { borderRadius: "20px" },
+            }}
+            fullWidth
+            maxWidth="md"
+            open={open}
+            onClose={handleClose}
+         >
             <Box className="p-3">
                <div className="text-right mb-3">
                   <IconButton size="small" onClick={handleClose} type="button">

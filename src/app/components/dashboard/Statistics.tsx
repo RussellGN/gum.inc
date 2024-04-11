@@ -6,7 +6,7 @@ export default function Statistics() {
    return (
       <>
          {statistics.map((statItem) => (
-            <Grid item xs={6} md={3} key={statItem.name}>
+            <Grid item xs={6} md={4} key={statItem.name}>
                <StatCard statistic={statItem} />
             </Grid>
          ))}

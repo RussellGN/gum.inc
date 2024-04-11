@@ -1,9 +1,10 @@
 import { DirectoryInterface } from "../interfaces";
 import { dashboardNavLink, link, option } from "../types";
 import {
+   AccountTreeOutlined,
    BarChart,
    BookOutlined,
-   Bookmark,
+   BookmarkAddOutlined,
    Brush,
    Business,
    BusinessCenter,
@@ -310,9 +311,14 @@ export const dashboardNavLinks: dashboardNavLink[] = [
       icon: <BarChart />,
    },
    {
+      label: "Event & Organization pages",
+      href: "/dashboard/events-organizations",
+      icon: <AccountTreeOutlined />,
+   },
+   {
       label: "Saved Incs",
       href: "/dashboard/saved-incs",
-      icon: <Bookmark />,
+      icon: <BookmarkAddOutlined />,
    },
    {
       label: "Monetization",

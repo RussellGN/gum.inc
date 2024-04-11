@@ -1,5 +1,3 @@
-"use client";
-
 import { ArrowUpward, Facebook, Instagram, Twitter, WhatsApp } from "@mui/icons-material";
 import { Box, Container, Grid, IconButton, Typography, Link as MuiLink } from "@mui/material";
 import Link from "next/link";
@@ -29,13 +27,6 @@ export default function Footer() {
                   <Typography sx={{ my: 1.5 }}>
                      Gum.inc LTD is a company registred in the United Kingdom and Whales.
                   </Typography>
-                  {/* <Typography variant="body2">
-                     <KeyboardDoubleArrowRight color="primary" fontSize="inherit" sx={{ mr: 0.5 }} /> London, England <br />
-                     <KeyboardDoubleArrowRight color="primary" fontSize="inherit" sx={{ mr: 0.5 }} /> Gatse Business Center
-                     <br />
-                     <KeyboardDoubleArrowRight color="primary" fontSize="inherit" sx={{ mr: 0.5 }} /> PSX 2644, Adlyn
-                     <br />
-                  </Typography> */}
                </Grid>
                <Grid item xs md={3}>
                   <div className="flex flex-col gap-2">
@@ -57,32 +48,6 @@ export default function Footer() {
                   </div>
                </Grid>
             </Grid>
-
-            {/* <div className="mt-[50px] px-10 text-justify">
-               <Typography>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sint, aperiam fugiat accusamus expedita
-                  nostrum consequatur culpa recusandae necessitatibus, suscipit distinctio laborum nemo, maiores molestias
-                  voluptates? Tempora molestias quis, dignissimos reiciendis, repudiandae aut corporis eveniet tenetur dicta
-                  dignissimos reiciendis, repudiandae aut corporis eveniet tenetur dicta corporis eveniet tenetur dicta
-                  <br />
-                  <br />
-                  incidunt, a minus nobis. Unde, ab quo, in facilis facere hic dignissimos aliquam ut laudantium dolore vero
-                  ex similique animi iusto! Nobis, porro accusamus quasi perspiciatis tempora est impedit quos neque quidem
-                  recusandae deserunt, corporis quod enim, dicta repellat doloremque reprehenderit quisquam beatae
-                  distinctio reiciendis voluptatum qui aspernatur. Ab error minus quo maiores cum optio autem blanditiis,
-                  consequuntur unde repudiandae natus! Molestiae, doloremque.{" "}
-               </Typography>
-               <div className="mt-5 text-right">
-                  <IconButton
-                     sx={{ border: "solid thin" }}
-                     title="Back to top"
-                     size="small"
-                     onClick={() => window.scrollTo(0, 0)}
-                  >
-                     <ArrowUpward />
-                  </IconButton>
-               </div>
-            </div> */}
          </Box>
 
          <Box
@@ -101,7 +66,6 @@ export default function Footer() {
                   <li key={socialMediaAccount.platform}>
                      <IconButton
                         component={Link}
-                        // color="primary"
                         href={socialMediaAccount.url}
                         sx={{ border: "solid thin", borderColor: "divider" }}
                         title={socialMediaAccount.platform}
@@ -121,7 +85,8 @@ export default function Footer() {
                   sx={{ border: "solid thin" }}
                   title="Back to top"
                   size="small"
-                  onClick={() => window.scrollTo(0, 0)}
+                  component={Link}
+                  href="#"
                   className="mt-5 ml-auto"
                >
                   <ArrowUpward />
@@ -177,8 +142,10 @@ function FooterLink({ href, children }: { href: string; children: ReactNode; inc
             position: "relative",
             pl: 1.5,
             width: "fit-content",
+            transition: "color 135ms linear",
             "&::after": {
                content: "''",
+               transition: "all 135ms linear",
                position: "absolute",
                top: "50%",
                left: 0,
@@ -189,7 +156,10 @@ function FooterLink({ href, children }: { href: string; children: ReactNode; inc
                backgroundColor: "secondary.light",
             },
             "&:hover": {
-               color: "secondary.light",
+               color: "grey",
+            },
+            "&:hover::after": {
+               backgroundColor: "secondary.dark",
             },
          }}
       >

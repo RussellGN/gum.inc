@@ -73,9 +73,8 @@ export default function DirsAccordion() {
                >
                   <Typography>{dir.name}</Typography>
                </AccordionSummary>
+
                <AccordionDetails>
-                  {/* <Typography component="p" variant="caption" className="bg-[whitesmoke] p-1.5 rounded-sm"> */}
-                  {/* <Typography component="p" variant="caption" className="border-t-4 pt-2"> */}
                   <Typography component="p" variant="caption">
                      <Typography variant="caption" className="line-clamp-2">
                         {dir.shortDescription}

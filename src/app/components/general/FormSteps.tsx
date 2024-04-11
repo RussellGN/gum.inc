@@ -5,7 +5,7 @@ import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, styled } from "@mui/material";
 import { ReactNode, useState } from "react";
 
-export default function FormSteps({ content }: { content: ReactNode[] }) {
+export default function FormSteps({ content, contentHeight = "40vh" }: { content: ReactNode[]; contentHeight?: string }) {
    const [step, setStep] = useState(0);
    const isLastStep = step === content.length - 1;
 
@@ -17,7 +17,7 @@ export default function FormSteps({ content }: { content: ReactNode[] }) {
                   type="button"
                   onClick={() => setStep(index)}
                   key={"step-number-" + index}
-                  className={`w-9 h-9 flex items-center justify-center rounded-[20px] ${
+                  className={`border w-9 h-9 flex items-center justify-center rounded-[20px] ${
                      index === step ? "text-white" : "hover:bg-slate-50"
                   } `}
                   sx={{
@@ -40,7 +40,7 @@ export default function FormSteps({ content }: { content: ReactNode[] }) {
             ))}
          </div>
 
-         <div className="min-h-[40vh]">
+         <div className={`min-h-[${contentHeight}]`}>
             {content.map((node, index) => (
                <div key={"step" + index} className={index === step ? "" : "hidden"}>
                   {node}

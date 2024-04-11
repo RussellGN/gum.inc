@@ -6,7 +6,7 @@ import { Box, Grid, Typography } from "@mui/material";
 
 export default function page() {
    return (
-      <Grid container spacing={2} alignItems="stretch">
+      <Grid container spacing={2}>
          <Grid item xs={12}>
             <Box sx={{ p: 3 }}>
                <Typography variant="h2">Account Overview</Typography>

@@ -39,21 +39,23 @@
 1. finish whats in store feature and its animations
 2. monetization options 1 and 2 forms
 
-3. about page inspiration and creation
-4. revamp subscriptiotns panel on dashboard
-5. create a statndard dir card with simplified prop
-6. settings page
-7. contact page and partner withus page, or maybe just make it an email 'mailto'
-8. edit pages for the different forms
-9. work on the title-description component and make it more customizable via props, also enable the adding of links via it
-10.   revamp notifications panel, maybe even move it
-11.   add inc score and other stats attributes to interfaces or perhaps their own stats interface that others inherit from
-12.   body background
-13.   logo revamp
-14.   favicon
-15.   mobile nav
-16.   mobile responsiveness
-17.   polish
+3. review about page
+4. dir read more
+5. about page inspiration and creation
+6. revamp subscriptiotns panel on dashboard
+7. create a statndard dir card with simplified prop
+8. settings page
+9. contact page and partner withus page, or maybe just make it an email 'mailto'
+10.   edit pages for the different forms
+11.   work on the title-description component and make it more customizable via props, also enable the adding of links via it
+12.   revamp notifications panel, maybe even move it
+13.   add inc score and other stats attributes to interfaces or perhaps their own stats interface that others inherit from
+14.   body background
+15.   logo revamp
+16.   favicon
+17.   mobile nav
+18.   mobile responsiveness
+19.   polish
 
 ## look into once done
 

@@ -64,11 +64,11 @@ export default function Page() {
                      and directory platform for connecting,networking and advertising. Explore and connect iNc with us
                      <br />
                      <br />
-                     'Inc Connec', Which is a listing platform that allows to entrepreneurs , corporates ,businesses and
-                     individuals to advertise or list their product, service , craft ,skill or expertise. It is backed up by
-                     a light messaging index that engages clients by messaging and favoriting the contacts that&apos;d want
-                     to access and interact with . 3rd incription security codes which secures information and scrutinizes
-                     all subscribers , bank cards , contacts , storage drives and email information.
+                     &lsquo;Inc Connec&lsquo;, Which is a listing platform that allows to entrepreneurs , corporates
+                     ,businesses and individuals to advertise or list their product, service , craft ,skill or expertise. It
+                     is backed up by a light messaging index that engages clients by messaging and favoriting the contacts
+                     that&apos;d want to access and interact with . 3rd incription security codes which secures information
+                     and scrutinizes all subscribers , bank cards , contacts , storage drives and email information.
                   </Typography>
                </div>
             </div>

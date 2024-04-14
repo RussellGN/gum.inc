@@ -58,9 +58,8 @@ export default function JoinValueFeature() {
          </div>
 
          <div className="flex items-center justify-center gap-3 mt-6">
-            <Button endIcon={<ArrowRightAlt />}>Join Now</Button>
-            <Button variant="outlined" color="primary">
-               Read More
+            <Button size="medium" endIcon={<ArrowRightAlt />}>
+               Join Now
             </Button>
          </div>
       </Box>

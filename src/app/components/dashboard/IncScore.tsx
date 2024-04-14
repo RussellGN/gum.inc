@@ -1,6 +1,5 @@
 import { InfoOutlined, Star } from "@mui/icons-material";
-import { Box, Button, Rating, Typography } from "@mui/material";
-import Link from "next/link";
+import { Box, Rating, Typography } from "@mui/material";
 
 export default function IncScore() {
    return (
@@ -19,11 +18,11 @@ export default function IncScore() {
 
             <Rating size="large" value={3.5} readOnly precision={0.5} />
          </Box>
-         <div>
+         {/* <div>
             <Button component={Link} href="/about#inc-score" startIcon={<InfoOutlined />}>
                About
             </Button>
-         </div>
+         </div> */}
       </Box>
    );
 }

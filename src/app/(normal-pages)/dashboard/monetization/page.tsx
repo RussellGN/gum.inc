@@ -1,8 +1,7 @@
 import Earnings from "@/app/components/dashboard/Earnings";
 import { StatCard } from "@/app/components/dashboard/Statistics";
-import { CurrencyExchange, InfoOutlined, VisibilitySharp } from "@mui/icons-material";
+import { CurrencyExchange, VisibilitySharp } from "@mui/icons-material";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Link from "next/link";
 
 export default function page() {
    return (
@@ -14,9 +13,9 @@ export default function page() {
          <Grid item xs={12}>
             <Typography sx={{ p: 4 }} variant="h3" fontWeight="bold" className="flex items-center gap-3 ">
                Monetization options
-               <Button component={Link} href="/about#monetization" startIcon={<InfoOutlined />}>
+               {/* <Button component={Link} href="/about#monetization" startIcon={<InfoOutlined />}>
                   About
-               </Button>
+               </Button> */}
             </Typography>
          </Grid>
 

@@ -32,3 +32,9 @@ export type stat = {
    value: string | number;
    icon: JSX.Element;
 };
+
+export type settingType = {
+   name: string;
+   icon: JSX.Element;
+   content: JSX.Element;
+};

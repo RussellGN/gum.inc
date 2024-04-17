@@ -2,7 +2,7 @@ import { sampleUsers } from "@/app/lib/sampleData";
 import { Bookmarks, CheckCircleOutlined } from "@mui/icons-material";
 import { Typography } from "@mui/material";
 import Image from "next/image";
-import UncontolledSlideshow from "../general/UncontolledSlideshow";
+import UncontrolledSlideshow from "../general/UncontrolledSlideshow";
 
 export default function GridItem2() {
    const users = sampleUsers.splice(7, 2);
@@ -38,7 +38,7 @@ export default function GridItem2() {
 
    return (
       <div className="col-span-3 row-span-1 flex items-center p-1">
-         <UncontolledSlideshow interval={7000} slides={slides} />
+         <UncontrolledSlideshow interval={7000} slides={slides} />
       </div>
    );
 }

@@ -2,7 +2,7 @@
 
 import { JSX, useEffect, useState } from "react";
 
-export default function UncontolledSlideshow({ slides, interval }: { slides: JSX.Element[]; interval?: number }) {
+export default function UncontrolledSlideshow({ slides, interval }: { slides: JSX.Element[]; interval?: number }) {
    const [currentSlide, setCurrentSlide] = useState(0);
 
    function nextSlide() {

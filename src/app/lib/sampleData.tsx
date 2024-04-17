@@ -410,7 +410,6 @@ export const sampleUsers: UserInterface[] = [
          },
       ],
    },
-
    {
       type: "user",
       worksAt: "Independant",

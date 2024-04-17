@@ -9,18 +9,9 @@ export default function Home() {
       <>
          <Hero />
          <SearchCta />
-         <br />
-         <br />
          <ValueProposition />
-         <br />
-         <br />
          <Features />
-         <br />
-         <br />
          <ResearchTools />
-         {/* <br />
-         <br />
-         <Cta /> */}
       </>
    );
 }

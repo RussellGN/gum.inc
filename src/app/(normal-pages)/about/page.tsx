@@ -1,8 +1,27 @@
 import Feature from "@/app/components/about/Feature";
+import EmblaCarousel from "@/app/components/general/embla-slideshow/EmblaCarousel";
 import { directories } from "@/app/lib/constants";
 import { Box, Typography } from "@mui/material";
 
 export default function Page() {
+   const slides = directories.map((dir, index) => (
+      <Box
+         component="li"
+         key={dir.name}
+         // className="flex flex-col items-center justify-between gap-3 border rounded-lg p-3"
+         className="flex flex-col items-center justify-between gap-3 p-3"
+         sx={{
+            // bgcolor: index % 2 === 1 ? "white" : "secondary.light",
+            "& svg": { color: "primary.main", fontSize: "3rem" },
+         }}
+      >
+         {dir.icon}
+         <Typography fontWeight="bold" className="w-[15rem] text-center ">
+            {dir.name}
+         </Typography>
+      </Box>
+   ));
+
    return (
       <div>
          <div>
@@ -32,23 +51,8 @@ export default function Page() {
 
          <div className="mb-20 flex items-center justify-center min-h-80vh">
             <div className="w-full">
-               <Box component="ul" sx={{ mb: 3, pb: 1 }} className="list-none flex justify-center gap-4 overflow-x-auto">
-                  {directories.map((dir, index) => (
-                     <Box
-                        component="li"
-                        key={dir.name}
-                        className="flex flex-col items-center justify-between gap-3 border rounded-lg p-3"
-                        sx={{
-                           bgcolor: index % 2 === 1 ? "white" : "secondary.light",
-                           "& svg": { color: "primary.main", fontSize: "3rem" },
-                        }}
-                     >
-                        {dir.icon}
-                        <Typography fontWeight="bold" className="w-[15rem] text-center ">
-                           {dir.name}
-                        </Typography>
-                     </Box>
-                  ))}
+               <Box sx={{ mb: 3 }}>
+                  <EmblaCarousel slides={slides} />
                </Box>
 
                <Typography variant="h2" className="text-center" sx={{ mb: 3 }}>

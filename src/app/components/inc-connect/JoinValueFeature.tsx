@@ -1,5 +1,6 @@
 import { ArrowRightAlt, Message, Money, PeopleOutlined, Search } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
+import EmblaCarousel from "../general/embla-slideshow/EmblaCarousel";
 
 type feature = {
    title: string;
@@ -34,28 +35,28 @@ const features: feature[] = [
 ];
 
 export default function JoinValueFeature() {
+   const slides = features.map((feature) => (
+      <div key={feature.title} className="bg-white p-6 rounded-[15px]">
+         <Box className="flex flex-col text-center justify-center items-center gap-6">
+            <Box sx={{ "& svg": { fontSize: "2.5rem", color: "primary.light" } }}>{feature.icon}</Box>
+
+            <div className="w-[20rem]">
+               <Typography sx={{ mb: 1 }} variant="h4">
+                  {feature.title.toUpperCase()}
+               </Typography>
+               <Typography>{feature.description}</Typography>
+            </div>
+         </Box>
+      </div>
+   ));
+
    return (
       <Box sx={{ my: 8, py: 3 }}>
          <Typography variant="h3" sx={{ textAlign: "center", mb: 3 }}>
             Why Join The Network?
          </Typography>
 
-         <div className="flex gap-3 overflow-x-auto items-stretch">
-            {features.map((feature) => (
-               <div key={feature.title} className="bg-white p-6 rounded-[15px]">
-                  <Box className="flex flex-col text-center justify-center items-center gap-6">
-                     <Box sx={{ "& svg": { fontSize: "2.5rem", color: "primary.light" } }}>{feature.icon}</Box>
-
-                     <div className="w-[20rem]">
-                        <Typography sx={{ mb: 1 }} variant="h4">
-                           {feature.title.toUpperCase()}
-                        </Typography>
-                        <Typography>{feature.description}</Typography>
-                     </div>
-                  </Box>
-               </div>
-            ))}
-         </div>
+         <EmblaCarousel slides={slides} />
 
          <div className="flex items-center justify-center gap-3 mt-6">
             <Button size="medium" endIcon={<ArrowRightAlt />}>

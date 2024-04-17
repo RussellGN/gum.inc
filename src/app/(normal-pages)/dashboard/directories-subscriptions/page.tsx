@@ -4,7 +4,6 @@ import { directories } from "@/app/lib/constants";
 import { sampleSubscriptions } from "@/app/lib/sampleData";
 import { BookOutlined, Subscriptions } from "@mui/icons-material";
 import { Box, Typography } from "@mui/material";
-import Link from "next/link";
 
 export default function page() {
    return (

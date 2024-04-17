@@ -16,9 +16,11 @@ export default function EmblaCarousel({ slides }: { slides: JSX.Element[] }) {
       if (!autoplay) return;
 
       //@ts-expect-error
+      // it works but package itself might be the issue
       const resetOrStop = autoplay.options.stopOnInteraction === false ? autoplay.reset : autoplay.stop;
 
       //@ts-expect-error
+      // it works but package itself might be the issue
       resetOrStop();
    }, []);
 

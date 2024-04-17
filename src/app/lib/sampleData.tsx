@@ -2030,7 +2030,7 @@ export const sampleSubscriptions: SubscriptionInterface[] = [
       renews: true,
       date: "2024-02-11",
       description: "This newsletter offers business insights and research into relevant fields selected by user.",
-      icon: <EmailOutlined fontSize="large" color="primary" />,
+      icon: <EmailOutlined fontSize="large" />,
    },
 ];
 

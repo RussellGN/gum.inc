@@ -10,7 +10,7 @@ export default function Layout({ children }: PropsWithChildren) {
          </Grid>
 
          <Grid item xs md>
-            <Box className="h-[80vh] overflow-y-auto border rounded-[15px] bg-white p-4 sticky top-[100px]">{children}</Box>
+            <Box className="h-[80vh] overflow-y-auto border rounded-[15px] bg-white p-8 sticky top-[100px]">{children}</Box>
          </Grid>
       </Grid>
    );

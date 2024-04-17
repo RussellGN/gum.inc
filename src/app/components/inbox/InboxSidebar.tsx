@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function InboxSidebar() {
    return (
-      <Box className="h-[80vh] overflow-y-auto border rounded-[15px] bg-white p-4 sticky top-[100px]">
+      <Box className="h-[80vh] overflow-y-auto border rounded-[15px] bg-white  px-4 py-8 sticky top-[100px]">
          <div className="flex items-center justify-between gap-2">
             <GoBackBtn noMarginBottom />
             <Typography variant="h5">Inbox</Typography>

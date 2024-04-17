@@ -16,10 +16,10 @@ export default function Feature({ image, alt, title, body, direction, minHeight 
          container
          alignItems="center"
          justifyContent="center"
-         gap={5}
+         gap={10}
          className={`min-h-[${minHeight || "80vh"}] mb-20`}
       >
-         <Grid item order={direction === "left" ? 1 : 2} xs md={5}>
+         <Grid item order={direction === "left" ? 1 : 2} xs md={4}>
             <Box
                sx={{
                   position: "relative",

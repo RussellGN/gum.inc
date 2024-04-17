@@ -41,20 +41,17 @@
 
 3. review about page
 4. dir read more
-5. revamp subscriptiotns panel on dashboard
-6. create a statndard dir card with simplified prop
-7. settings page
-8. contact page and partner withus page, or maybe just make it an email 'mailto'
-9. edit pages for the different forms
-10.   work on the title-description component and make it more customizable via props, also enable the adding of links via it
-11.   revamp notifications panel, maybe even move it
-12.   add inc score and other stats attributes to interfaces or perhaps their own stats interface that others inherit from
-13.   body background
-14.   logo revamp
-15.   favicon
-16.   mobile nav
-17.   mobile responsiveness
-18.   polish
+5. contact page and partner withus page, or maybe just make it an email 'mailto'
+6. edit pages for the different forms
+7. work on the title-description component and make it more customizable via props, also enable the adding of links via it
+8. revamp notifications panel, maybe even move it
+9. add inc score and other stats attributes to interfaces or perhaps their own stats interface that others inherit from
+10.   body background
+11.   logo revamp
+12.   favicon
+13.   mobile nav
+14.   mobile responsiveness
+15.   polish
 
 ## look into once done
 

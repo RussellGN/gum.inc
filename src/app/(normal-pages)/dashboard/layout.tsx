@@ -10,8 +10,8 @@ export default function layout({ children }: PropsWithChildren) {
          <div className="flex gap-3 items-center justify-end mb-4 ">
             <Button
                size="medium"
-               variant="outlined"
-               color="primary"
+               // variant="outlined"
+               // color="primary"
                component={Link}
                href="/new/event"
                endIcon={<EventAvailable />}
@@ -20,8 +20,8 @@ export default function layout({ children }: PropsWithChildren) {
             </Button>
             <Button
                size="medium"
-               variant="outlined"
-               color="primary"
+               // variant="outlined"
+               // color="primary"
                component={Link}
                href="/new/organization"
                endIcon={<Business />}

@@ -15,10 +15,8 @@ export default function EmblaCarousel({ slides }: { slides: JSX.Element[] }) {
       const autoplay = emblaApi?.plugins()?.autoplay;
       if (!autoplay) return;
 
-      //@ts-ignore
       const resetOrStop = autoplay.options.stopOnInteraction === false ? autoplay.reset : autoplay.stop;
 
-      //@ts-ignore
       resetOrStop();
    }, []);
 

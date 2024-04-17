@@ -4,7 +4,7 @@ import { directories } from "@/app/lib/constants";
 import { Box, Typography } from "@mui/material";
 
 export default function Page() {
-   const slides = directories.map((dir, index) => (
+   const slides = directories.map((dir) => (
       <Box
          component="li"
          key={dir.name}

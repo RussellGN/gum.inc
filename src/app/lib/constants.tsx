@@ -1,5 +1,6 @@
+import EmailSettings from "../components/settings/EmailSettings";
 import { DirectoryInterface } from "../interfaces";
-import { dashboardNavLink, link, option } from "../types";
+import { dashboardNavLink, link, option, settingType } from "../types";
 import {
    AccountTreeOutlined,
    BarChart,
@@ -20,6 +21,7 @@ import {
    Piano,
    Restaurant,
    School,
+   Settings,
    Shop,
    Sports,
 } from "@mui/icons-material";
@@ -329,5 +331,13 @@ export const dashboardNavLinks: dashboardNavLink[] = [
       label: "Directories & subscriptions",
       href: "/dashboard/directories-subscriptions",
       icon: <BookOutlined />,
+   },
+];
+
+export const settings: settingType[] = [
+   {
+      name: "Email Notifications",
+      icon: <Settings />,
+      content: <EmailSettings />,
    },
 ];

@@ -23,6 +23,7 @@ import SaveIncButton from "../inc-connect/SaveIncButton";
 import Members from "./Members";
 import Verification from "./Verification";
 import Gallery from "./Gallery";
+import DirectoryCard from "./DirectoryCard";
 
 export default function EventPage({ event, isAuthenticated }: { event: EventInterface; isAuthenticated?: boolean }) {
    return (
@@ -206,13 +207,8 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                   </Typography>
                   <Grid container spacing={1} wrap="nowrap" overflow="auto" sx={{ pb: 1 }}>
                      {directories.map((dir) => (
-                        <Grid item xs={4.5} component={Link} href={`/inc-connect?dir=${dir.name}`} key={dir.name}>
-                           <Box className="bg-slate-100 p-2 rounded-xl border flex flex-col items-center justify-center gap-2">
-                              {dir.icon}
-                              <Typography noWrap className="w-full text-center ">
-                                 {dir.name}
-                              </Typography>
-                           </Box>
+                        <Grid item xs={4.5} key={dir.name}>
+                           <DirectoryCard simplified dir={dir} />
                         </Grid>
                      ))}
                   </Grid>

@@ -16,7 +16,8 @@ export default function JoinCard({ dir }: { dir: DirectoryInterface }) {
    return (
       <Box
          component={Link}
-         href={"/join/" + dir.name}
+         // href={"/join/" + dir.name}
+         href={"/signup"}
          className="border-4 border-[whitesmoke] rounded-[15px] transition-all  hover:border-slate-400"
          sx={{ background: gradients.secondary1 }}
       >

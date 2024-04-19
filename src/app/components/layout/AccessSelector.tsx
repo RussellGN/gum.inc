@@ -2,12 +2,23 @@
 
 import { KeyboardArrowDown, InfoOutlined } from "@mui/icons-material";
 import Image from "next/image";
-import { Link as MuiLink, Box, Popover, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel } from "@mui/material";
+import {
+   Link as MuiLink,
+   Box,
+   Popover,
+   Radio,
+   RadioGroup,
+   FormControlLabel,
+   FormControl,
+   FormLabel,
+   Typography,
+} from "@mui/material";
 import { MouseEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 export default function AccessSelector() {
+   const [showInfo, setShowInfo] = useState(false);
    const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
    const router = useRouter();
    const pathname = usePathname();
@@ -63,11 +74,10 @@ export default function AccessSelector() {
                <FormControl>
                   <FormLabel id="access-level-label" className="flex gap-3 items-center" sx={{ mb: 1 }}>
                      Select Access Level
-                     <MuiLink sx={{ mt: -0.3 }} component={Link} href="/about#access-level">
+                     {/* <MuiLink sx={{ mt: -0.3 }} component={Link} href="/about#access-level">
                         <InfoOutlined fontSize="small" />
-                     </MuiLink>
+                     </MuiLink> */}
                   </FormLabel>
-
                   <RadioGroup
                      aria-labelledby="access-level-label"
                      value={accessLevel}
@@ -77,6 +87,14 @@ export default function AccessSelector() {
                      <FormControlLabel value="uk" control={<Radio size="small" />} label={"United kingdom"} />
                      <FormControlLabel value="global" control={<Radio size="small" />} label="Global" />
                   </RadioGroup>
+
+                  <Typography
+                     variant="subtitle1"
+                     sx={{ fontFamily: "Roboto, Arial, Serif", mt: 1, color: "rgb(100,100,100)" }}
+                  >
+                     <InfoOutlined fontSize="inherit" sx={{ mt: -0.5, mr: 0.5 }} />
+                     Determines the listings you see <br /> based off their location attributes.
+                  </Typography>
                </FormControl>
             </Box>
          </Popover>

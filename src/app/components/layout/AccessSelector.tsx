@@ -2,20 +2,9 @@
 
 import { KeyboardArrowDown, InfoOutlined } from "@mui/icons-material";
 import Image from "next/image";
-import {
-   Link as MuiLink,
-   Box,
-   Popover,
-   Radio,
-   RadioGroup,
-   FormControlLabel,
-   FormControl,
-   FormLabel,
-   Typography,
-} from "@mui/material";
+import { Box, Popover, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Typography } from "@mui/material";
 import { MouseEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import Link from "next/link";
 
 export default function AccessSelector() {
    const [showInfo, setShowInfo] = useState(false);

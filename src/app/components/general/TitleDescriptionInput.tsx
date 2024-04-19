@@ -5,8 +5,16 @@ import { Add, Close, KeyboardDoubleArrowRight, WarningAmber } from "@mui/icons-m
 import { Button, IconButton, TextField, Typography } from "@mui/material";
 import { useRef, useState } from "react";
 
-export default function TitleDescriptionInput({ title }: { title: string }) {
-   const [titleDescriptionItems, setTitleDescriptionItems] = useState<{ name: string; description: string }[]>([]);
+type propTypes = {
+   title: string;
+   descriptionName: string;
+   defaults?: { name: string; description: string }[];
+};
+
+export default function TitleDescriptionInput({ title, descriptionName, defaults }: propTypes) {
+   const [titleDescriptionItems, setTitleDescriptionItems] = useState<{ name: string; description: string }[]>(
+      defaults || []
+   );
    const [error, setError] = useState(false);
    const nameRef = useRef<HTMLInputElement | null>();
    const descriptionRef = useRef<HTMLInputElement | null>();
@@ -54,7 +62,7 @@ export default function TitleDescriptionInput({ title }: { title: string }) {
             inputRef={descriptionRef}
             variant="outlined"
             size="small"
-            label={"Description"}
+            label={capitalizeWords(descriptionName)}
             fullWidth
             multiline
             rows={3}
@@ -64,7 +72,7 @@ export default function TitleDescriptionInput({ title }: { title: string }) {
 
          <Typography sx={{ mb: 2 }} textAlign="center" color="firebrick" className={error ? "block" : "hidden"}>
             <WarningAmber fontSize="inherit" sx={{ mt: -0.2, mr: 1 }} />
-            Please enter both a unique {title} and its description!
+            Please enter both a unique {title.toLowerCase()} and its {descriptionName.toLowerCase()}!
          </Typography>
 
          <div className="text-right">
@@ -76,7 +84,7 @@ export default function TitleDescriptionInput({ title }: { title: string }) {
          <ul className="list-none bg-white border rounded-lg p-2 mt-4">
             {titleDescriptionItems.length ? (
                titleDescriptionItems.map((item) => (
-                  <li key={item.name} className="flex items-start gap-2 mb-4">
+                  <li key={item.name} className="flex items-start gap-2 my-2">
                      <KeyboardDoubleArrowRight fontSize="small" />
                      <div className="flex-grow">
                         <Typography>{capitalizeWords(item.name)}</Typography>
@@ -88,7 +96,7 @@ export default function TitleDescriptionInput({ title }: { title: string }) {
                   </li>
                ))
             ) : (
-               <Typography textAlign="center">No items added</Typography>
+               <Typography textAlign="center">No {title.toLowerCase()} added</Typography>
             )}
          </ul>
       </div>

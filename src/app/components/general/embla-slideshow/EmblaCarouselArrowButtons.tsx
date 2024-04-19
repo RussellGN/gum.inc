@@ -45,7 +45,10 @@ export function usePrevNextButtons(
    };
 }
 
-const btnSx: SxProps = { border: "solid thin grey" };
+const btnSx: SxProps = {
+   border: "solid thin",
+   borderColor: "divider",
+};
 
 export function PrevButton({ disabled, onClick }: { disabled: boolean; onClick: () => void }) {
    return (

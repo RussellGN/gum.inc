@@ -96,7 +96,10 @@ export default function OrganizationPage({
                      >
                         {isAuthenticated ? (
                            <>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
+                              <IconButton
+                                 href={"/new/organization?organizationSlug=" + organization.slug}
+                                 sx={{ border: "solid thin", borderColor: "divider" }}
+                              >
                                  <Edit />
                               </IconButton>
                            </>

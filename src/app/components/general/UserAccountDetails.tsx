@@ -88,7 +88,11 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                      >
                         {isAuthenticated ? (
                            <>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
+                              <IconButton
+                                 component={Link}
+                                 href="/account-details?edit=true"
+                                 sx={{ border: "solid thin", borderColor: "divider" }}
+                              >
                                  <Edit />
                               </IconButton>
                            </>

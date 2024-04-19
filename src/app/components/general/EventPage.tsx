@@ -93,7 +93,10 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                      >
                         {isAuthenticated ? (
                            <>
-                              <IconButton sx={{ border: "solid thin", borderColor: "divider" }}>
+                              <IconButton
+                                 href={"/new/event?eventSlug=" + event.slug}
+                                 sx={{ border: "solid thin", borderColor: "divider" }}
+                              >
                                  <Edit />
                               </IconButton>
                            </>

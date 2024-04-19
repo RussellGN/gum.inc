@@ -28,30 +28,19 @@
 9. rearrange event and organization form fields so that they make better sense
 10.   seo items
 11.   dp image viewer
-12.   popovers, toasts, dialogs and alerts
-13.   proper wording site-wide
-14.   custom logos/icons for the different directories
-15.   make expanded dirs section with all dirs and related info
-16.   work on that padding for active dir accordion btns
+12.   image cropping
+13.   popovers, toasts, dialogs and alerts
+14.   proper wording site-wide
+15.   custom logos/icons for the different directories
+16.   make expanded dirs section with all dirs and related info
+17.   work on that padding for active dir accordion btns
 
 # straightforward code
 
-1. finish whats in store feature and its animations
-2. monetization options 1 and 2 forms
-
-3. review about page
-4. dir read more
-5. contact page and partner withus page, or maybe just make it an email 'mailto'
-6. edit pages for the different forms
-7. work on the title-description component and make it more customizable via props, also enable the adding of links via it
-8. revamp notifications panel, maybe even move it
-9. add inc score and other stats attributes to interfaces or perhaps their own stats interface that others inherit from
-10.   body background
-11.   logo revamp
-12.   favicon
-13.   mobile nav
-14.   mobile responsiveness
-15.   polish
+1. review about page
+2. mobile nav
+3. mobile responsiveness
+4. polish
 
 ## look into once done
 

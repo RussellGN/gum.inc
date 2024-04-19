@@ -69,7 +69,11 @@ function ListingPageCard({ listing }: { listing: ListingInterface }) {
             <Button component={Link} href={`/inc-connect/${listing.type}/${listing.slug}`} endIcon={<OpenInBrowser />}>
                View
             </Button>
-            <Button component={Link} href={`/new/${listing.type}/${listing.slug}`} endIcon={<Edit />}>
+            <Button
+               component={Link}
+               href={"/new/" + listing.type + "?" + listing.type + "Slug=" + listing.slug}
+               endIcon={<Edit />}
+            >
                Edit
             </Button>
          </Box>

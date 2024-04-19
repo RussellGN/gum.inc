@@ -7,7 +7,6 @@ import { MouseEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function AccessSelector() {
-   const [showInfo, setShowInfo] = useState(false);
    const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
    const router = useRouter();
    const pathname = usePathname();

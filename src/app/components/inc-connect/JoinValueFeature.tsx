@@ -1,6 +1,7 @@
 import { ArrowRightAlt, Message, Money, PeopleOutlined, Search } from "@mui/icons-material";
 import { Box, Button, Typography } from "@mui/material";
 import EmblaCarousel from "../general/embla-slideshow/EmblaCarousel";
+import Link from "next/link";
 
 type feature = {
    title: string;
@@ -59,7 +60,7 @@ export default function JoinValueFeature() {
          <EmblaCarousel slides={slides} />
 
          <div className="flex items-center justify-center gap-3 mt-6">
-            <Button size="medium" endIcon={<ArrowRightAlt />}>
+            <Button component={Link} href="/signup" size="medium" endIcon={<ArrowRightAlt />}>
                Join Now
             </Button>
          </div>

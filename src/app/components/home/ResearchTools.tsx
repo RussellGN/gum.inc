@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ResearchTools() {
    return (
@@ -28,7 +29,7 @@ export default function ResearchTools() {
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse ullam hic possimus optio totam
                   consectetur! Alias pariatur ut doloremque accusantium repellendus reprehenderit, enim dicta eius eveniet
                </Typography>
-               <Button color="primary" size="large">
+               <Button component={Link} href="/inc-office" color="primary" size="large">
                   Get Started
                </Button>
             </Box>

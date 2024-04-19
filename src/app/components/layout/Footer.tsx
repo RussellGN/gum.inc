@@ -44,7 +44,9 @@ export default function Footer() {
                         Quick links
                      </Typography>
                      <FooterLink href="/contact">Contact</FooterLink>
-                     <FooterLink href="/advertise">Partner with us</FooterLink>
+                     <FooterLink isATag href="mailto:info@guminc.com?subject=Partnership">
+                        Partner with us
+                     </FooterLink>
                   </div>
                </Grid>
             </Grid>
@@ -131,10 +133,19 @@ const socialMediaAccounts: socialMedia[] = [
    },
 ];
 
-function FooterLink({ href, children }: { href: string; children: ReactNode; includes?: string }) {
+function FooterLink({
+   href,
+   children,
+   isATag,
+}: {
+   href: string;
+   children: ReactNode;
+   includes?: string;
+   isATag?: boolean;
+}) {
    return (
       <MuiLink
-         component={Link}
+         component={isATag ? "a" : Link}
          href={href}
          sx={{
             textDecoration: "none",

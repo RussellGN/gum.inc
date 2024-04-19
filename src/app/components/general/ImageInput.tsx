@@ -4,8 +4,8 @@ import { Add, DeleteOutlined } from "@mui/icons-material";
 import { Box, IconButton } from "@mui/material";
 import React, { useRef, useState } from "react";
 
-export default function ImageInput({ name }: { name: string }) {
-   const [imageUrl, setImageUrl] = useState("");
+export default function ImageInput({ name, defaultImage }: { name: string; defaultImage?: string }) {
+   const [imageUrl, setImageUrl] = useState(defaultImage || "");
    const inputRef = useRef<HTMLInputElement>(null);
 
    function onChange(e: React.ChangeEvent<HTMLInputElement>) {

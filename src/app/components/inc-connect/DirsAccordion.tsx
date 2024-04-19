@@ -1,25 +1,26 @@
 "use client";
 
 import { useState, SyntheticEvent } from "react";
-import { Link as MuiLink, Accordion, AccordionDetails, AccordionSummary, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Typography, useTheme } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { directories } from "@/app/lib/constants";
 import { useRouter, useSearchParams } from "next/navigation";
-import { InfoOutlined } from "@mui/icons-material";
-import Link from "next/link";
+import { KeyboardArrowDown, KeyboardArrowUp } from "@mui/icons-material";
 
 export default function DirsAccordion() {
    const router = useRouter();
    const readOnlySearchParams = useSearchParams();
    const searchParams = new URLSearchParams(readOnlySearchParams);
    const activeDir = searchParams.get("dir") || directories[0].name;
-
+   const [expandAbout, setExpandAbout] = useState(false);
    const [expanded, setExpanded] = useState<string | false>(`panel${activeDir}`);
+   const theme = useTheme();
 
    const handleChange = (dir: string) => (event: SyntheticEvent, isExpanded: boolean) => {
       searchParams.set("dir", dir);
       router.push("/inc-connect?" + searchParams.toString());
       setExpanded(isExpanded ? `panel${dir}` : false);
+      setExpandAbout(false);
    };
 
    return (
@@ -76,12 +77,24 @@ export default function DirsAccordion() {
 
                <AccordionDetails>
                   <Typography component="p" variant="caption">
-                     <Typography variant="caption" className="line-clamp-2">
-                        {dir.shortDescription}
+                     <Typography variant="caption" className={expandAbout ? "" : "line-clamp-2"}>
+                        {dir.about}
                      </Typography>{" "}
-                     <MuiLink component={Link} href={`/about#directories-${dir.name}`}>
-                        <InfoOutlined fontSize="small" sx={{ mt: -0.1 }} /> read more
-                     </MuiLink>
+                     <button
+                        style={{ color: theme.palette.primary.dark }}
+                        className="bg-[transparent] border-0 outline-0 mt-2 flex items-center gap-2"
+                        onClick={() => setExpandAbout((prev) => !prev)}
+                     >
+                        {expandAbout ? (
+                           <>
+                              minimize <KeyboardArrowUp fontSize="small" />
+                           </>
+                        ) : (
+                           <>
+                              expand <KeyboardArrowDown fontSize="small" />
+                           </>
+                        )}
+                     </button>
                   </Typography>
                </AccordionDetails>
             </Accordion>

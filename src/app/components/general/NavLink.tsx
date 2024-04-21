@@ -5,17 +5,15 @@ import { Link as MuiLink, SxProps, useTheme } from "@mui/material";
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
-export default function NavLink({
-   href,
-   children,
-   includes,
-   sx,
-}: {
+type propTypes = {
    href: string;
    children: ReactNode;
    includes?: string;
    sx?: SxProps;
-}) {
+   onClick?: () => void;
+};
+
+export default function NavLink({ href, children, includes, sx, onClick }: propTypes) {
    const pathname = usePathname();
    const theme = useTheme();
 
@@ -27,6 +25,7 @@ export default function NavLink({
       <MuiLink
          component={Link}
          href={href}
+         onClick={onClick}
          sx={{
             textDecoration: "none",
             color: "inherit",

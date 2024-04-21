@@ -34,7 +34,7 @@ export default function Navbar() {
                </ul>
             </Box>
 
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-1.5 items-center md:gap-3">
                <Suspense
                   fallback={
                      <div className="flex gap-1 items-center border rounded-[20px] px-1 py-0.5 bg-gray-100">

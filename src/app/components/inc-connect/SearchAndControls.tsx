@@ -96,7 +96,7 @@ export default function SearchAndSort() {
    // const pathname = usePathname();
 
    return (
-      <Box sx={{ p: 4 }}>
+      <Box sx={{ p: { md: 4 }, mb: { xs: 3, md: "unset" } }}>
          <Box
             component="form"
             sx={{

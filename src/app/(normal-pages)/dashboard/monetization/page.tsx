@@ -5,7 +5,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 
 export default function page() {
    return (
-      <Grid container spacing={2} sx={{ p: 2 }}>
+      <Grid container spacing={2} sx={{ p: { xs: 1, md: 2 } }}>
          <Grid item xs={12}>
             <Earnings alternate />
          </Grid>

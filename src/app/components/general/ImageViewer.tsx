@@ -36,7 +36,7 @@ export default function ImageViewer({ image, alt }: { image: string | StaticImag
             open={open}
             onClose={handleClose}
          >
-            <Box className="p-3">
+            <Box sx={{ p: { xs: 1, sm: 3 } }}>
                <div className="text-right mb-3">
                   <IconButton size="small" onClick={handleClose} type="button">
                      <Close />

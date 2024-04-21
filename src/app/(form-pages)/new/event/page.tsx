@@ -35,7 +35,7 @@ export default function Page({ searchParams: { eventSlug } }: { searchParams: { 
 function Step1({ event }: { event: EventInterface | undefined }) {
    return (
       <>
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <Typography sx={{ px: 2, textAlign: "center" }}>
                <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
                Tell us about this event you would like to showcase on the platform
@@ -196,7 +196,7 @@ function Step4({ event }: { event: EventInterface | undefined }) {
 function Step5({ event }: { event: EventInterface | undefined }) {
    return (
       <>
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <Typography sx={{ px: 2, textAlign: "center" }}>
                <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
                Now, lets upload some images of / related to the event. Start with a logo or main feature.

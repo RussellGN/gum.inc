@@ -22,13 +22,14 @@ import SaveIncButton from "../inc-connect/SaveIncButton";
 import Verification from "./Verification";
 import Gallery from "./Gallery";
 import DirectoryCard from "./DirectoryCard";
+import ResponsiveTypography from "./ResponsiveTypography";
 
 export default function UserAccountDetails({ user, isAuthenticated }: { user: UserInterface; isAuthenticated?: boolean }) {
    // const isAuthenticated = true;
 
    return (
       <Grid container spacing={2} className="min-h-[70vh]">
-         <Grid item xs md>
+         <Grid item xs={12} md>
             <div className="p-3">
                <Grid container gap={3} alignItems="center" justifyContent={{ xs: "center", md: "unset" }}>
                   <Grid item xs={5} md={2}>
@@ -41,28 +42,46 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                      />
                   </Grid>
 
-                  <Grid item xs>
+                  <Grid item xs={12} md>
                      <Box
-                        sx={{ alignItems: { xs: "center", md: "flex-start" } }}
+                        sx={{ alignItems: { xs: "center", md: "flex-start", textAlign: { xs: "center", md: "unset" } } }}
                         className="flex flex-col justify-center gap-2"
                      >
                         <Typography variant="h2">{user.name}</Typography>
 
-                        <Box className="flex items-center gap-3" sx={{ "& svg": { color: "primary.main" } }}>
-                           <Typography className="border-r flex gap-2 items-center">
-                              <Person2 />
+                        <Box
+                           className={`flex ${
+                              (user.name + user.jobTitle + user.industry).length > 40 ? "flex-wrap" : ""
+                           } items-center justify-center gap-2 md:justify-start md:gap-3`}
+                           sx={{ "& svg": { color: "primary.main" } }}
+                        >
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              <Person2 sx={{ mt: -0.2 }} />
                               {user.jobTitle}
-                           </Typography>
+                           </ResponsiveTypography>
 
-                           <Typography className="border-r flex gap-2 items-center">
-                              <Work />
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              {/* <Typography className="border-r flex gap-2 items-center"> */}
+                              <Work sx={{ mt: -0.2 }} />
                               {user.industry}
-                           </Typography>
+                           </ResponsiveTypography>
 
-                           <Typography className="flex gap-2 items-center">
-                              <LocationOn />
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              <LocationOn sx={{ mt: -0.2 }} />
                               {user.location}
-                           </Typography>
+                           </ResponsiveTypography>
                         </Box>
 
                         <Typography variant="subtitle1">
@@ -125,7 +144,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                      </Box>
                   </Grid>
 
-                  <Grid item xs md={6}>
+                  <Grid item xs={12} md={6}>
                      <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md ">
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
                            What I Do
@@ -147,7 +166,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
                      </Box>
                   </Grid>
 
-                  <Grid item xs md={6}>
+                  <Grid item xs={12} md={6}>
                      <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md" sx={{ mb: 3 }}>
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
                            Contact Details
@@ -193,7 +212,7 @@ export default function UserAccountDetails({ user, isAuthenticated }: { user: Us
             </div>
          </Grid>
 
-         <Grid item xs md={3.5}>
+         <Grid item xs={12} md={3.5}>
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
                <Gallery images={user.images} />
 

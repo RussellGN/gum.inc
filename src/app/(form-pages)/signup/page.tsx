@@ -17,7 +17,7 @@ export default function page() {
             <div className="w-1/4 h-[2px] rounded-md bg-gray-600" />
          </div>
 
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <TextField
                variant="filled"
                size="small"

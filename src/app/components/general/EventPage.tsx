@@ -1,7 +1,7 @@
 import { EventInterface } from "@/app/interfaces";
 import { directories } from "@/app/lib/constants";
 import { sampleUsers } from "@/app/lib/sampleData";
-import { capitalizeWords } from "@/app/lib/utils";
+import { capitalizeWords, friendlyDate } from "@/app/lib/utils";
 import {
    Link as LinkIcon,
    Work,
@@ -24,14 +24,17 @@ import Members from "./Members";
 import Verification from "./Verification";
 import Gallery from "./Gallery";
 import DirectoryCard from "./DirectoryCard";
+import ResponsiveTypography from "./ResponsiveTypography";
 
 export default function EventPage({ event, isAuthenticated }: { event: EventInterface; isAuthenticated?: boolean }) {
+   const eventDates = friendlyDate(event.startDate) + " to " + friendlyDate(event.endDate);
+
    return (
       <Grid container spacing={2} className="min-h-[70vh]">
-         <Grid item xs md>
+         <Grid item xs={12} md>
             <div className="p-3">
-               <Grid container gap={3} alignItems="center">
-                  <Grid item xs={3} md={2}>
+               <Grid container gap={3} alignItems="center" justifyContent={{ xs: "center", md: "unset" }}>
+                  <Grid item xs={5} md={2}>
                      <AspectContainedNextImage
                         src={event?.displayPhoto}
                         alt={event.name}
@@ -41,27 +44,45 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                      />
                   </Grid>
 
-                  <Grid item xs>
-                     <div className="flex flex-col justify-center items-start gap-2">
+                  <Grid item xs={12} md>
+                     <Box
+                        sx={{ alignItems: { xs: "center", md: "flex-start", textAlign: { xs: "center", md: "unset" } } }}
+                        className="flex flex-col justify-center gap-2"
+                     >
                         <Typography variant="h2">{event.name}</Typography>
 
-                        <Box className="flex items-center gap-3" sx={{ "& svg": { color: "primary.main" } }}>
-                           <Typography className="border-r flex gap-2 items-center">
-                              <Event />
-                              {`${new Date(event.startDate).toLocaleDateString()} to ${new Date(
-                                 event.endDate
-                              ).toLocaleDateString()}`}
-                           </Typography>
+                        <Box
+                           className={`flex ${
+                              (eventDates + event.eventType + event.location).length > 40 ? "flex-wrap" : ""
+                           } items-center justify-center gap-2 md:justify-start md:gap-3`}
+                           sx={{ "& svg": { color: "primary.main" } }}
+                        >
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              <Event sx={{ mt: -0.2 }} />
+                              {eventDates}
+                           </ResponsiveTypography>
 
-                           <Typography className="border-r flex gap-2 items-center">
-                              <Work />
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              <Work sx={{ mt: -0.2 }} />
                               {event.eventType}
-                           </Typography>
+                           </ResponsiveTypography>
 
-                           <Typography className="flex gap-2 items-center">
-                              <LocationOn />
+                           <ResponsiveTypography
+                              desktopVariant="body1"
+                              mobileVariant="subtitle2"
+                              className="whitespace-nowrap flex gap-1 md:gap-2 items-center"
+                           >
+                              <LocationOn sx={{ mt: -0.2 }} />
                               {event.location}
-                           </Typography>
+                           </ResponsiveTypography>
                         </Box>
 
                         <Typography variant="subtitle1">
@@ -78,7 +99,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                         </Typography>
 
                         <Verification isVerified={event.verified} />
-                     </div>
+                     </Box>
                   </Grid>
 
                   <Grid item xs={12} md="auto">
@@ -129,7 +150,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                      </Box>
                   </Grid>
 
-                  <Grid item xs md={6}>
+                  <Grid item xs={12} md={6}>
                      <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md ">
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
                            Key Takeaways
@@ -151,7 +172,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
                      </Box>
                   </Grid>
 
-                  <Grid item xs md={6}>
+                  <Grid item xs={12} md={6}>
                      <Box className="border px-2 py-5 rounded-[15px] bg-white shadow-md" sx={{ mb: 3 }}>
                         <Typography variant="h3" className="flex items-center gap-2" sx={{ mb: 2, px: 2 }}>
                            Contact Details
@@ -198,7 +219,7 @@ export default function EventPage({ event, isAuthenticated }: { event: EventInte
             </div>
          </Grid>
 
-         <Grid item xs md={3.5}>
+         <Grid item xs={12} md={3.5}>
             <Box sx={{ p: 2 }} className="border min-h-[60vh] rounded-[15px] bg-white shadow-md">
                {event.hosts && <Members members={event.hosts} memberType="hosts" />}
 

@@ -11,9 +11,10 @@ type propTypes = { params: { slug: string }; searchParams: { type: string } };
 export default function Page({ params: { slug }, searchParams: { type } }: propTypes) {
    const chat = sampleChats.find((chat) => chat.chatRespondend.slug === slug) || sampleChats[0];
    const messages = sampleMessages.filter((msg) => msg.chat.id === chat.id);
-   console.log(type);
+   console.log(type); // to shut TS up
+
    return (
-      <div className="flex flex-col h-full">
+      <Box sx={{ height: { xs: "70vh", md: "100%" } }} className="flex flex-col">
          <Box className="w-full flex items-center gap-3 mb-4">
             <Image
                src={chat.chatRespondend.displayPhoto}
@@ -36,11 +37,14 @@ export default function Page({ params: { slug }, searchParams: { type } }: propT
             </IconButton>
          </Box>
 
-         <div className="border h-full flex-grow p-4 rounded-lg flex flex-col gap-3 overflow-y-auto">
+         <Box
+            sx={{ mx: { xs: -1, md: "unset" }, p: { xs: 1, md: 2 } }}
+            className="border h-full flex-grow rounded-lg flex flex-col gap-3 overflow-y-auto"
+         >
             {messages.map((message, index) => (
                <MessageComponent key={message.id} message={message} index={index} />
             ))}
-         </div>
+         </Box>
 
          <form className="flex items-center gap-3 mt-4">
             <TextField
@@ -60,7 +64,7 @@ export default function Page({ params: { slug }, searchParams: { type } }: propT
                <Send />
             </IconButton>
          </form>
-      </div>
+      </Box>
    );
 }
 
@@ -73,10 +77,11 @@ function MessageComponent({ message, index }: { message: MessageInterface; index
             bgcolor: isOddChild ? "whitesmoke" : "white",
             textAlign: isOddChild ? "left" : "right",
             ml: isOddChild ? 0 : "auto",
+            maxWidth: { xs: "80%", md: "45%" },
          }}
-         className="border w-fit max-w-[45%] p-3"
+         className="border w-fit p-3"
       >
-         <Typography sx={{ mb: 2 }}>{message.body}</Typography>
+         <Typography sx={{ mb: { xs: 1, md: 2 } }}>{message.body}</Typography>
          <Typography
             variant="subtitle2"
             className={`text-gray-400 flex items-center gap-2 ${isOddChild ? "justify-start" : "justify-end"}`}

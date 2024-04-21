@@ -5,8 +5,8 @@ import NotificationComponent from "./NotificationComponent";
 
 export default function AccountActivity() {
    return (
-      <Box className="shadow-lg bg-white rounded-xl border p-5 h-full">
-         <Typography sx={{ mb: 2 }} variant="h3" fontWeight="bold" className="flex items-center gap-3 ">
+      <Box className="shadow-lg bg-white rounded-xl border h-full" sx={{ py: 4, px: { xs: 2, md: 3 } }}>
+         <Typography sx={{ mb: 2, px: 1 }} variant="h3" fontWeight="bold" className="flex items-center gap-3 ">
             Activity
             <Notifications fontSize="inherit" />
          </Typography>

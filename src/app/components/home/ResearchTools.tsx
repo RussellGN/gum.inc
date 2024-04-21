@@ -8,6 +8,7 @@ export default function ResearchTools() {
          container
          alignItems="center"
          justifyContent="center"
+         direction={{ xs: "column-reverse", md: "row" }}
          gap={10}
          className="min-h-[60vh]  rounded-[20px] mb-20"
          sx={{
@@ -15,9 +16,10 @@ export default function ResearchTools() {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             backgroundSize: "cover",
+            p: { xs: 2, md: 5 },
          }}
       >
-         <Grid item xs md="auto">
+         <Grid item xs={12} md="auto">
             <Box sx={{ pr: { md: 5 } }}>
                <Typography variant="h2">
                   <Box component="span" sx={{ color: "primary.light" }}>
@@ -35,7 +37,7 @@ export default function ResearchTools() {
             </Box>
          </Grid>
 
-         <Grid item xs md={4}>
+         <Grid item xs={12} md={4}>
             <Image src="/svgs/undraw_mailbox_re_dvds.svg" width={160} height={90} alt="online resume" className="w-full" />
          </Grid>
       </Grid>

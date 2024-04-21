@@ -7,7 +7,7 @@ export default function SubscriptionCard({ subscription }: { subscription: Subsc
    const expiryDate = new Date(date.setMonth(date.getMonth() + 1)).toLocaleDateString();
 
    return (
-      <Box className="w-1/2 bg-white border-2 rounded-xl p-6 flex gap-4 items-start">
+      <Box className="max-w-[30rem] bg-white border-2 rounded-xl p-6 flex gap-4 items-start">
          {subscription.icon}
          <div className="flex-grow">
             <Typography fontWeight="bold">{subscription.name}</Typography>

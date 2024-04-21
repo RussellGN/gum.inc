@@ -1,8 +1,13 @@
+"use client";
+
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { gradients } from "@/app/lib/constants";
 import { Mail } from "@mui/icons-material";
 import { Badge, Box } from "@mui/material";
 
 export default function GridItem3() {
+   const isMobile = useIsMobile();
+
    return (
       <Box
          sx={{ background: gradients.primary1 }}
@@ -10,7 +15,7 @@ export default function GridItem3() {
       >
          <Box className="p-2 flex items-center justify-center rounded-md h-full">
             <Badge badgeContent={4} color="success">
-               <Mail fontSize="large" />
+               <Mail fontSize={isMobile ? "medium" : "large"} />
             </Badge>
          </Box>
       </Box>

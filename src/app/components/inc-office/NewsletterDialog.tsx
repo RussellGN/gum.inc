@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, Dialog, FormGroup, Grid, IconButton, TextField, Typography } from "@mui/material";
+import { Box, Dialog, FormGroup, Grid, IconButton, TextField, Typography } from "@mui/material";
 import { AddCard, Close, InfoOutlined } from "@mui/icons-material";
 import FormSteps from "../general/FormSteps";
 import OptionCard from "./OptionCard";
@@ -32,7 +32,7 @@ export default function NewsletterDialog({ open, handleClose, toggleOptionChecke
             open={open}
             onClose={handleClose}
          >
-            <Box className="min-h-[90vh]">
+            <Box className="min-h-[90vh] py-5">
                <div className="text-right mb-3 w-full p-3 ">
                   <IconButton size="small" onClick={handleClose} type="button">
                      <Close />
@@ -40,7 +40,12 @@ export default function NewsletterDialog({ open, handleClose, toggleOptionChecke
                </div>
 
                <form className="max-w-[35rem] mx-auto p-3">
-                  <FormSteps content={content} contentHeight="60vh" />
+                  <FormSteps
+                     content={content}
+                     contentHeight="60vh"
+                     submitButtonIcon={<AddCard />}
+                     submitButtonText={"Proceed To Payment"}
+                  />
                </form>
             </Box>
          </Dialog>
@@ -50,7 +55,7 @@ export default function NewsletterDialog({ open, handleClose, toggleOptionChecke
 
 function Step1() {
    return (
-      <div className="flex flex-col gap-6 p-5 mt-3 text-center">
+      <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5 mt-3 text-center">
          <Typography variant="h3" sx={{ px: 2, textAlign: "center" }}>
             <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
             Before proceeding, please take note...
@@ -60,8 +65,8 @@ function Step1() {
             information. Your input ensures that our content is relevant and valuable to your industry.{" "}
          </Typography>
          <Typography>
-            Kindly complete the form with details about your business. Your insights matter, and we&apos;re excited to deliver
-            content that aligns with your business goals.{" "}
+            Kindly complete the form with details about your business. Your insights matter, and we&apos;re excited to
+            deliver content that aligns with your business goals.{" "}
          </Typography>
       </div>
    );
@@ -69,7 +74,7 @@ function Step1() {
 
 function Step2() {
    return (
-      <div className="flex flex-col gap-6 p-5 mt-3">
+      <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5 mt-3">
          <Typography variant="h3" sx={{ px: 2, textAlign: "center" }}>
             <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
             Business Information
@@ -128,7 +133,7 @@ function Step2() {
 
 function Step3() {
    return (
-      <div className="flex flex-col gap-6 p-5 mt-3">
+      <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5 mt-3">
          <Typography variant="h3" sx={{ px: 2, textAlign: "center" }}>
             <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
             Business Information & Queries
@@ -194,7 +199,7 @@ function Step4({
    options: (option & { checked: boolean })[];
 }) {
    return (
-      <div className="flex flex-col gap-6 py-5 mt-3">
+      <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5 mt-3">
          <Typography variant="h3" sx={{ px: 2, textAlign: "center" }}>
             <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
             Payment and Confirmation
@@ -206,11 +211,11 @@ function Step4({
                   You have opted for the following areas of interest. <b>Total - £20</b>
                </Typography>
             </Grid>
-            <Grid item xs="auto">
+            {/* <Grid item xs="auto">
                <Button size="large" endIcon={<AddCard />}>
                   Make payment
                </Button>
-            </Grid>
+            </Grid> */}
          </Grid>
          <FormGroup sx={{ pb: 2 }} className="">
             <div className="flex flex-row max-h-[40vh] overflow-y-auto flex-wrap gap-1">

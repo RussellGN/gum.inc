@@ -35,7 +35,7 @@ export default function Page({ searchParams: { organizationSlug } }: { searchPar
 function Step1({ organization }: { organization: OrganizationInterface | undefined }) {
    return (
       <>
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <Typography sx={{ px: 2, textAlign: "center" }}>
                <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
                Tell us about the organization you would like to showcase on the platform
@@ -181,7 +181,7 @@ function Step4({ organization }: { organization: OrganizationInterface | undefin
 function Step5({ organization }: { organization: OrganizationInterface | undefined }) {
    return (
       <>
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <Typography sx={{ px: 2, textAlign: "center" }}>
                <InfoOutlined fontSize="inherit" sx={{ mt: -0.4, mr: 1 }} />
                Now, lets upload some images of / related to the organization. Start with a logo or main feature.

@@ -19,7 +19,7 @@ export default function Page() {
 
          <DividerWithText text="or" />
 
-         <div className="flex flex-col gap-5 p-5">
+         <div className="flex flex-col gap-5 py-4 px-3 md:py-5 md:px-5">
             <div className=" flex items-center gap-3">
                <div className="flex-grow">
                   <TextField

@@ -9,13 +9,14 @@ export default function Layout({ children }: PropsWithChildren) {
          component="main"
          className="min-h-[101vh] flex items-center justify-center"
          sx={{
-            p: 3,
+            px: { xs: 2, md: 3 },
+            py: 4,
             background: gradients.secondary1,
          }}
       >
          <Box
             className="bg-[whitesmoke] rounded-[15px] shadow-2xl border max-w-[35rem] flex flex-col justify-between w-full min-h-[60vh]"
-            sx={{ p: 5 }}
+            sx={{ py: 5, px: { xs: 2, md: 5 } }}
          >
             <FormNav />
             <div className="flex-grow mt-10">{children}</div>

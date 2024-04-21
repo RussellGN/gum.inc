@@ -41,12 +41,12 @@ export default function JoinValueFeature() {
          <Box className="flex flex-col text-center justify-center items-center gap-6">
             <Box sx={{ "& svg": { fontSize: "2.5rem", color: "primary.light" } }}>{feature.icon}</Box>
 
-            <div className="w-[20rem]">
+            <Box sx={{ width: { xs: "100%", md: "20rem" } }}>
                <Typography sx={{ mb: 1 }} variant="h4">
                   {feature.title.toUpperCase()}
                </Typography>
                <Typography>{feature.description}</Typography>
-            </div>
+            </Box>
          </Box>
       </div>
    ));
@@ -59,7 +59,7 @@ export default function JoinValueFeature() {
 
          <EmblaCarousel slides={slides} />
 
-         <div className="flex items-center justify-center gap-3 mt-6">
+         <div className="flex items-center justify-center gap-3 md:mt-6">
             <Button component={Link} href="/signup" size="medium" endIcon={<ArrowRightAlt />}>
                Join Now
             </Button>

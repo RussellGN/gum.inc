@@ -7,10 +7,22 @@ export default function Earnings({ alternate }: { alternate?: boolean }) {
    return (
       <Box
          className="shadow-lg flex gap-2 items-center rounded-xl border  h-full"
-         sx={{ background: gradients.secondary2, color: "white", py: 3, px: alternate ? 5 : 3 }}
+         sx={{
+            flexDirection: { xs: "column", md: "row" },
+            textAlign: { xs: "center", md: "unset" },
+            background: gradients.secondary2,
+            color: "white",
+            py: 3,
+            px: { xs: 2, md: alternate ? 5 : 3 },
+         }}
       >
          <div className="flex-grow">
-            <Typography sx={{ mb: 2 }} variant="h3" fontWeight="bold" className="flex items-center gap-3 ">
+            <Typography
+               sx={{ mb: 2, justifyContent: { xs: "center", md: "unset" } }}
+               variant="h3"
+               fontWeight="bold"
+               className="flex items-center gap-3 "
+            >
                Earnings
                <CurrencyExchange fontSize="inherit" />
             </Typography>
@@ -25,7 +37,13 @@ export default function Earnings({ alternate }: { alternate?: boolean }) {
 
             {!alternate && (
                <div>
-                  <Button component={Link} href="/dashboard/monetization" fullWidth endIcon={<ArrowRightAlt />}>
+                  <Button
+                     size="medium"
+                     component={Link}
+                     href="/dashboard/monetization"
+                     fullWidth
+                     endIcon={<ArrowRightAlt />}
+                  >
                      Monetization Page
                   </Button>
                </div>

@@ -15,12 +15,13 @@ export default function Footer() {
                display: "flex",
                alignItems: "center",
                justifyContent: "space-between",
-               p: 8,
+               py: { xs: 8, md: 8 },
+               px: { xs: 3, md: 8 },
                mb: 2,
             }}
          >
-            <Grid container gap={3} justifyContent="space-between">
-               <Grid item xs md={3}>
+            <Grid container spacing={3} justifyContent="space-between">
+               <Grid item xs={12} md={3}>
                   <Typography variant="h2" color="primary">
                      GUM.INC
                   </Typography>
@@ -28,7 +29,8 @@ export default function Footer() {
                      Gum.inc LTD is a company registred in the United Kingdom and Whales.
                   </Typography>
                </Grid>
-               <Grid item xs md={3}>
+
+               <Grid item xs={6} md={3}>
                   <div className="flex flex-col gap-2">
                      <Typography variant="h3" sx={{ mb: 2.5 }}>
                         Quick links
@@ -38,7 +40,8 @@ export default function Footer() {
                      <FooterLink href="/signup">Signup</FooterLink>
                   </div>
                </Grid>
-               <Grid item xs md={3}>
+
+               <Grid item xs={6} md={3}>
                   <div className="flex flex-col gap-2">
                      <Typography variant="h3" sx={{ mb: 2.5 }}>
                         Quick links
@@ -58,7 +61,7 @@ export default function Footer() {
                borderColor: "divider",
                borderRadius: "20px",
                backgroundColor: "white",
-               px: 8,
+               px: { xs: 3, md: 8 },
                py: 3,
                mb: 5,
             }}
@@ -84,7 +87,7 @@ export default function Footer() {
                <Typography variant="body2">All Rights Reserved. &copy;GUM.INC {new Date().getFullYear()}</Typography>
 
                <IconButton
-                  sx={{ border: "solid thin" }}
+                  sx={{ border: { md: "solid thin" } }}
                   title="Back to top"
                   size="small"
                   component={Link}

@@ -1,4 +1,5 @@
 import { NotificationInterface } from "@/app/interfaces";
+import { getTimeElapsedSince } from "@/app/lib/utils";
 import { notificationType } from "@/app/types";
 import {
    Announcement,
@@ -12,27 +13,30 @@ import {
    VisibilitySharp,
 } from "@mui/icons-material";
 import { Box, SxProps, Typography } from "@mui/material";
+import ResponsiveTypography from "../general/ResponsiveTypography";
 
 export default function NotificationComponent({ notification }: { notification: NotificationInterface }) {
    return (
       <Box
-         className="flex items-center gap-3 border-b p-1.5"
-         sx={{ backgroundColor: notification.read ? "" : "whitesmoke" }}
+         className="flex items-center gap-3 border-b"
+         sx={{ backgroundColor: notification.read ? "" : "whitesmoke", p: 1 }}
       >
-         <div className="mr-auto ">
-            <div className="flex items-start gap-2">
-               <Typography>
-                  <NotificationIcon type={notification.type} otherProps={{ fontSize: "inherit" }} />
-               </Typography>
-               <div>
-                  <Typography> {notification.title}</Typography>
-                  <Typography variant="subtitle2">{notification.content}</Typography>
-               </div>
+         <div className="flex items-start gap-1 mr-auto">
+            <Typography>
+               <NotificationIcon type={notification.type} otherProps={{ fontSize: "small" }} />
+            </Typography>
+            <div>
+               <ResponsiveTypography mobileVariant="subtitle1" desktopVariant="body1">
+                  {notification.title}
+               </ResponsiveTypography>
+               <ResponsiveTypography mobileVariant="caption" desktopVariant="subtitle2">
+                  {notification.content}
+               </ResponsiveTypography>
             </div>
          </div>
 
-         <Typography component="p" variant="caption">
-            {new Date(notification.date).toLocaleDateString()}
+         <Typography variant="caption" className="whitespace-nowrap">
+            {getTimeElapsedSince(notification.date)}
          </Typography>
       </Box>
    );

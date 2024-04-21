@@ -6,11 +6,13 @@ import { Button, FormGroup, Box } from "@mui/material";
 import { useState } from "react";
 import OptionCard from "./OptionCard";
 import NewsletterDialog from "./NewsletterDialog";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 export default function ResearchBureauNewsletterForm() {
    const [showDialog, setShowDialog] = useState(false);
    const [options, setOptions] = useState(() => researchBureauOptions.map((option) => ({ ...option, checked: false })));
    const selectedOptions = options.filter((option) => option.checked);
+   const isMobile = useIsMobile();
 
    function handleOpen() {
       setShowDialog(true);
@@ -62,7 +64,7 @@ export default function ResearchBureauNewsletterForm() {
                   type="button"
                   onClick={handleOpen}
                   color="success"
-                  size="medium"
+                  size={isMobile ? "small" : "medium"}
                   endIcon={<ArrowRightAlt />}
                >
                   Proceed
@@ -70,7 +72,7 @@ export default function ResearchBureauNewsletterForm() {
                <Button
                   onClick={toggleAllOptions}
                   color="success"
-                  size="medium"
+                  size={isMobile ? "small" : "medium"}
                   variant="outlined"
                   endIcon={isAllSelected ? <RemoveDone /> : <DoneAll />}
                >
@@ -80,11 +82,16 @@ export default function ResearchBureauNewsletterForm() {
 
             <Box sx={{ mt: 2.5 }}>
                <FormGroup sx={{ pb: 2 }} className="">
-                  <div className="flex flex-row flex-wrap gap-3">
+                  <Box sx={{ gap: { xs: 0.8, md: 2 } }} className="flex flex-row flex-wrap ">
                      {options.map((option) => (
-                        <OptionCard key={option.name} option={option} toggleOptionCheckedState={toggleOptionCheckedState} />
+                        <OptionCard
+                           small={isMobile}
+                           key={option.name}
+                           option={option}
+                           toggleOptionCheckedState={toggleOptionCheckedState}
+                        />
                      ))}
-                  </div>
+                  </Box>
                </FormGroup>
             </Box>
          </div>

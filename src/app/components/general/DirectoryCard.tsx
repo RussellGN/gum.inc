@@ -7,9 +7,8 @@ export default function DirectoryCard({ dir, simplified }: { dir: DirectoryInter
       <Box
          component={Link}
          href={`/inc-connect?dir=${dir.name}`}
-         className={`${
-            simplified ? "w-full" : "w-[15rem]"
-         } bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 border transition-all hover:bg-slate-50`}
+         sx={{ width: { xs: "100%", md: simplified ? "100%" : "15rem" } }}
+         className="bg-white p-4 rounded-xl flex flex-col items-center justify-center gap-2 border transition-all hover:bg-slate-50"
       >
          {dir.icon}
          <Typography noWrap className="w-full text-center ">

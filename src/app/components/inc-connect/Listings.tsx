@@ -7,10 +7,12 @@ import { directories } from "@/app/lib/constants";
 import { sampleOrganizations, sampleEvents, sampleUsers } from "@/app/lib/sampleData";
 import { OrganizationInterface, EventInterface, UserInterface } from "@/app/interfaces";
 import Listing from "./Listing";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 export default function Listings() {
    const readOnlySearchParams = useSearchParams();
    const activeDirName = readOnlySearchParams.get("dir") || directories[0].name;
+   const isMobile = useIsMobile();
 
    const activeDir = directories.find((dir) => dir.name === activeDirName);
    const activeDirFor = (directories.find((dir) => dir.name === activeDirName) || directories[0]).for;
@@ -40,7 +42,7 @@ export default function Listings() {
          <Typography textAlign="center" sx={{ px: 2, mb: 3 }}>
             Showing all listings in <strong>{activeDirName} - UK access</strong>
          </Typography>
-         <div className="grid grid-cols-5 gap-2 ">
+         <div className={`grid ${isMobile ? "grid-cols-2 gap-1" : "grid-cols-5 gap-2"}`}>
             <JoinCard dir={activeDir!} />
             {listings.map((listing) => (
                <Listing key={listing.slug} listing={listing} />

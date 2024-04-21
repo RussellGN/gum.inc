@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Box, Popover, Radio, RadioGroup, FormControlLabel, FormControl, FormLabel, Typography } from "@mui/material";
 import { MouseEvent, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import useIsMobile from "@/app/hooks/useIsMobile";
 
 export default function AccessSelector() {
    const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
@@ -13,6 +14,7 @@ export default function AccessSelector() {
    const readOnlySearchParams = useSearchParams();
    const searchParams = new URLSearchParams(readOnlySearchParams);
    const accessLevel = (searchParams.get("access-level") as "global" | "uk") || "uk";
+   const isMobile = useIsMobile();
 
    function changeAccessLevel(newAccessLevel: string) {
       searchParams.set("access-level", newAccessLevel);
@@ -36,14 +38,16 @@ export default function AccessSelector() {
             type="button"
             aria-describedby={id}
             onClick={handleClick}
-            className="flex gap-1 items-center border rounded-[20px] px-1 py-0.5 hover:bg-[whitesmoke]"
+            className={`flex ${
+               isMobile ? "gap-0.5" : "gap-1"
+            } items-center border rounded-[20px] px-1 py-0.5 hover:bg-[whitesmoke]`}
          >
             <Image
                src={accessLevel === "uk" ? "/svgs/ukFlag.svg" : "/svgs/worldFlag.svg"}
                alt={accessLevel === "uk" ? "uk flag" : "world flag"}
                width={35}
                height={35}
-               className={`w-7 h-7 object-cover border rounded-[100%]`}
+               className={`${isMobile ? "w-6 h-6" : "w-7 h-7"} object-cover border rounded-[100%]`}
             />
             <KeyboardArrowDown />
          </button>
@@ -58,13 +62,10 @@ export default function AccessSelector() {
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             transformOrigin={{ vertical: "top", horizontal: "right" }}
          >
-            <Box sx={{ p: 3 }}>
+            <Box sx={{ p: 3, width: isMobile ? "95vw" : "unset" }}>
                <FormControl>
                   <FormLabel id="access-level-label" className="flex gap-3 items-center" sx={{ mb: 1 }}>
                      Select Access Level
-                     {/* <MuiLink sx={{ mt: -0.3 }} component={Link} href="/about#access-level">
-                        <InfoOutlined fontSize="small" />
-                     </MuiLink> */}
                   </FormLabel>
                   <RadioGroup
                      aria-labelledby="access-level-label"

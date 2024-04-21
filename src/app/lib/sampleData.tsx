@@ -1970,7 +1970,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "search-appearance",
       content: `You made 5 Search appearances today!`,
-      date: "2024-01-13",
+      date: "2024-05-21",
       read: false,
    },
    {
@@ -1979,7 +1979,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "account",
       content: "Find out how you can monentize your account on the monetization page",
-      date: "2024-01-12",
+      date: "2024-04-21",
       read: false,
    },
    {
@@ -1988,7 +1988,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "announcement",
       content: `Check out our new 'Gummy Pages' directory and consider becoming a memebr!`,
-      date: "2023-11-02",
+      date: "2024-04-02",
       read: true,
    },
    {
@@ -1997,7 +1997,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "saved",
       content: "You've been bookmarked 15 times today!",
-      date: "2023-10-12",
+      date: "2024-03-12",
       read: true,
    },
    {
@@ -2006,7 +2006,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "page",
       content: "Your business page was approved and is now live!",
-      date: "2023-09-02",
+      date: "2023-01-02",
       read: true,
    },
    {
@@ -2015,7 +2015,7 @@ export const sampleNotifications: NotificationInterface[] = [
       user: sampleUsers[1],
       type: "account",
       content: `Welcome to Gum.iNc ${generateAvatarLetters(sampleUsers[1].name)}!`,
-      date: "2023-09-01",
+      date: "2019-09-01",
       read: true,
    },
 ];

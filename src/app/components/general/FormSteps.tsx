@@ -5,7 +5,9 @@ import { ArrowRightAlt } from "@mui/icons-material";
 import { Button, styled } from "@mui/material";
 import { ReactNode, useState } from "react";
 
-export default function FormSteps({ content, contentHeight = "40vh" }: { content: ReactNode[]; contentHeight?: string }) {
+type propTypes = { content: ReactNode[]; submitButtonIcon?: ReactNode; submitButtonText?: string; contentHeight?: string };
+
+export default function FormSteps({ content, submitButtonIcon, submitButtonText, contentHeight = "40vh" }: propTypes) {
    const [step, setStep] = useState(0);
    const isLastStep = step === content.length - 1;
 
@@ -68,13 +70,13 @@ export default function FormSteps({ content, contentHeight = "40vh" }: { content
                Next
             </Button>
             <Button
-               endIcon={<ArrowRightAlt />}
+               endIcon={submitButtonIcon || <ArrowRightAlt />}
                sx={!isLastStep ? { display: "none" } : {}}
                type="submit"
                variant="contained"
                color="primary"
             >
-               Finish
+               {submitButtonText || "Finish"}
             </Button>
          </div>
       </>

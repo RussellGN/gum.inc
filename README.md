@@ -37,10 +37,9 @@
 
 # straightforward code
 
-1. review about page
-2. mobile nav
-3. mobile responsiveness
-4. polish
+1. make mobile nav more proffesional
+2. review about page
+3. polish
 
 ## look into once done
 

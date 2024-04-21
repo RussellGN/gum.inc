@@ -1,22 +1,12 @@
 import { sampleUsers } from "@/app/lib/sampleData";
 import { Box, Grid, Typography } from "@mui/material";
-import {
-   Verified,
-   LocationOn,
-   Message,
-   AutoStories,
-   Star,
-   BusinessCenter,
-   Workspaces,
-   Event,
-   Business,
-} from "@mui/icons-material";
+import { Verified, LocationOn, Message, Event, Business } from "@mui/icons-material";
 import AspectContainedNextImage from "../general/AspectContainedNextImage";
-import { gradients } from "@/app/lib/constants";
 import { friendlyDate } from "@/app/lib/utils";
 import UncontrolledSlideshow from "../general/UncontrolledSlideshow";
 import { EventInterface, OrganizationInterface, UserInterface } from "@/app/interfaces";
 import images from "@/app/assets";
+import HeroSlide2Content from "./HeroSlide2Content";
 
 export default function GridItem1() {
    return (
@@ -204,27 +194,7 @@ const slides = [
    </div>,
 
    <div key="item1-slide2" className="items-center justify-center h-full">
-      <Box
-         className="h-full p-3 text-white border flex flex-col justify-around shadow-lg rounded-[10px]"
-         sx={{ background: gradients.primary1 }}
-      >
-         <Typography variant="subtitle2" className="flex items-center gap-3">
-            <AutoStories />
-            <span>10+ Curated Directories</span>
-         </Typography>
-         <Typography variant="subtitle2" className="flex items-center gap-3">
-            <Workspaces />
-            <span>Encompassing Various Industries</span>
-         </Typography>
-         <Typography variant="subtitle2" className="flex items-center gap-3">
-            <BusinessCenter />
-            <span>Proffessionals, Services, Businessses, Events</span>
-         </Typography>
-         <Typography variant="subtitle2" className="flex items-center gap-3">
-            <Star />
-            <span> And More</span>
-         </Typography>
-      </Box>
+      <HeroSlide2Content />
    </div>,
 
    <div key="item1-slide3" className="h-full">

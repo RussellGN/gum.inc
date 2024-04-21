@@ -6,6 +6,7 @@ import { PrevButton, NextButton, usePrevNextButtons } from "./EmblaCarouselArrow
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import "./embla.css";
+import { Box } from "@mui/material";
 
 export default function EmblaCarousel({ slides }: { slides: JSX.Element[] }) {
    const options: EmblaOptionsType = { direction: "rtl", loop: true };
@@ -29,12 +30,13 @@ export default function EmblaCarousel({ slides }: { slides: JSX.Element[] }) {
 
    return (
       <div className="border-t-8 flex h-fit text-center justify-center py-4">
-         <div className="flex items-center justify-center">
+         <Box sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", alignItems: "center" }}>
             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-         </div>
+         </Box>
 
          {/* <div className="border-r-8 border-l-8 px-8 py-4"> */}
-         <div className="px-8 py-4">
+         {/* <div className="px-8 py-4"> */}
+         <div className="py-4 max-w-full md:px-8">
             <section className="embla" dir="rtl">
                <div className="embla__viewport" ref={emblaRef}>
                   <div className="embla__container">
@@ -48,9 +50,9 @@ export default function EmblaCarousel({ slides }: { slides: JSX.Element[] }) {
             </section>
          </div>
 
-         <div className="flex items-center justify-center">
+         <Box sx={{ display: { xs: "none", md: "flex" }, justifyContent: "center", alignItems: "center" }}>
             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-         </div>
+         </Box>
       </div>
    );
 }

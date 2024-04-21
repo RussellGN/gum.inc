@@ -7,9 +7,9 @@ import { Suspense } from "react";
 export default function Page() {
    return (
       <>
-         {/* <Explainer /> */}
          <Grid container gap={3}>
             <Sidebar />
+
             <Grid item xs md>
                <Box>
                   <Suspense>

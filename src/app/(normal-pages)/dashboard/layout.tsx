@@ -1,5 +1,5 @@
 import DashboardNav from "@/app/components/dashboard/DashboardNav";
-import PageCreationButtons from "@/app/components/dashboard/pageCreationButtons";
+import PageCreationButtons from "@/app/components/dashboard/PageCreationButtons";
 import { Grid } from "@mui/material";
 import { PropsWithChildren } from "react";
 

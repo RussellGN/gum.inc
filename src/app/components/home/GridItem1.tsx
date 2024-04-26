@@ -144,163 +144,171 @@ const organization: OrganizationInterface = {
 
 const slides = [
    <div key="item1-slide1" className="h-full">
-      <Box className="border rounded-[15px] bg-white flex flex-col flex-1 justify-around h-full p-1.5">
-         <Grid container spacing={1} justifyContent="space-between" className="mb-2 ">
-            <Grid item xs zeroMinWidth>
-               <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
-                  {user.name}
-               </Typography>
-               <Typography variant="caption" noWrap component="p">
-                  {user.jobTitle}
-               </Typography>
+      <Box sx={{ maxWidth: { xs: "15rem", md: "unset" }, mx: { xs: "auto", md: "unset" }, height: "100%" }}>
+         <Box className="border rounded-[15px] bg-white flex flex-col flex-1 justify-around h-full p-1.5">
+            <Grid container spacing={1} justifyContent="space-between" className="mb-2 ">
+               <Grid item xs zeroMinWidth>
+                  <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
+                     {user.name}
+                  </Typography>
+                  <Typography variant="caption" noWrap component="p">
+                     {user.jobTitle}
+                  </Typography>
+               </Grid>
+               <Grid item xs="auto">
+                  <Verified fontSize="small" />
+               </Grid>
             </Grid>
-            <Grid item xs="auto">
-               <Verified fontSize="small" />
-            </Grid>
-         </Grid>
 
-         <Box
-            sx={{
-               position: "relative",
-               "&:after": {
-                  content: "''",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "rgba(255,255,255,0.3)",
-                  borderRadius: "10px",
-               },
-            }}
-         >
-            <AspectContainedNextImage
-               src={user.displayPhoto}
-               alt={user.name}
+            <Box
                sx={{
-                  borderRadius: "10px",
+                  position: "relative",
+                  "&:after": {
+                     content: "''",
+                     position: "absolute",
+                     top: 0,
+                     left: 0,
+                     width: "100%",
+                     height: "100%",
+                     backgroundColor: "rgba(255,255,255,0.3)",
+                     borderRadius: "10px",
+                  },
                }}
-            />
-         </Box>
+            >
+               <AspectContainedNextImage
+                  src={user.displayPhoto}
+                  alt={user.name}
+                  sx={{
+                     borderRadius: "10px",
+                  }}
+               />
+            </Box>
 
-         <Box className="mt-2 flex justify-between items-center">
-            <Typography noWrap className="flex-grow">
-               <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
-               {user.location}
-            </Typography>
-            <Message />
+            <Box className="mt-2 flex justify-between items-center">
+               <Typography noWrap className="flex-grow">
+                  <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
+                  {user.location}
+               </Typography>
+               <Message />
+            </Box>
          </Box>
       </Box>
    </div>,
 
    <div key="item1-slide2" className="items-center justify-center h-full">
-      <HeroSlide2Content />
+      <Box sx={{ maxWidth: { xs: "15rem", md: "unset" }, mx: { xs: "auto", md: "unset" }, height: "100%" }}>
+         <HeroSlide2Content />
+      </Box>
    </div>,
 
    <div key="item1-slide3" className="h-full">
-      <Box className="border rounded-[15px] bg-slate-100 flex flex-col flex-1 justify-around h-full p-1.5">
-         <Grid container gap={1} justifyContent="space-between" className="mb-2 ">
-            <Grid item xs zeroMinWidth>
-               <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
-                  {event.name}
-               </Typography>
-               <Typography variant="caption" component="div">
-                  {event.eventType}
-               </Typography>
+      <Box sx={{ maxWidth: { xs: "15rem", md: "unset" }, mx: { xs: "auto", md: "unset" }, height: "100%" }}>
+         <Box className="border rounded-[15px] bg-slate-100 flex flex-col flex-1 justify-around h-full p-1.5">
+            <Grid container gap={1} justifyContent="space-between" className="mb-2 ">
+               <Grid item xs zeroMinWidth>
+                  <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
+                     {event.name}
+                  </Typography>
+                  <Typography variant="caption" component="div">
+                     {event.eventType}
+                  </Typography>
+               </Grid>
+               <Grid item xs="auto">
+                  <div className="flex flex-col gap-1">
+                     <Verified fontSize="small" />
+                     <Event fontSize="small" />
+                  </div>
+               </Grid>
             </Grid>
-            <Grid item xs="auto">
-               <div className="flex flex-col gap-1">
-                  <Verified fontSize="small" />
-                  <Event fontSize="small" />
-               </div>
-            </Grid>
-         </Grid>
 
-         <Box
-            sx={{
-               position: "relative",
-               "&:after": {
-                  content: "''",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "rgba(255,255,255,0.3)",
-                  borderRadius: "10px",
-               },
-            }}
-         >
-            <AspectContainedNextImage
-               src={event.displayPhoto}
-               alt={event.name}
+            <Box
                sx={{
-                  borderRadius: "10px",
+                  position: "relative",
+                  "&:after": {
+                     content: "''",
+                     position: "absolute",
+                     top: 0,
+                     left: 0,
+                     width: "100%",
+                     height: "100%",
+                     backgroundColor: "rgba(255,255,255,0.3)",
+                     borderRadius: "10px",
+                  },
                }}
-            />
-         </Box>
+            >
+               <AspectContainedNextImage
+                  src={event.displayPhoto}
+                  alt={event.name}
+                  sx={{
+                     borderRadius: "10px",
+                  }}
+               />
+            </Box>
 
-         <Box className="mt-2 flex justify-between items-center">
-            <Typography noWrap className="flex-grow">
-               <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
-               {event.location}
-            </Typography>
-            <Typography variant="caption" color="grey">
-               {`${friendlyDate(event.startDate)} `}
-            </Typography>
+            <Box className="mt-2 flex justify-between items-center">
+               <Typography noWrap className="flex-grow">
+                  <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
+                  {event.location}
+               </Typography>
+               <Typography variant="caption" color="grey">
+                  {`${friendlyDate(event.startDate)} `}
+               </Typography>
+            </Box>
          </Box>
       </Box>
    </div>,
 
    <div key="item1-slide4" className="h-full">
-      <Box className="border rounded-[15px] bg-white flex flex-col flex-1 justify-around h-full p-1.5">
-         <Grid container gap={1} justifyContent="space-between" className="mb-2 ">
-            <Grid item xs zeroMinWidth>
-               <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
-                  {organization.name}
-               </Typography>
-               <Typography variant="caption" component="div">
-                  {organization.industry}
-               </Typography>
+      <Box sx={{ maxWidth: { xs: "15rem", md: "unset" }, mx: { xs: "auto", md: "unset" }, height: "100%" }}>
+         <Box className="border rounded-[15px] bg-white flex flex-col flex-1 justify-around h-full p-1.5">
+            <Grid container gap={1} justifyContent="space-between" className="mb-2 ">
+               <Grid item xs zeroMinWidth>
+                  <Typography fontWeight="bold" noWrap sx={{ textDecoration: "underline" }}>
+                     {organization.name}
+                  </Typography>
+                  <Typography variant="caption" component="div">
+                     {organization.industry}
+                  </Typography>
+               </Grid>
+               <Grid item xs="auto">
+                  <div className="flex flex-col gap-1">
+                     <Verified fontSize="small" />
+                     <Business fontSize="small" />
+                  </div>
+               </Grid>
             </Grid>
-            <Grid item xs="auto">
-               <div className="flex flex-col gap-1">
-                  <Verified fontSize="small" />
-                  <Business fontSize="small" />
-               </div>
-            </Grid>
-         </Grid>
 
-         <Box
-            sx={{
-               position: "relative",
-               "&:after": {
-                  content: "''",
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "rgba(255,255,255,0.3)",
-                  borderRadius: "10px",
-               },
-            }}
-         >
-            <AspectContainedNextImage
-               src={organization.displayPhoto}
-               alt={organization.name}
+            <Box
                sx={{
-                  borderRadius: "10px",
+                  position: "relative",
+                  "&:after": {
+                     content: "''",
+                     position: "absolute",
+                     top: 0,
+                     left: 0,
+                     width: "100%",
+                     height: "100%",
+                     backgroundColor: "rgba(255,255,255,0.3)",
+                     borderRadius: "10px",
+                  },
                }}
-            />
-         </Box>
+            >
+               <AspectContainedNextImage
+                  src={organization.displayPhoto}
+                  alt={organization.name}
+                  sx={{
+                     borderRadius: "10px",
+                  }}
+               />
+            </Box>
 
-         <Box className="mt-2 flex justify-between items-center">
-            <Typography noWrap className="flex-grow">
-               <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
-               {organization.location}
-            </Typography>
-            <Message />
+            <Box className="mt-2 flex justify-between items-center">
+               <Typography noWrap className="flex-grow">
+                  <LocationOn fontSize="inherit" sx={{ mr: 0.2, mt: -0.2 }} />
+                  {organization.location}
+               </Typography>
+               <Message />
+            </Box>
          </Box>
       </Box>
    </div>,

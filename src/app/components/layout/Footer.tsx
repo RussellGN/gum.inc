@@ -25,9 +25,7 @@ export default function Footer() {
                   <Typography variant="h2" color="primary">
                      GUM.INC
                   </Typography>
-                  <Typography sx={{ my: 1.5 }}>
-                     Gum.inc LTD is a company registred in the United Kingdom and Whales.
-                  </Typography>
+                  <Typography sx={{ my: 1.5 }}>Gum.inc LTD is a company registred in the United Kingdom.</Typography>
                </Grid>
 
                <Grid item xs={6} md={3}>

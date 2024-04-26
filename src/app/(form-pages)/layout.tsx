@@ -9,7 +9,7 @@ export default function Layout({ children }: PropsWithChildren) {
          component="main"
          className="min-h-[101vh] flex items-center justify-center"
          sx={{
-            px: { xs: 2, md: 3 },
+            px: { xs: 2, sm: 3 },
             py: 4,
             background: gradients.secondary1,
          }}

@@ -9,10 +9,12 @@ export default function page() {
       <Grid container spacing={2}>
          <Grid item xs={12}>
             <Box sx={{ p: { xs: 2, md: 3 } }}>
-               <Typography variant="h2">Account Overview</Typography>
+               <Typography variant="h2" sx={{ mb: 1 }}>
+                  Account Overview
+               </Typography>
                <Typography>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti praesentium expedita repudiandae, at
-                  quisquam reprehenderit. Cupiditate labore ipsum
+                  Stay informed with real-time activity updates and track your account perfomance with insightful
+                  statistics.
                </Typography>
             </Box>
          </Grid>

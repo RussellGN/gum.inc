@@ -14,7 +14,10 @@ export default function Hero() {
                      Grow
                   </Box>
                </Typography>
-               <Typography className="py-3" sx={{ maxWidth: { md: "20rem" }, px: { xs: 1, md: "unset" } }}>
+               <Typography
+                  className="py-3"
+                  sx={{ px: { xs: 1, md: "unset" }, maxWidth: "25rem", mx: { xs: "auto", md: "unset" } }}
+               >
                   Explore and engage a vibrant community of professionals, businesses and events. Fuel your growth with our
                   impactful newsletters
                   <br />

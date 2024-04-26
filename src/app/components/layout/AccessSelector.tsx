@@ -62,7 +62,7 @@ export default function AccessSelector() {
             anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
             transformOrigin={{ vertical: "top", horizontal: "right" }}
          >
-            <Box sx={{ p: 3, width: isMobile ? "95vw" : "unset" }}>
+            <Box sx={{ p: 3, width: { xs: "95vw", sm: "unset" } }}>
                <FormControl>
                   <FormLabel id="access-level-label" className="flex gap-3 items-center" sx={{ mb: 1 }}>
                      Select Access Level

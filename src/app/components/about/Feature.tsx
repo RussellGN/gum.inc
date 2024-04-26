@@ -14,7 +14,7 @@ export default function Feature({ image, alt, title, body, direction, minHeight 
    return (
       <Box className={`min-h-[${minHeight || "80vh"}] mb-20 flex items-center justify-center`}>
          <Grid container alignItems="center" justifyContent="center" gap={{ xs: 5, md: 10 }} sx={{ width: "100%" }}>
-            <Grid item order={{ md: direction === "left" ? 1 : 2 }} xs={12} md={4}>
+            <Grid item order={{ md: direction === "left" ? 1 : 2 }} xs={12} sm={8} md={4}>
                <Box
                   sx={{
                      px: { xs: "10%", md: "unset" },
@@ -66,9 +66,11 @@ export default function Feature({ image, alt, title, body, direction, minHeight 
             </Grid>
 
             <Grid item order={{ md: direction === "left" ? 2 : 1 }} xs={12} md="auto">
-               <Box>
+               <Box sx={{ textAlign: { xs: "center", md: "unset" } }}>
                   {title && <Typography variant="h2">{title}</Typography>}
-                  <Typography className="max-w-[25rem] py-3">{body} </Typography>
+                  <Typography sx={{ maxWidth: "25rem", mx: { xs: "auto", md: "unset" } }} className="py-3">
+                     {body}
+                  </Typography>
                </Box>
             </Grid>
          </Grid>

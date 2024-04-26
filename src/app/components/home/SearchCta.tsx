@@ -57,9 +57,8 @@ export default function SearchCta() {
                ""
             ) : (
                <Typography className="max-w-prose text-center">
-                  Type in search keywords to quickly <br />
-                  find what you&apos;re looking for, or navigate to <Link href="/inc-connect">Inc Connect</Link> <br /> and
-                  get exploring
+                  Enter keywords to swiftly <br />
+                  locate what you need, or dive into <Link href="/inc-connect">Inc Connect</Link> <br /> to start exploring
                </Typography>
             )}
             <form onSubmit={onSubmit} className={`md:w-1/2 ${isMobile ? "mb-3" : "mt-5"} flex`}>

@@ -14,14 +14,15 @@ export default function Features() {
             <Grid container alignItems="center" justifyContent="center" gap={6} sx={{ width: "100%" }}>
                <Grid item order={{ xs: 2, md: 1 }} xs={12} md="auto" sx={{ textAlign: { xs: "center", md: "left" } }}>
                   <Box sx={{ pr: { md: 5 } }}>
-                     <Typography variant="h2" className="max-w-[25rem]">
+                     <Typography variant="h2" sx={{ maxWidth: { xs: "25rem" }, mx: { xs: "auto", md: "unset" } }}>
                         Discover, list, and{" "}
                         <Typography color="primary" variant="inherit" component="span">
                            thrive
                         </Typography>{" "}
                         in the world of opportunities
                      </Typography>
-                     <Typography className="max-w-[25rem] py-3">
+
+                     <Typography sx={{ maxWidth: { xs: "25rem" }, mx: { xs: "auto", md: "unset" } }} className="py-3">
                         Unlock a wealth of opportunities in our comprehensive Inc Connect directory. Find or showcase
                         services, connect with industry leaders, and elevate your business.{" "}
                      </Typography>
@@ -37,7 +38,7 @@ export default function Features() {
                   </Box>
                </Grid>
 
-               <Grid item order={{ xs: 1, md: 2 }} xs={12} md={5}>
+               <Grid item order={{ xs: 1, md: 2 }} xs={12} sm={8} md={5}>
                   <DirectoriesTabs />
                </Grid>
             </Grid>
@@ -63,16 +64,17 @@ export default function Features() {
                <Grid item xs={12} md="auto">
                   <Box sx={{ pr: { md: 5 } }}>
                      <Typography variant="h2">
-                        Signup and be <br />
+                        Step into the <br />
                         <Box component="span" sx={{ color: "primary.light" }}>
-                           discovered
+                           spotlight
                         </Box>
                      </Typography>
                      <Typography
-                        className="max-w-[15rem] py-3"
+                        className="max-w-[20rem] py-3"
                         sx={{ mx: { xs: "auto", md: "unset" }, px: { xs: 1, md: "unset" } }}
                      >
-                        Lorem ipsum dolor sit amet. Illum vero corrupti molestiae?
+                        Join our vibrant community of enterpreneurs, professionals, and creatives. Showcase your talents,
+                        and grow your network.
                         <br />
                      </Typography>
                      <Button component={Link} href="/signup" endIcon={<ArrowRightAlt />}>

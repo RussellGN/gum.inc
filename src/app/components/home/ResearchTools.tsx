@@ -28,8 +28,9 @@ export default function ResearchTools() {
                   Newsletters for <br /> business insights and research
                </Typography>
                <Typography className="max-w-[25rem] py-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae esse ullam hic possimus optio totam
-                  consectetur! Alias pariatur ut doloremque accusantium repellendus reprehenderit, enim dicta eius eveniet
+                  Stay ahead of the curve: Subscribe to Inc Office newsletters for exclusive business insights and research.
+                  Receive curated content straight to your inbox, including industry trends, market analysis, and expert
+                  advice to fuel your business growth and success.
                </Typography>
                <Button component={Link} href="/inc-office" color="primary" size="large">
                   Get Started

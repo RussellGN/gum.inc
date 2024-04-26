@@ -20,7 +20,7 @@ export default function page() {
                <BookOutlined fontSize="inherit" />
             </ResponsiveTypography>
 
-            <Box sx={{ justifyContent: { xs: "center", md: "unset" } }} className="flex flex-wrap gap-2">
+            <Box sx={{ justifyContent: { xs: "center", sm: "unset" } }} className="flex flex-wrap gap-2">
                {directories.splice(0, 3).map((dir) => (
                   <DirectoryCard key={dir.name} dir={dir} />
                ))}
@@ -38,7 +38,7 @@ export default function page() {
                <Subscriptions fontSize="inherit" />
             </ResponsiveTypography>
 
-            <Box sx={{ justifyContent: { xs: "center", md: "unset" } }} className="flex flex-wrap gap-2">
+            <Box sx={{ justifyContent: { xs: "center", sm: "unset" } }} className="flex flex-wrap gap-2">
                {sampleSubscriptions.map((sub) => (
                   <SubscriptionCard key={sub.id} subscription={sub} />
                ))}

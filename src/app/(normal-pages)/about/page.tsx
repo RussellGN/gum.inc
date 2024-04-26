@@ -25,7 +25,6 @@ export default function Page() {
    return (
       <div>
          <div>
-            {/* <Box sx={{ mb: 3 }} className="p-6 text-center border-b-8 border-t-8 w-fit mx-auto"> */}
             <Box sx={{ mb: 3 }} className="p-6 text-center  w-fit mx-auto">
                <Typography variant="h1">About Gum.inc</Typography>
             </Box>
@@ -36,6 +35,7 @@ export default function Page() {
             direction="left"
             image="/svgs/undraw_online_resume.svg"
             alt="online resume"
+            title="What is Gum.Inc"
             body="Gum.iNc is a contract management IRM & CRM system oriented as an Almanac & Directory listing
             platform, at both online and offline spectrums. That focuses on how entrepreneurs, corporate
             entities and the creative economy-stores and secures business contacts , network and connections
@@ -46,6 +46,7 @@ export default function Page() {
             direction="right"
             image="/svgs/undraw_newspaper_re_syf5.svg"
             alt="newspaper"
+            title="Our mission"
             body="Revolutionizing and reinvention of the yellow pages , not only on all spectrums of information, digital or traditional yellow page hard copy culture but stretching into Motorizing contact platform, allow clients to generate funds for sustainability of existing information in our platform ."
          />
 
@@ -56,31 +57,26 @@ export default function Page() {
                </Box>
 
                <Typography variant="h2" className="text-center" sx={{ mb: 3 }}>
-                  Directory System
+                  Inc Connect
                </Typography>
 
                <div className="mx-auto text-center max-w-prose">
                   <Typography>
                      Over the course of the centuries certain industries have deemed lucrative and thriving ,so we&apos;ve
-                     carefully curated and tailor suited our directory system to 15 almanacs that have shown exponential
-                     growth and positive future outlook in this ever changing digital era . Gum.iNc is a premium access
-                     contact management system that is organized to thriving industry backed up by a multi faceted Almanac
-                     and directory platform for connecting,networking and advertising. Explore and connect iNc with us
+                     carefully curated and tailor suited our directory system to 15 different directories that have shown
+                     exponential growth and positive future outlook in this ever changing digital era. Inc Connect is a
+                     premium access contact management system that facilitates connecting, networking and advertising.
+                     Explore and connect with us.
                      <br />
                      <br />
-                     &lsquo;Inc Connec&lsquo;, Which is a listing platform that allows to entrepreneurs , corporates
-                     ,businesses and individuals to advertise or list their product, service , craft ,skill or expertise. It
-                     is backed up by a light messaging index that engages clients by messaging and favoriting the contacts
-                     that&apos;d want to access and interact with . 3rd incription security codes which secures information
-                     and scrutinizes all subscribers , bank cards , contacts , storage drives and email information.
+                     With &lsquo;Inc Connec&lsquo;, entrepreneurs, businesses and individuals can advertise or list their
+                     products, services, craft and expertise. It is backed up by a light messaging feature that allows
+                     engagement with others on the platform. Users also get the ability to bookmark listings for later
+                     reference.
                   </Typography>
                </div>
             </div>
          </div>
-
-         {/* <div className="">
-            <JoinValueFeature />
-         </div> */}
 
          <Feature
             direction="left"

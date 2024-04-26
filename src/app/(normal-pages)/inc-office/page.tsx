@@ -15,6 +15,7 @@ export default function Page() {
                   mobileVariant="h2"
                   desktopVariant="h1"
                   sx={{
+                     px: 2,
                      textAlign: "center",
                      width: "fit-content",
                      mx: "auto",

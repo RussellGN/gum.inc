@@ -32,79 +32,82 @@ export default function DirsAccordion() {
       <>
          {directories.map((dir) => {
             return (
-               <Accordion
-                  elevation={0}
-                  key={dir.name}
-                  expanded={expanded === `panel${dir.name}`}
-                  onChange={handleChange(dir.name)}
+               <Box
                   sx={{
                      ...(isMobile && !showAll && activeDir !== dir.name ? { display: "none" } : {}),
                      border: "solid 2px",
                      borderColor: "divider",
                      borderRadius: "10px",
                      mb: 1,
-                     "&:before": {
-                        display: "none",
-                     },
-                     "& .MuiAccordionDetails-root": {
-                        p: 1,
-                     },
-                     "& .MuiAccordionSummary-root": {
-                        p: 1,
-                        minHeight: "unset",
-                        borderRadius: "10px 10px 0 0",
-                     },
-                     "& .MuiAccordionSummary-root:hover": {
-                        bgcolor: "whitesmoke",
-                     },
-                     "& .MuiAccordionSummary-root.Mui-expanded": {
-                        bgcolor: "divider",
-                     },
-                     "& .MuiAccordionSummary-content": {
-                        m: "unset",
-                     },
-                     // "& .MuiButtonBase-root-MuiAccordionSummary-root.Mui-expanded": {
-                     //    minHeight: 0,
-                     // },
+                     overflow: "hidden",
                   }}
+                  key={dir.name}
                >
-                  <AccordionSummary
-                     expandIcon={<ExpandMoreIcon />}
-                     aria-controls={`panel${dir.name}bh-content`}
-                     id={`panel${dir.name}bh-header`}
+                  <Accordion
+                     elevation={0}
+                     expanded={expanded === `panel${dir.name}`}
+                     onChange={handleChange(dir.name)}
                      sx={{
+                        "&:before": {
+                           display: "none",
+                        },
+                        "& .MuiAccordionDetails-root": {
+                           p: 1,
+                        },
+                        "& .MuiAccordionSummary-root": {
+                           p: 1,
+                           minHeight: "unset",
+                           borderRadius: "10px 10px 0 0",
+                        },
+                        "& .MuiAccordionSummary-root:hover": {
+                           bgcolor: "whitesmoke",
+                        },
                         "& .MuiAccordionSummary-root.Mui-expanded": {
-                           height: "fit-content",
-                           minHeight: "fit-content !important",
+                           bgcolor: "divider",
+                        },
+                        "& .MuiAccordionSummary-content": {
+                           m: "unset",
                         },
                      }}
                   >
-                     <Typography>{dir.name}</Typography>
-                  </AccordionSummary>
+                     <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        aria-controls={`panel${dir.name}bh-content`}
+                        id={`panel${dir.name}bh-header`}
+                        sx={{
+                           "& .MuiAccordionSummary-root.Mui-expanded": {
+                              height: "fit-content",
+                              minHeight: "fit-content !important",
+                           },
+                        }}
+                     >
+                        <Typography>{dir.name}</Typography>
+                     </AccordionSummary>
 
-                  <AccordionDetails>
-                     <Typography component="p" variant="caption">
-                        <Typography variant="caption" className={expandAbout ? "" : "line-clamp-2"}>
-                           {dir.about}
-                        </Typography>{" "}
-                        <button
-                           style={{ color: theme.palette.primary.dark }}
-                           className="bg-[transparent] border-0 outline-0 mt-2 flex items-center gap-2"
-                           onClick={() => setExpandAbout((prev) => !prev)}
-                        >
-                           {expandAbout ? (
-                              <>
-                                 minimize <KeyboardArrowUp fontSize="small" />
-                              </>
-                           ) : (
-                              <>
-                                 expand <KeyboardArrowDown fontSize="small" />
-                              </>
-                           )}
-                        </button>
-                     </Typography>
-                  </AccordionDetails>
-               </Accordion>
+                     <AccordionDetails>
+                        <Typography component="p" variant="caption">
+                           <Typography variant="caption" className={expandAbout ? "" : "line-clamp-2"}>
+                              {dir.about}
+                           </Typography>{" "}
+                           <button
+                              style={{ color: theme.palette.primary.dark }}
+                              className="bg-[transparent] border-0 outline-0 mt-2 flex items-center gap-2"
+                              onClick={() => setExpandAbout((prev) => !prev)}
+                           >
+                              {expandAbout ? (
+                                 <>
+                                    minimize <KeyboardArrowUp fontSize="small" />
+                                 </>
+                              ) : (
+                                 <>
+                                    expand <KeyboardArrowDown fontSize="small" />
+                                 </>
+                              )}
+                           </button>
+                        </Typography>
+                     </AccordionDetails>
+                  </Accordion>
+               </Box>
             );
          })}
 

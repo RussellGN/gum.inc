@@ -1,0 +1,21 @@
+{
+   "version": "2.0.0",
+   "tasks": [
+      {
+         "type": "npm",
+         "script": "dev",
+         "problemMatcher": [],
+         "label": "launch dev server",
+         "group": "none",
+         "detail": "next dev",
+         "presentation": {
+            "panel": "shared",
+            "showReuseMessage": true,
+            "clear": true
+         },
+         "runOptions": {
+            "runOn": "folderOpen"
+         }
+      }
+   ]
+}

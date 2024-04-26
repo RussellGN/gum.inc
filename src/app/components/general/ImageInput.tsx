@@ -5,6 +5,7 @@ import { Box, IconButton } from "@mui/material";
 import React, { useRef, useState } from "react";
 
 export default function ImageInput({ name, defaultImage }: { name: string; defaultImage?: string }) {
+   const [key, setKey] = useState(1); // fixes onchange trigger inability bug when imageurl is reset
    const [imageUrl, setImageUrl] = useState(defaultImage || "");
    const inputRef = useRef<HTMLInputElement>(null);
 
@@ -16,6 +17,7 @@ export default function ImageInput({ name, defaultImage }: { name: string; defau
    function onClick() {
       if (imageUrl) {
          setImageUrl("");
+         setKey((prev) => prev + 1);
       } else {
          inputRef.current?.click();
       }
@@ -48,6 +50,7 @@ export default function ImageInput({ name, defaultImage }: { name: string; defau
          </IconButton>
 
          <input
+            key={name + key.toString()}
             onChange={onChange}
             ref={inputRef}
             className="hidden"

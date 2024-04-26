@@ -83,7 +83,6 @@ export interface SubscriptionInterface {
 
 export interface DirectoryInterface {
    name: string;
-   shortDescription: string;
    about: string;
    icon: JSX.Element;
    for: "events" | "users" | "organizations" | "users-organizations";

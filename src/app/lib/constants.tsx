@@ -58,8 +58,7 @@ export const secondaryDarkColor = "#b9b9d3";
 export const directories: DirectoryInterface[] = [
    {
       name: "Gummy Pages",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "middle rough slabs sight sometime girl physical light tea foreign citizen recent salmon front short pair without caught cause are go bridge art return",
+      about: "Explore a diverse array of businesses, professionals, and entities on Gummy Pages. From tech startups to creative freelancers, discover and connect with the right partners to fuel your projects and ventures.",
       icon: <Pages />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -68,8 +67,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Upcoming Events",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "shut rough sold ability else colony bigger realize interior repeat grew house fog bow pleasure opportunity making duck running eventually star metal different represent",
+      about: "Stay informed and engaged with upcoming events in your area and beyond. From industry conferences to community gatherings, discover opportunities to network, learn, and grow.",
       icon: <EventAvailable />,
       for: "events",
       itemToBeListed: "event",
@@ -78,8 +76,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Crème Chefs",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "raw cloth that unless black poetry report lips higher lying becoming pole discover program built simplest pressure week pool planning about rabbit percent effect",
+      about: "Indulge your culinary cravings with Crème Chefs. Discover talented chefs, caterers, and food artisans offering delectable delights for every occasion. From gourmet meals to mouthwatering desserts, satisfy your taste buds with Crème Chefs.",
       icon: <Fireplace />,
       for: "users",
       itemToBeListed: "yourself",
@@ -88,8 +85,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Restaurants",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "hardly gun key me determine run stopped society cause dirt vote roof part bear difference crew selection fear cabin social die poetry scale captain",
+      about: "Explore a diverse selection of restaurants offering culinary delights to tantalize your taste buds. From cozy cafes to upscale dining experiences, discover new flavors and savor memorable meals at restaurants near you",
       icon: <Restaurant />,
       for: "organizations",
       itemToBeListed: "restaurant",
@@ -98,8 +94,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Sports",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "cross plate planned his kitchen break to two did positive in waste music saw does needle fifteen natural song money visitor point football how",
+      about: "Dive into the world of sports with a variety of offerings on our platform. From amateur leagues to professional coaches, discover opportunities to stay active, compete, and connect with fellow sports enthusiasts",
       icon: <Sports />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -108,8 +103,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Craft / Skill",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "answer hello man kept familiar sets straw chose recognize per written twelve weather see pool small range accident saddle pilot five stronger smooth soil",
+      about: "Unleash your creativity and hone your skills with Craft/Skill. From artists to artisans, discover talented individuals offering unique creations and services. Explore, learn, and connect with the makers behind the craft.",
       icon: <Brush />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -118,8 +112,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Coin (Business)",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "camp nuts sea difficulty together statement flower topic nation mirror see castle rough built steady forty lead sale powder smoke may river finger judge",
+      about: "Navigate the world of business with Coin. Discover startups, enterprises, and entrepreneurs making waves in the industry. Connect, collaborate, and explore opportunities to grow your business network",
       icon: <Money />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -128,8 +121,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Thrift (Fashion)",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "block dust service tie atom ability range train aloud wealth then badly return skill therefore present direct cabin fought difference whispered fill free children",
+      about: "Embrace style with Thrift directories. Explore curated collections of fashion items. From clothing to accessories, discover unique pieces that reflect your individuality and eco-conscious values.",
       icon: <Shop />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -138,8 +130,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Education",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "court height practical coal also whose name fort failed spread tin clearly probably origin raise use car heard younger expression safe tall large negative",
+      about: "Explore opportunities for learning and development with Education. Discover schools, courses, and educational resources to enhance your knowledge and skills. From traditional classrooms to online platforms, pursue your academic goals with confidence.",
       icon: <School />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -148,8 +139,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Creatives & Artists",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "getting else is son sat nails exclaimed adjective church tie moon search nearer size character familiar route ants joy corn nearly trap whether far",
+      about: "Immerse yourself in the world of creativity with Creatives & Artists. Discover talented individuals pushing the boundaries of art and innovation. From visual arts to performing arts, explore, connect, and be inspired by the creative community.",
       icon: <Piano />,
       for: "users",
       itemToBeListed: "yourself or establishment",
@@ -158,8 +148,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Labels, Artists & Repertoire / Booking Agents",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "leg hearing gulf fed lose track noon material vessels pipe sides read mouse bicycle atomic hat poor wrapped beyond loss school straw began ago",
+      about: "Dive into the music industry with Labels, Artists & Repertoire/Booking Agents. Discover record labels, artists, and booking agents shaping the soundtracks of tomorrow. Connect with industry professionals and explore opportunities for collaboration and representation.",
       icon: <MusicNote />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",
@@ -168,8 +157,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "NGOs / Sponsorships & Funds",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "live into southern forty mathematics aloud song research funny exactly growth yes origin torn recently president got equally quickly final arrangement season almost poetry",
+      about: "Make a difference with NGOs/Sponsorships & Funds. Discover organizations dedicated to social impact and humanitarian causes. Explore opportunities for sponsorship, funding, and collaboration to support meaningful initiatives and create positive change.",
       icon: <Business />,
       for: "organizations",
       itemToBeListed: "establishment",
@@ -178,8 +166,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Hubs / Studios & Co-working spaces ",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "fought brass want lungs parallel create newspaper fell pond underline heading meal ants brush becoming sell familiar worry hollow several bottom myself small word",
+      about: "Foster creativity and collaboration with Hubs/Studios & Co-working Spaces. Discover vibrant hubs, studios, and co-working spaces where ideas come to life. From shared workspaces to specialized facilities, find the perfect environment to unleash your potential.",
       icon: <BusinessCenter />,
       for: "organizations",
       itemToBeListed: "establishment",
@@ -188,8 +175,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "AirBnbs, Hotels & Resorts",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "mysterious result cast softly science particular mother food brush practical government end thee rock thought income market worker slope provide solve snow slide grandmother",
+      about: "Plan your next getaway with Airbnbs, Hotels & Resorts. Explore a variety of accommodations, from cozy Airbnbs to luxurious resorts. Whether you're traveling for business or leisure, find the perfect place to relax and unwind.",
       icon: <Hotel />,
       for: "organizations",
       itemToBeListed: "establishment",
@@ -198,8 +184,7 @@ export const directories: DirectoryInterface[] = [
 
    {
       name: "Hospitals / Medical Specialists & facilities",
-      shortDescription: "Features listings of everyday proffessionals",
-      about: "selection aid tune pole minute impossible pitch instrument shout chapter lunch another sides handle on listen among them story tired realize had language heat",
+      about: "Prioritize your health with Hospitals/Medical Specialists & Facilities. Access top-notch medical care and facilities, from hospitals to specialized clinics. Connect with skilled medical professionals and explore options for comprehensive healthcare services",
       icon: <LocalHospital />,
       for: "users-organizations",
       itemToBeListed: "yourself or establishment",

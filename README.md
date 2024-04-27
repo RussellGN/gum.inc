@@ -10,5 +10,5 @@
 6. seo
 7. work on padding for active dir accordion buttons
 8. review about page
-9. verification form
-10.   polish
+9. polish
+10.   verification form
